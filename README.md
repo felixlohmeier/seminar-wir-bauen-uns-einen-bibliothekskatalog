@@ -22,7 +22,7 @@ Soweit möglich werden die Materialien für die Lehrveranstaltung an dieser Stel
 
 ## Inhalte
 
-Die Inhalte werden sukzessive hier bereitgestellt. Folgender Ablauf ist vorgesehen:
+Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei akademische Doppelstunden, also insgesamt 3 Zeitstunden. Folgender Ablauf ist vorgesehen:
 
 1. Vorlesung: [Einführung in Discovery-Systeme in Bibliotheken](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/01_Einfuehrung-Discovery-Systeme.html) (19.09.2016) 
 2. Vorlesung: Überblick über Open-Source-Software für Bibliothekskataloge (26.09.2016) 
