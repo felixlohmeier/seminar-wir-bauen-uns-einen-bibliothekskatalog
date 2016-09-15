@@ -1,7 +1,8 @@
 # Skript zum Seminar "(Open) Discovery: Wir bauen uns einen Bibliothekskatalog"
 
 ## Formate
-* Lesefassung bei GitBook (HTML, PDF etc.): https://www.gitbook.com/book/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog/
+* Lesefassung bei GitBook (HTML): https://www.gitbook.com/read/book/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog
+* Druckfassung bei GitBook (PDF): https://www.gitbook.com/download/pdf/book/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog
 * Repository bei GitHub (zum Nachnutzen): https://github.com/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog 
 
 ## Lehrveranstaltung
@@ -23,13 +24,13 @@ Soweit möglich werden die Materialien für die Lehrveranstaltung an dieser Stel
 
 Die Inhalte werden sukzessive hier bereitgestellt. Folgender Ablauf ist vorgesehen:
 
-1. Vorlesung: Einführung in Discovery-Systeme in Bibliotheken (19.09.) 
-2. Vorlesung: Überblick über Open-Source-Software für Bibliothekskataloge (26.09.) 
-3. Praxis: Grundinstallation der Arbeitsumgebung (vorkonfigurierte VM wird bereitgestellt) (10.10.) 
-4. Praxis: Installation des Werkzeugs zur Datentransformation (OpenRefine) (17.10.)
-5. Vorlesung: Metadaten in Bibliotheken am Beispiel von echten Katalogdaten (24.10.)
-6. Praxis [3x]: Datentransformation mit OpenRefine (31.10., 07.11., 14.11.)
-7. Praxis: Installation des Suchmaschinenindex (Solr) (21.11.)
+1. Vorlesung: Einführung in Discovery-Systeme in Bibliotheken (19.09.2016) 
+2. Vorlesung: Überblick über Open-Source-Software für Bibliothekskataloge (26.09.2016) 
+3. Praxis: Grundinstallation der Arbeitsumgebung (vorkonfigurierte VM wird bereitgestellt) (10.10.2016) 
+4. Praxis: Installation des Werkzeugs zur Datentransformation (OpenRefine) (17.10.2016)
+5. Vorlesung: Metadaten in Bibliotheken am Beispiel von echten Katalogdaten (24.10.2016)
+6. Praxis [3x]: Datentransformation mit OpenRefine (31.10.2016, 07.11.2016, 14.11.2016)
+7. Praxis: Installation des Suchmaschinenindex (Solr) (21.11.2016)
 8. Praxis [2x]: Konfiguration und Übungen mit Solr
 9. Vorlesung: Relevanzranking, Facettierung und andere Katalogfunktionen
 10. Praxis: Installation des Katalogfrontends (TYPO3-find)
