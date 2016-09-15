@@ -1,0 +1,30 @@
+[
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "-",
+                "l": "-"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "Feld",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "Feld"
+        }
+      ]
+    }
+  },
+]
