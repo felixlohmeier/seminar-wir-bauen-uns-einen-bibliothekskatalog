@@ -1,7 +1,6 @@
 # OPAC vs. Discovery-System
 
-[![Screenshot Christensen 2014](images/screenshot-christensen-2014.png)](http://www.slideshare.net/xenzen/discoverysysteme-zwischenbilanz-fr-eine-bibliothekarische-lsung-in-einer-postbibliothekarischen-welt)
-
+[](http://www.slideshare.net/steilen/discoverysysteme-die-opacs-der-zukunft)![Screenshot Steilen 2012](/images/screenshot-steilen-2012.png)
 
 ## Kernpunkte
 * ...
