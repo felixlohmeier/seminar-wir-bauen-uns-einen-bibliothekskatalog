@@ -2,7 +2,7 @@
 
 Ziel: Einstieg ins Thema
 
-Fragen
+Fragen:
 * Was unterscheidet Discovery-Systeme von vorherigen Bibliothekskatalogen (OPACs)?
 * Wenn es Discovery-Systeme schon seit etwa 10 Jahren gibt, wo stehen wir heute? Was sind aktuelle Probleme und Lösungsansätze?
 * Welche Software ist derzeit auf dem Markt im Einsatz?
