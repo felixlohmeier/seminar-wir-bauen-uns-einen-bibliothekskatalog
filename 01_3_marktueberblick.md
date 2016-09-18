@@ -1,6 +1,7 @@
 # Marktüberblick
 
 ## Bericht von Marshall Breeding (2014)
+https://journals.ala.org/ltr/issue/view/195
 
 [](https://journals.ala.org/ltr/issue/view/195)![Screenshot Breeding 2014](images/screenshot-breeding-2014.png)
 
