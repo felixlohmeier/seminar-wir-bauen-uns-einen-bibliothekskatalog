@@ -5,4 +5,5 @@
    * [Marktüberblick](01_3_marktueberblick.md)
    * OPAC vs. Discovery-System
    * Open Discovery Initiative
+   * Zwischenbilanz mit Problemen und Lösungsansätzen
 
