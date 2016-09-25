@@ -7,4 +7,5 @@
    * [Marktüberblick](01_3_marktueberblick.md)
    * [Open Discovery Initiative](01_4_open_discovery_initiative.md)
 * [Lerntagebücher](lerntagebucher.md)
+* 02 Überblick über Open-Source-Software für Bibliothekskataloge
 
