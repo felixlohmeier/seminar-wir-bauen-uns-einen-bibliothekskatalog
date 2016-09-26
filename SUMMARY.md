@@ -10,5 +10,6 @@
    * Referat zu Pro & Contra von Open Source
    * Open Source Software zur Verarbeitung und Analyse von Metadaten
    * Software zur Katalogpräsentation: Blacklight, TYPO3-find
+   * All-in-One-Systeme am Beispiel von VuFind und FOLIO
 * [Lerntagebücher](lerntagebucher.md)
 
