@@ -9,5 +9,6 @@
 * [02 Überblick über Open-Source-Software für Bibliothekskataloge](02_Ueberblick_Open-Source-Software_fuer_Bibliothekskataloge.md)
    * Referat zu Pro & Contra von Open Source
    * Open Source Software zur Verarbeitung und Analyse von Metadaten
+   * Software zur Katalogpräsentation: Blacklight, TYPO3-find
 * [Lerntagebücher](lerntagebucher.md)
 
