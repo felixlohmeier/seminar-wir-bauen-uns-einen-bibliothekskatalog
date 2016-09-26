@@ -7,7 +7,7 @@
    * [Marktüberblick](01_3_marktueberblick.md)
    * [Open Discovery Initiative](01_4_open_discovery_initiative.md)
 * [02 Überblick über Open-Source-Software für Bibliothekskataloge](02_Ueberblick_Open-Source-Software_fuer_Bibliothekskataloge.md)
-   * Referat zu Pro & Contra von Open Source
+   * [Referat zu Pro & Contra von Open Source](referat_zu_pro_&_contra_von_open_source.md)
    * Open Source Software zur Verarbeitung und Analyse von Metadaten
    * Software zur Katalogpräsentation: Blacklight, TYPO3-find
    * All-in-One-Systeme am Beispiel von VuFind und FOLIO
