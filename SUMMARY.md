@@ -8,5 +8,6 @@
    * [Open Discovery Initiative](01_4_open_discovery_initiative.md)
 * [02 Überblick über Open-Source-Software für Bibliothekskataloge](02_Ueberblick_Open-Source-Software_fuer_Bibliothekskataloge.md)
    * Referat zu Pro & Contra von Open Source
+   * Open Source Software zur Verarbeitung und Analyse von Metadaten
 * [Lerntagebücher](lerntagebucher.md)
 
