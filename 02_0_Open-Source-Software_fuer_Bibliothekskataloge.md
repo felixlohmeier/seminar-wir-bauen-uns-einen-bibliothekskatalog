@@ -1,4 +1,4 @@
-# 02 Open-Source-Software für Bibliothekskataloge (26.09.2016)
+# 2. Open-Source-Software für Bibliothekskataloge (26.09.2016)
 
 Ziel: Potentiale für den Einsatz von Open Source Software im Bibliothekswesen realistisch einschätzen können
 
