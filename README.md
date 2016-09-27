@@ -40,7 +40,7 @@ Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei
 
 ## Lerntagebücher
 
-Als eine mögliche Prüfungsleistung schreiben Studierende öffentliche Lerntagebücher, in denen sie von ihren Erkenntnissen berichten und sich mit dem Inhalt des Seminars auseinandersetzen.
+Als eine mögliche [Prüfungsleistung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/pruefungsleistungen.html) schreiben Studierende öffentliche Lerntagebücher, in denen sie von ihren Erkenntnissen berichten und sich mit dem Inhalt des Seminars auseinandersetzen.
 
 Die Blogs der Studierenden sind unter der Rubrik [Lerntagebücher](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/lerntagebucher.html) im Skript verlinkt.
 
