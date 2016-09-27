@@ -10,5 +10,5 @@
    * [Referat zu Pro & Contra von Open Source](referat_zu_pro_&_contra_von_open_source.md)
    * [Open Source Software zur Verarbeitung und Analyse von Metadaten](open_source_software_zur_verarbeitung_und_analyse_.md)
 * [Lerntagebücher](lerntagebucher.md)
-* Prüfungsleistungen
+* [Prüfungsleistungen](pruefungsleistungen.md)
 
