@@ -9,7 +9,6 @@
 * [02 Open-Source-Software für Bibliothekskataloge](02_Open-Source-Software_fuer_Bibliothekskataloge.md)
    * [Referat zu Pro & Contra von Open Source](referat_zu_pro_&_contra_von_open_source.md)
    * [Open Source Software zur Verarbeitung und Analyse von Metadaten](open_source_software_zur_verarbeitung_und_analyse_.md)
-   * [Software zur Katalogpräsentation: Blacklight, TYPO3-find](software_zur_katalogprasentation_blacklight,_typo3.md)
    * [All-in-One-Systeme am Beispiel von VuFind und FOLIO](all-in-one-systeme_am_beispiel_von_vufind_und_foli.md)
 * [Lerntagebücher](lerntagebucher.md)
 
