@@ -24,8 +24,8 @@ Soweit möglich werden die Materialien für die Lehrveranstaltung an dieser Stel
 
 Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei akademische Doppelstunden, also insgesamt 3 Zeitstunden. Folgender Ablauf ist vorgesehen:
 
-1. Vorlesung: [Einführung in Discovery-Systeme in Bibliotheken](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/01_Einfuehrung-Discovery-Systeme.html) (19.09.2016) 
-2. Vorlesung: [Open-Source-Software für Bibliothekskataloge](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_Open-Source-Software_fuer_Bibliothekskataloge.html) (26.09.2016) 
+1. Vorlesung: [Einführung in Discovery-Systeme in Bibliotheken](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/01_0_Einfuehrung-Discovery-Systeme.html) (19.09.2016) 
+2. Vorlesung: [Open-Source-Software für Bibliothekskataloge](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_0_Open-Source-Software_fuer_Bibliothekskataloge.html) (26.09.2016) 
 3. Praxis: Grundinstallation der Arbeitsumgebung (10.10.2016) 
 4. Praxis: Installation des Werkzeugs zur Datentransformation (OpenRefine) (17.10.2016)
 5. Vorlesung: Metadaten in Bibliotheken (24.10.2016)
