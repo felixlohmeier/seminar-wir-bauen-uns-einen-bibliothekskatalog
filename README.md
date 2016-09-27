@@ -28,14 +28,14 @@ Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei
 2. Vorlesung: [Open-Source-Software für Bibliothekskataloge](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_Open-Source-Software_fuer_Bibliothekskataloge.html) (26.09.2016) 
 3. Praxis: Grundinstallation der Arbeitsumgebung (10.10.2016) 
 4. Praxis: Installation des Werkzeugs zur Datentransformation (OpenRefine) (17.10.2016)
-5. Vorlesung: Metadaten in Bibliotheken am Beispiel von echten Katalogdaten (24.10.2016)
+5. Vorlesung: Metadaten in Bibliotheken (24.10.2016)
 6. Praxis [3x]: Datentransformation mit OpenRefine (31.10.2016, 07.11.2016, 14.11.2016)
 7. Praxis: Installation des Suchmaschinenindex (Solr) (21.11.2016)
 8. Praxis [2x]: Konfiguration und Übungen mit Solr
-9. Vorlesung: Relevanzranking, Facettierung und andere Katalogfunktionen
-10. Praxis: Installation des Katalogfrontends (TYPO3-find)
+9. Vorlesung: Relevanzranking, Facettierung und weitere Katalogfunktionen
+10. Praxis: Installation der Katalogoberfläche (TYPO3-find)
 11. Praxis [3x]: Konfiguration von TYPO3-find
-12. Vorlesung: Was fehlt noch für einen öffentlichen Server?
+12. Vorlesung: Was fehlt noch für einen Produktivbetrieb?
 13. Evaluation und Abschlussbesprechung
 
 ## Lerntagebücher
