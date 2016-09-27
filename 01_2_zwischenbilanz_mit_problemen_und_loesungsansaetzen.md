@@ -1,4 +1,4 @@
-# Zwischenbilanz mit Problemen und Lösungsansätzen
+# 1.2 Zwischenbilanz mit Problemen und Lösungsansätzen
 
 ## Präsentation Anne Christensen (2014)
 http://www.slideshare.net/xenzen/discoverysysteme-zwischenbilanz-fr-eine-bibliothekarische-lsung-in-einer-postbibliothekarischen-welt
