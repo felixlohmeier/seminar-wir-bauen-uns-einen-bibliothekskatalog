@@ -1,4 +1,4 @@
-# Einführung in Discovery-Systeme in Bibliotheken (19.09.2016)
+# 1. Einführung in Discovery-Systeme in Bibliotheken (19.09.2016)
 
 Ziel: Einstieg ins Thema
 
