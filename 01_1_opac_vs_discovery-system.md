@@ -3,7 +3,7 @@
 ## Präsentation Gerald Steilen (2012)
 http://www.slideshare.net/steilen/discoverysysteme-die-opacs-der-zukunft
 
-![Screenshot Steilen 2012](/images/screenshot-steilen-2012.png)
+[![Screenshot Steilen 2012](/images/screenshot-steilen-2012.png)](http://www.slideshare.net/steilen/discoverysysteme-die-opacs-der-zukunft)
 
 ## Kernpunkte
 Der klassische Bibliothekskatalog (Online Public Access Catalogue, kurz: OPAC) wird von NutzerInnen nur noch selten als erster Einstieg gewählt. Gerald Steilen zitiert aus einer Studie von 2009 die folgenden Gründe:
