@@ -1,4 +1,4 @@
-# Open Discovery Initiative
+# Open Discovery
 
 ## NISO Open Discovery Initiative
 * Standardisierungsgremium in den USA
