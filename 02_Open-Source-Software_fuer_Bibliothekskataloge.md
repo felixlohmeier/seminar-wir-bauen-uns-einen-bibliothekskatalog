@@ -9,5 +9,5 @@ Fragen:
 Inhalte:
 1. Referat zu Pro & Contra von Open Source
 2. Open Source Software zur Verarbeitung und Analyse von Metadaten (Pfeffer 2016)
-3. Software, die in diesem Seminar verwendet wird: OpenRefine und TYPO3-find
-4. Mögliche Alternativen: VuFind, Blacklight, FOLIO etc.
+3. Im Seminar verwendete Software
+4. Alternativen und Begründung der Auswahl
