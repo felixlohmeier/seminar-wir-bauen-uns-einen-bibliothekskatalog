@@ -7,7 +7,7 @@ Fragen:
 * Welche Open Source Software steht zum Bau von Bibliothekskatalogen bereit?
 
 Inhalte:
-1. Referat zu Pro & Contra von Open Source
-2. Open Source Software zur Verarbeitung und Analyse von Metadaten (Pfeffer 2016)
-3. Im Seminar verwendete Software
-4. Alternativen und Begründung der Auswahl
+1. [Referat zu Pro & Contra von Open Source](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/referat_zu_pro_&_contra_von_open_source.html)
+2. [Open Source Software zur Verarbeitung und Analyse von Metadaten](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/open_source_software_zur_verarbeitung_und_analyse_.html) (Pfeffer 2016)
+3. [Im Seminar verwendete Software](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_Im_Seminar_verwendete_Software.html)
+4. [Alternativen und Begründung der Auswahl](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_Alternativen_und_Begruendung_der_Auswahl.html)
