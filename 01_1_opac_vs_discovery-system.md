@@ -1,4 +1,4 @@
-# OPAC vs. Discovery-System
+# 1.1 OPAC vs. Discovery-System
 
 ## Präsentation Gerald Steilen (2012)
 http://www.slideshare.net/steilen/discoverysysteme-die-opacs-der-zukunft
