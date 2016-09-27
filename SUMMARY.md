@@ -1,7 +1,7 @@
 # Summary
 
 * [Einleitung](README.md)
-* [01 Einführung in Discovery-Systeme in Bibliotheken](01_0_Einfuehrung-Discovery-Systeme.md)
+* [1. Einführung in Discovery-Systeme in Bibliotheken](01_0_Einfuehrung-Discovery-Systeme.md)
    * [OPAC vs. Discovery-System](01_1_opac_vs_discovery-system.md)
    * [Zwischenbilanz mit Problemen und Lösungsansätzen](01_2_zwischenbilanz_mit_problemen_und_loesungsansaetzen.md)
    * [Marktüberblick](01_3_marktueberblick.md)
