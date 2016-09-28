@@ -19,9 +19,9 @@ Für die Probleme der Bibliotheken mit Discovery-Lösungen (zu vereinfacht, zu v
 Sie plädiert für einen pragmatischen Ansatz und Ausrichtung der Suchoberflächen nach Nutzerwünschen. So ist beispielsweise das Angebot von Delivery-Optionen (elektronisch, sofort ausleihbar, ausleihbar/wartezeit, Fernleihe) sehr wichtig.
 
 Als Verbesserungsmöglichkeiten für aktuelle Discovery-Systeme (Präsentation von 2014) spricht sie an:
-1. Verbesserung des Rankings,
-2. Nutzung von Normdaten,
-3. Zusammenspiel zwischen Bibliothekssystem, Discovery System und Link-Resolvern
+* Verbesserung des Rankings,
+* Nutzung von Normdaten,
+* Zusammenspiel zwischen Bibliothekssystem, Discovery System und Link-Resolvern
 
 Mittelfristig haben aus ihrer Sicht weder lokale Bibliothekskataloge noch lokale Discovery-Lösungen eine Zukunft, weshalb die Definition von Austauschformaten für Lizenzinformationen sehr wichtig ist.
 
