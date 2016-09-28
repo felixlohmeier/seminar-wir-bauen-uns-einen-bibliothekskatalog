@@ -29,6 +29,11 @@ Seit dem Artikel aus 2014 hat im Zuge der Einführung von Cloud-Lösungen und du
 * EBSCO ist nicht nur Anbieter von Bibliothekssoftware, sondern betreibt auch Fachdatenbanken. In Konkurrenz zu anderen Anbietern versucht EBSCO daraus einen Vorteil zu gewinnen, indem es die Inhalte der Fachdatenbanken bevorzugt im eigenen Discovery-System-Index verfügbar macht. Darüber ist 2013-2015 ein Streit mit Ex Libris entbrannt, woraufhin Kunden von Ex Libris versucht haben eine Einigung herbeizuführen (siehe Zusammenfassung der ORBIS CASCADE ALLIANCE, einem Zusammenschluss von amerikanischen Universitätsbibliotheken: https://www.orbiscascade.org/ebsco-ex-libris/).
 * Um den Komplettlösungen von OCLC und Ex Libris zu begegnen, hat EBSCO zudem Mitte 2016 [in das Open-Source-Projekt Kuali OLE investiert](https://www.ebsco.com/e/de-de/nachrichten-center/pressemitteilungen-in-deutscher-sprache/folio-die-neue-kooperation-bringt-bibliotheken-dienstleister-und-entwickler) und dieses unter neuem Namen [FOLIO](https://www.folio.org) herausgebracht. Zusammen mit der Firma Index Data wird eine Alternative zu den Komplettlösungen von Ex Libris und OCLC entwickelt. Ob der angekündigte Weg der Open-Source-Community tatsächlich in Reinform eingehalten wird oder doch Abhängigkeiten geschaffen werden, bleibt noch abzuwarten.
 
-## Aktuelle Artikel von Marshall Breeding
-* The Future of Library Resource Discovery - A white paper commissioned by the NISO Discovery to Delivery (D2D) Topic Committee: http://www.niso.org/apps/group_public/download.php/14487/future_library_resource_discovery.pdf
-* Library Systems Report 2016 - Power plays: https://americanlibrariesmagazine.org/2016/05/02/library-systems-report-2016/
+Marshall Breeding schreibt regelmäßig Berichte unter dem Titel "Library Systems Report". Der diesjährige [Artikel von 2016](https://americanlibrariesmagazine.org/2016/05/02/library-systems-report-2016/) ist mit "Power plays" untertitelt. Das spielt auf die oben beschriebene zunehmende Marktkonzentration an.
+
+## Open Discovery
+
+Es gibt Bestrebungen, die Discovery-Systeme möglichst unabhängig von Bibliothekssystemen einsetzbar zu halten und zu gewährleisten, dass wissenschaftliche Inhalte unabhängig von Marktinteressen in allen Discovery-Systemen nachgewiesen werden können.
+
+In den USA hat die ["Open Discovery Initiative (ODI)"](http://www.niso.org/workrooms/odi/) des Standardisierungsgremiums NISO eine umfangreiche Empfehlung dazu herausgegeben: 
+[NISO RP-19-2014: A Recommended Practice of the  National Information Standards Organization](http://www.niso.org/workrooms/odi/publications/rp/rp-19-2014)
