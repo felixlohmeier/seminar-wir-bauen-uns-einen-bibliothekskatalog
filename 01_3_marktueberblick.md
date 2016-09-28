@@ -39,3 +39,5 @@ Es gibt Bestrebungen, die Discovery-Systeme möglichst unabhängig von Bibliothe
 
 In den USA hat die ["Open Discovery Initiative (ODI)"](http://www.niso.org/workrooms/odi/) des Standardisierungsgremiums NISO eine umfangreiche Empfehlung dazu herausgegeben: 
 [NISO RP-19-2014: A Recommended Practice of the  National Information Standards Organization](http://www.niso.org/workrooms/odi/publications/rp/rp-19-2014)
+
+Im Seminar verfolgen wir einen herstellerunabhängigen, modularen Ansatz. Daher das "(Open) Discovery" im Titel des Seminars.
