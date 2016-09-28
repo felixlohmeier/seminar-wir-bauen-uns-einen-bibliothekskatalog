@@ -19,7 +19,7 @@ Für die Probleme der Bibliotheken mit Discovery-Lösungen (zu vereinfacht, zu v
 Sie plädiert für einen pragmatischen Ansatz und Ausrichtung der Suchoberflächen nach Nutzerwünschen. So ist beispielsweise das Angebot von Delivery-Optionen (elektronisch, sofort ausleihbar, ausleihbar/wartezeit, Fernleihe) sehr wichtig.
 
 Als Verbesserungsmöglichkeiten für aktuelle Discovery-Systeme (Präsentation von 2014) spricht sie an:
-1. Ranking,
+1. Verbesserung des Rankings,
 2. Nutzung von Normdaten,
 3. Zusammenspiel zwischen Bibliothekssytem, Discovery System und Link-Resolvern
 
