@@ -18,7 +18,9 @@ Sein umfassender Bericht von 2014 in der Zeitschrift ALA TechSource bietet einen
 
 Es gibt zwar noch eine Reihe von anderen Anbietern, aber diese sind vor allem an kleineren Einrichtungen oder mit geringen Installationszahlen auf dem Markt für wissenschaftliche Bibliotheken tätig. Open-Source-Systeme wie VuFind sind ebenfalls noch recht wenig verbreitet.
 
-Von großer Bedeutung sind die von den Anbietern aufgebauten Indizes mit elektronischen Artikeln, die zusammen mit dem Discovery-Produkt, manchmal aber auch allein lizenziert werden können. Die Anbieter übernehmen dabei die Aufgabe, die Metadaten zu lizenzpflichtigen und lizenzfreien Online-Ressourcen aus verschiedenen Quellen zusammenzutragen und zu normalisieren. Der daraus resultierende Gesamtindex wird dann mit den Lizenzen der Kunden ("Holdings") abgeglichen und im Discovery-System integriert oder in einem separaten Suchraum "Elektronische Artikel" oder ähnlich bereitgestellt.
+Von großer Bedeutung sind die von den Anbietern aufgebauten Indizes mit elektronischen Artikeln, die zusammen mit dem Discovery-Produkt, manchmal aber auch allein lizenziert werden können. Die Anbieter übernehmen dabei die Aufgabe, die Metadaten zu lizenzpflichtigen und lizenzfreien Online-Ressourcen aus verschiedenen Quellen zusammenzutragen und zu normalisieren. Der daraus resultierende "Gesamtindex" wird dann mit den Lizenzen der Kunden ("Holdings") abgeglichen und im Discovery-System integriert oder in einem separaten Suchraum "Elektronische Artikel" oder ähnlich bereitgestellt.
+
+Zum genaueren Verständnis der Funktion des Gesamtindex ("Central Index") ist ergänzend der folgende Artikel von Athena Hoeppner von 2012 hilfreich: [The Ins and Outs of Evaluating Web-Scale Discovery Services](http://www.infotoday.com/cilmag/apr12/Hoeppner-Web-Scale-Discovery-Services.shtml). In: Computers in Libraries, April 2012.
 
 ## Neuere Entwicklungen
 
