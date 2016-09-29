@@ -2,28 +2,34 @@
 
 ## Software, die wir im Seminar verwenden werden
 
-**Verarbeitung und Analyse der Metadaten**: OpenRefine
+**Verarbeitung und Analyse der Metadaten**: [OpenRefine](http://openrefine.org)
 
-OpenRefine bietet ...
+OpenRefine bietet eine grafische Oberfläche zur Analyse und Transformation von Daten, die ähnlich wie eine klassische Tabellenverarbeitungssoftware (MS Excel, LibreOffice Calc, usw.) aufgebaut ist. Wir verwenden diese Software im Seminar um die Ausgangsdaten aus dem Bibliothekssystem zu manipulieren und in ein passendes Format für den Suchmaschinenindex zu transformieren.
 
-**Suchmaschinenindex**: Solr
+**Suchmaschinenindex**: [Solr](http://lucene.apache.org/solr/)
 
-Apache Solr ist die Standard-Suchmaschinentechnologie ... auch in vielen kommerziellen Discovery-Systemen...
+Apache Solr ist eine der Standardsuchmaschinen, die auch in vielen kommerziellen Discovery-Systemen zum Einsatz kommt. Die Indexierung der Daten in Solr ermöglicht sehr schnelle und flexible Suchen. Der Suchmaschinenindex läuft im Hintergrund, wird von den Nutzerinnen und Nutzern also nie direkt aufgerufen.
 
-**Katalogoberfläche**: TYPO3-find
+**Katalogoberfläche**: [TYPO3-find](https://github.com/subugoe/typo3-find)
 
-TYPO3-find ist eine Erweiterung für das Content-Management-System TYPO3 und wurde an der Staats- und Universitätsbibliothek Göttingen entwickelt.
+Das, was die Nutzerinnen und Nutzer zu sehen bekommen, ist schließlich die Katalogoberfläche. Im Grunde handelt es sich um eine Webseite mit Suchfunktion. Wir verwenden im Seminar die Software TYPO3-find, eine Erweiterung für das Content-Management-System TYPO3, die an der Staats- und Universitätsbibliothek Göttingen entwickelt wurde. TYPO3-find kommuniziert mit dem Suchmaschinenindex Solr über die Software [Solarium](http://www.solarium-project.org/), die ebenfalls Open Source ist.
 
 ## Schaubild zum Datenfluss
 
-
+```
+                             Transform             Search                Website
++----------------+         +------------+         +------+            +------------+
+|                | Extract |            |  Load   |      |  Solarium  |            |
+| Library System | +-----> | OpenRefine | +-----> | Solr | +--------+ | TYPO3-find |
+|                |         |            |         |      |            |            |
++----------------+         +------------+         +------+            +------------+
+                            PICA+ -> TSV
+```
 
 ## Alternativen, die auch interessant wären
 
-All-in-One-System: VuFind
+Es gibt eine ausgereifte Komplettlösung, die alle drei Funktionen (Verarbeitung der Metadaten, Suchmaschinenindex und Katalogoberfläche) in einer Open-Source-Lösung vereint: [VuFind](http://vufind-org.github.io/vufind/). Diese Lösung kann am ehesten als vollständiger Ersatz für ein kommerzielles Discovery-System gelten (mal abgesehen vom "Central Index" für elektronische Artikel). Wir verwenden VuFind in diesem Seminar nicht, weil die Software zu viele Schritte im Hintergrund erledigt, die das Verständnis der zugrundeliegenden Prozesse erschweren würden. VuFind ist international an vielen Bibliotheken im Einsatz und hat eine sehr aktive Community. In Deutschland finden regelmäßig Anwendertreffen statt, [im Oktober 2016 beispielsweise in Freiburg](https://www.ub.uni-freiburg.de/ihre-ub/veranstaltungen/vufind-anwendertreffen/). Die lange Historie von VuFind (Entwicklung seit 2008) ist gleichzeitig Hauptkritikpunkt: Der Code ist "gewachsen" und entsprechend schwierig zu warten. Die Komplettlösung ist wenig modular aufgebaut und damit schwieriger in andere Systeme integrierbar.
 
-Verarbeitung und Analyse der Metadaten: Von den in 2.2. genannten Alternativen sind vor allem Catmandu und d:swarm interessant.
+Alternativen für die Verarbeitung und Analyse der Metadaten wurden im vorigen Kapitel bereits diskutiert. Für das Ziel des Seminars kämen vor allem Catmandu und d:swarm in Frage. [Catmandu](http://librecat.org/) muss über die Kommandozeile gesteuert werden und hat damit eine höhere Einstiegshürde für diejenigen die grafische Oberflächen aus Windows gewohnt sind. [d:swarm](http://www.dswarm.org) hingegen bietet einen optischen Zugang, ist jedoch noch in einem relativ frühen Entwicklungsstadium und hat eine relativ komplexe Systemarchitektur.
 
-Suchmaschinenindex: Elasticsearch
-
-Katalogoberfläche: Blacklight
+Als Alternative für die Katalogoberfläche ist noch [Blacklight](http://projectblacklight.org/) zu nennen, das in den USA eine recht hohe Verbreitung an Universitätsbibliotheken findet.
