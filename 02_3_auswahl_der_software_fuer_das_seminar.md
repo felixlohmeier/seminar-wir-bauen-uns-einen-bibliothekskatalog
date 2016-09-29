@@ -2,9 +2,17 @@
 
 ## Software, die wir im Seminar verwenden werden
 
-Verarbeitung und Analyse der Metadaten: OpenRefine
-Suchmaschinenindex: Solr
-Katalogoberfläche: TYPO3-find
+**Verarbeitung und Analyse der Metadaten**: OpenRefine
+
+OpenRefine bietet ...
+
+**Suchmaschinenindex**: Solr
+
+Apache Solr ist die Standard-Suchmaschinentechnologie ... auch in vielen kommerziellen Discovery-Systemen...
+
+**Katalogoberfläche**: TYPO3-find
+
+TYPO3-find ist eine Erweiterung für das Content-Management-System TYPO3 und wurde an der Staats- und Universitätsbibliothek Göttingen entwickelt.
 
 ## Schaubild zum Datenfluss
 
