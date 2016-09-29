@@ -42,7 +42,7 @@ In der an das Referat anschließenden Diskussion wurden die Folgen des Einsatzes
 * Unter welchen Voraussetzungen (und in welchem Kontext) lohnt es sich, in welchem vielleicht eher nicht?
 
 Bei der Beantwortung dieser Fragen spielen zwei Punkte eine herausgehobene Rolle:
-1. Die strategische Entwicklung der Bibliothek: 
-2. Die Bedeutung von Open Source Communities: 
+1. Die strategische Entwicklung der Bibliothek: Der Einsatz von Open-Source-Software verlangt die dauerhafte Widmung von Ressourcen, entweder für Dienstleister oder für eigenes IT-Personal. Nur dann zahlt sich die Anpassbarkeit der Software wirklich aus.
+2. Die Bedeutung von Open Source Communities: Für wichtige Dienste sollte nur Software eingesetzt werden, die von einer lebendigen Community aus Interessierten und Nutzenden weiterentwickelt wird. So ist gewährleistet, dass Sicherheitsupdates erhältlich sind und Entwicklungsaufwände ggf. unter den Nutzenden geteilt werden können.
 
-Beispiele für Bibliotheken, die ihre Weiterentwicklungen öffentlich teilen, hat die Arbeitsgruppe code4lib aus den USA zusammengetragen: http://wiki.code4lib.org/Libraries_Sharing_Code
+Beispiele für Bibliotheken, die ihren Programmcode öffentlich teilen, hat die Arbeitsgruppe code4lib aus den USA zusammengetragen: http://wiki.code4lib.org/Libraries_Sharing_Code
