@@ -32,4 +32,4 @@ Es gibt eine ausgereifte Komplettlösung, die alle drei Funktionen (Verarbeitung
 
 Alternativen für die Verarbeitung und Analyse der Metadaten wurden im vorigen Kapitel bereits diskutiert. Für das Ziel des Seminars kämen vor allem Catmandu und d:swarm in Frage. [Catmandu](http://librecat.org/) muss über die Kommandozeile gesteuert werden und hat damit eine höhere Einstiegshürde für diejenigen die grafische Oberflächen aus Windows gewohnt sind. [d:swarm](http://www.dswarm.org) hingegen bietet einen optischen Zugang, ist jedoch noch in einem relativ frühen Entwicklungsstadium und hat eine relativ komplexe Systemarchitektur.
 
-Als Alternative für die Katalogoberfläche ist noch [Blacklight](http://projectblacklight.org/) zu nennen, das in den USA eine recht hohe Verbreitung an Universitätsbibliotheken findet. 
+Als Alternative für die Katalogoberfläche ist noch [Blacklight](http://projectblacklight.org/) zu nennen, das in den USA eine recht hohe Verbreitung an Universitätsbibliotheken findet.
