@@ -12,4 +12,5 @@
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 * [3. Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
+   * 3.1 Einführung in das Linux Terminal
 
