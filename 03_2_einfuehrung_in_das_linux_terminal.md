@@ -1,2 +1,2 @@
-# 3.2 Einführung in das Linux Terminal
+# 3.2 Einführung in die Linux Konsole
 
