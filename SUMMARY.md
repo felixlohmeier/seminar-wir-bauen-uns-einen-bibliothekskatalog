@@ -13,5 +13,5 @@
 * [Prüfungsleistungen](pruefungsleistungen.md)
 * [3. Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
    * 3.2 Einführung in das Linux Terminal
-   * 3.2 Übung: Etwas über das System herausfinden
+   * 3.3 Übung: Etwas über das System herausfinden
 
