@@ -15,4 +15,5 @@
    * 3.1 Installation der Systemumgebung
    * 3.2 Einführung in das Linux Terminal
    * 3.3 Übung: Etwas über das System herausfinden
+   * 3.4 Einführung in Schnittstellen zum Laden der Metadaten
 
