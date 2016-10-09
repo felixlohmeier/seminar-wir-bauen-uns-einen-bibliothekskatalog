@@ -1,11 +1,9 @@
 # 3.3 Übung: Etwas über das System herausfinden
 
 {% exercise %}
-Define a variable `x` equal to 10.
-{% initial %}
-var x =
+Wieviel Arbeitsspeicher ist auf dem System frei?
 {% solution %}
-var x = 10;
+free -h
 {% endexercise %}
 
 ---
