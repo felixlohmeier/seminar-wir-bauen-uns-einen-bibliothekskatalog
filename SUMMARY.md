@@ -12,7 +12,7 @@
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 * [3. Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
-   * [3.1 Installation der Systemumgebung](03_01_installation_der_systemumgebung.md)
+   * [3.1 Installation der Systemumgebung](03_1_installation_der_systemumgebung.md)
    * [3.2 Einführung in das Linux Terminal](03_2_einfuhrung_in_das_linux_terminal.md)
    * 3.3 Übung: Etwas über das System herausfinden
    * 3.4 Einführung in Schnittstellen zum Laden der Metadaten
