@@ -16,6 +16,4 @@ function magicFunc() {
 }
 {% endexercise %}
 
-/// Klicke mich
-Dieser Text ist zunächst versteckt.
-///
+This is a spoiler: {%s%}Hello World.{%ends%}
