@@ -16,4 +16,5 @@
    * 3.2 Einführung in das Linux Terminal
    * 3.3 Übung: Etwas über das System herausfinden
    * 3.4 Einführung in Schnittstellen zum Laden der Metadaten
+   * 3.5 Übung: Ausgewählte Metadaten der HAW-Bibliothek laden
 
