@@ -15,3 +15,7 @@ function magicFunc() {
     return 3;
 }
 {% endexercise %}
+
+/// Klicke mich
+Dieser Text ist zunächst versteckt.
+///
