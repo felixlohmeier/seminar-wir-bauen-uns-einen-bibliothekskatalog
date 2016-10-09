@@ -16,4 +16,10 @@ function magicFunc() {
 }
 {% endexercise %}
 
-This is a spoiler: {%s%}Hello World.{%ends%}
+---
+
+Aufgabe: Wieviel Arbeitsspeicher ist auf dem System frei?
+
+Lösung: {%s%}free -h{%ends%}
+
+---
