@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "exercises"
+        "exercises",
+        "spoiler"
     ],
     "pluginsConfig": {}
 }
