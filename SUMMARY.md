@@ -11,5 +11,5 @@
    * [2.3 Auswahl der Software für das Seminar](02_3_auswahl_der_software_fuer_das_seminar.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
-* 3. Grundinstallation der Arbeitsumgebung
+* [3. Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
 
