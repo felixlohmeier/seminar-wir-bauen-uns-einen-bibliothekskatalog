@@ -17,6 +17,7 @@
    * [3.5 Übung: Text über die Konsole erstellen](03_5_uebung_text_ueber_die_konsole_erstellen.md)
    * [3.6 Übung: Text durchsuchen und Wörter zählen](03_6_uebung_text_durchsuchen_und_woerter_zaehlen.md)
 * [4 Schnittstellen zum Laden der Metadaten](04_0_schnittstellen_zum_laden_der_metadaten.md)
+   * 4.1 Schnittstellen des Bibliotheksverbunds GBV
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
