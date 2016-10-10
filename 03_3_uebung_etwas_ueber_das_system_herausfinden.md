@@ -31,7 +31,7 @@ Lösung: {%s%}dpkg -l{%ends%}
 Lösung: {%s%}top{%ends%}
 Lösung: {%s%}ps -e{%ends%}
 
-### 7. Welche Netzwerkverbindungen sind gerade aktiv?
+### 8. Welche Netzwerkverbindungen sind gerade aktiv?
 Lösung: {%s%}
 * netstat -i
 * netstat -r
