@@ -18,6 +18,7 @@
    * [3.6 Übung: Text durchsuchen und Wörter zählen](03_6_uebung_text_durchsuchen_und_woerter_zaehlen.md)
 * [4 Schnittstellen zum Laden der Metadaten](04_0_schnittstellen_zum_laden_der_metadaten.md)
    * 4.1 Schnittstellen des Bibliotheksverbunds GBV
+   * 4.2 Übung: unAPI-Schnittstelle des GBV
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
