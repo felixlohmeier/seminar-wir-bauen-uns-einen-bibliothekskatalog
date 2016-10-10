@@ -31,7 +31,7 @@ Aus dem Referat von Jana Baier am 26.9.2016:
 * Fachliches Wissen in Linux erforderlich
 * Beim Umstieg auf Windows entstehen Kosten
 * Teilweise lizenzpflichtig
-* Kosteneinsparungen mögl. bei geringem Bedarf an Zusatzpaketen und Dienstleistungen (Support, Updates etc.)
+* Bei geringem Bedarf an Zusatzpaketen und Dienstleistungen (Support, Updates etc.) ist ein kommerzielles Produkt "von der Stange" ggf. insgesamt günstiger als der Einsatz von Open-Source-Software
 * Systeme unzureichend erprobt
 * U.U. schlechtere Performanz und geringerer Funktionsumfang als bei lizenzpflichtiger Software
 
