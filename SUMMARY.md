@@ -14,6 +14,7 @@
    * [3.2 Einführung in die Linux Konsole](03_2_einfuehrung_in_die_linux_konsole.md)
    * [3.4 Übung: Etwas über das System herausfinden](03_4_uebung_etwas_ueber_das_system_herausfinden.md)
    * 3.3 Verbinden mit dem Server über SSH
+   * 3.5. Übung: Text über die Konsole erstellen
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
