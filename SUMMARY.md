@@ -12,7 +12,7 @@
 * [3. Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
    * [3.1 Installation der Systemumgebung](03_1_installation_der_systemumgebung.md)
    * [3.2 Einführung in die Linux Konsole](03_2_einfuehrung_in_die_linux_konsole.md)
-   * [3.4 Übung: Etwas über das System herausfinden](03_3_uebung_etwas_ueber_das_system_herausfinden.md)
+   * [3.4 Übung: Etwas über das System herausfinden](03_4_uebung_etwas_ueber_das_system_herausfinden.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
