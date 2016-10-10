@@ -7,7 +7,8 @@ Welche Linux-Kommandos liefern die Antworten auf die folgenden Fragen? Ein Teil 
 ## Hilfreiche Grundlagen
 * Dateien und Verzeichnisse: siehe [Cheatsheet](http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/)
 * Abbruch / Programm beenden: ***Ctrl+C***
-* Handbuch eines Programms aufrufen: **man** ***Programmname***
+* Kurzhilfe eines Programms aufrufen: ***Programmname* --help**
+* Handbuch eines Programms aufrufen: **man *Programmname***
 * Automatische Ergänzung: ***Tab***
 * Vorige Kommandos anzeigen: ***Pfeiltaste nach oben***
 * Suche in Historie der Kommandozeile: ***Ctrl+R***
