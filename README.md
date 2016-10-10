@@ -26,9 +26,9 @@ Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei
 
 1. Vorlesung: [Einführung in Discovery-Systeme in Bibliotheken](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/01_0_Einfuehrung-Discovery-Systeme.html) (19.09.2016) 
 2. Vorlesung: [Open-Source-Software für Bibliothekskataloge](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_0_Open-Source-Software_fuer_Bibliothekskataloge.html) (26.09.2016) 
-3. Praxis: [Grundinstallation der Arbeitsumgebung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/03_0_grundinstallation_der_arbeitsumgebung.html) und [Schnittstellen zum Laden der Metadaten](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_0_schnittstellen_zum_laden_der_metadaten.html) (10.10.2016) 
-4. Praxis: Installation des Werkzeugs zur Datentransformation (OpenRefine) (17.10.2016)
-5. Vorlesung: Metadaten in Bibliotheken (24.10.2016)
+3. Praxis: [Grundinstallation der Arbeitsumgebung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/03_0_grundinstallation_der_arbeitsumgebung.html) (10.10.2016)
+4. Praxis: [Schnittstellen zum Laden der Metadaten](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_0_schnittstellen_zum_laden_der_metadaten.html) (17.10.2016) 
+5. Vorlesung: Metadaten in Bibliotheken; Praxis: Installation des Werkzeugs zur Datentransformation (OpenRefine) (24.10.2016)
 6. Praxis [3x]: Datentransformation mit OpenRefine (31.10.2016, 07.11.2016, 14.11.2016)
 7. Praxis: Installation des Suchmaschinenindex (Solr) (21.11.2016)
 8. Praxis [2x]: Konfiguration und Übungen mit Solr
