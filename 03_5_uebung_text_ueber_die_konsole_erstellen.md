@@ -1,2 +1,2 @@
-# 3.5. Übung: Text über die Konsole erstellen
+# 3.5 Übung: Text über die Konsole erstellen
 
