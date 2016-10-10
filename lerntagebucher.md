@@ -9,4 +9,4 @@ Die öffentlichen Lerntagebücher haben zwei Ziele:
 ## Blogs der Studierenden
 * Lena entdeckt: https://lenaentdeckt.wordpress.com/
 * Dennis lernt nicht aus: http://dennislerntnichtaus.wordpress.com
-* ...
+* Yu's Blog: http://xyopendiscovery.wordpress.com
