@@ -15,6 +15,7 @@
    * [3.4 Übung: Etwas über das System herausfinden](03_4_uebung_etwas_ueber_das_system_herausfinden.md)
    * 3.3 Verbinden mit dem Server über SSH
    * 3.5. Übung: Text über die Konsole erstellen
+   * 3.6. Übung: Text durchsuchen und Wörter zählen
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
