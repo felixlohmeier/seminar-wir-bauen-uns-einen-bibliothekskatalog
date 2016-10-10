@@ -16,7 +16,6 @@
    * [3.4 Übung: Etwas über das System herausfinden](03_4_uebung_etwas_ueber_das_system_herausfinden.md)
    * [3.5 Übung: Text über die Konsole erstellen](03_5_uebung_text_ueber_die_konsole_erstellen.md)
    * [3.6 Übung: Text durchsuchen und Wörter zählen](03_6_uebung_text_durchsuchen_und_woerter_zaehlen.md)
+* 4. Schnittstellen zum Laden der Metadaten
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
-* 4. Schnittstellen zum Laden der Metadaten
-
