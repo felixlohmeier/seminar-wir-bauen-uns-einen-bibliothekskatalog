@@ -15,10 +15,13 @@ Lösung: {%s%}df -H{%ends%}
 Lösung: {%s%}lscpu{%ends%}
 
 ### 4. Welches Betriebssystem, in welcher Version und mit welchem Linux-Kernel ist installiert?
-Lösung: {%s%}
+Lösung:
+
+{%s%}
 * cat /etc/issue
 * cat /etc/debian_version
 * uname -r
+
 {%ends%}
 
 ### 5. Wer ist gerade auf dem System angemeldet?
