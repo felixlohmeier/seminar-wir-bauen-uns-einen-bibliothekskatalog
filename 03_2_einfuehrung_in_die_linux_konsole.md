@@ -4,7 +4,7 @@ Wer Webserver administrieren möchte, der kommt an der [Kommandozeile](https://d
 
 In diesem Seminar verbinden wir uns von unseren Rechnern (auf denen Windows läuft) mit dem Linux-Server. Dafür nutzen wir das kleine Programm [Putty](http://www.putty.org). Für die Verbindung nutzen wir das SSH-Protokoll, damit die Verbindung vollständig verschlüsselt wird.
 
-```Windows-PC : Programm "Putty" <- SSH-Verbindung -> Linux-Server```
+Windows-PC : Programm "Putty" <- SSH-Verbindung -> Linux-Server
 
 Wenn wir uns mit Putty über SSH mit dem Linux-Server verbinden, dann bekommen wir die Kommandozeile von Linux angezeigt und können auf dem Linux-Server arbeiten, als wir ob direkt davor sitzen.
 
