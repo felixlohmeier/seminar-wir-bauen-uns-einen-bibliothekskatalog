@@ -20,6 +20,7 @@
    * 4.1 Schnittstellen des Bibliotheksverbunds GBV
    * 4.2 Übung: unAPI-Schnittstelle des GBV
    * 4.3 Übung: SRU-Schnittstelle des GBV
+   * 4.4 Übung: Vergleich der verschiedenen Formate
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
