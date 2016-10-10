@@ -4,6 +4,13 @@
 ## Aufgaben zu Linux-Kommandos
 Welche Linux-Kommandos liefern die Antworten auf die folgenden Fragen? Ein Teil der benötigten Kommandos findet sich auf dem im vorigen Kapitel erwähnten [Cheatsheet](http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/). Weitere Antworten finden sich über Suchen im Internet. Meist reicht es an die passenden Suchbegriffe das Wort "linux" mit anzuhängen.
 
+## Hilfreiche Grundlagen
+* Abbruch / Laufendes Programm beenden: Ctrl+C
+* Handbuch eines Programms aufrufen: man <Programmname>
+* Automatische Ergänzung in der Kommandozeile: Tab
+* Vorige Kommandos anzeigen: Pfeiltaste nach oben
+* Suche in Historie der Kommandozeile: Ctrl+R
+
 ### 1. Wieviel Arbeitsspeicher ist auf dem System frei?
 
 Lösung: {%s%}free -h{%ends%}
