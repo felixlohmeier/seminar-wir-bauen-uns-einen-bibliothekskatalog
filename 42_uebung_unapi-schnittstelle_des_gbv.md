@@ -29,26 +29,18 @@ Beispiel:
 * PPN: {%s%}834422018{%ends%}
 * ID des Katalogs beim GBV: {%s%}opac-de-18-302{%ends%} (Katalog der HAW-Bibliothek)
 
-PICA+
-```
+### PICA+
 {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=pp" > 834422018.pp{%ends%}
-```
 
-PICA-XML
-```
+### PICA-XML
 {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picaxml" > 834422018.picaxml{%ends%}
-```
 
-MARC 21
-```
+### MARC 21
 {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marc21" > 834422018.marc21{%ends%}
-```
 
-Weitere Formate
-```
-{%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marcxml" > 834422018.marcxml{%ends%}
-{%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=mods" > 834422018.mods{%ends%}
-{%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=dc" > 834422018.dc{%ends%}
-{%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=isbd" > 834422018.isbd{%ends%}
-{%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picahtml" > 834422018.html{%ends%}
-```
+### Weitere Formate
+* MARCXML: {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marcxml" > 834422018.marcxml{%ends%}
+* MODS: {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=mods" > 834422018.mods{%ends%}
+* DC: {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=dc" > 834422018.dc{%ends%}
+* ISBD: {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=isbd" > 834422018.isbd{%ends%}
+* PICA+ als HTML: {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picahtml" > 834422018.html{%ends%}
