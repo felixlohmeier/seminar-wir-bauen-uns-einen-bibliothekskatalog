@@ -14,15 +14,11 @@ Lösung: {%s%}df -H{%ends%}
 ### 3. Welche(r) Prozessor(en) stehen dem System zur Verfügung?
 Lösung: {%s%}lscpu{%ends%}
 
-### 4. Welches Betriebssystem, in welcher Version und mit welchem Linux-Kernel ist installiert?
+### 4. Welches Betriebssystem (a), in welcher Version (b) und mit welchem Linux-Kernel (c) ist installiert?
 Lösung:
-
-{%s%}
-* cat /etc/issue
-* cat /etc/debian_version
-* uname -r
-
-{%ends%}
+* (a) {%s%}cat /etc/issue{%ends%}
+* (b) {%s%}cat /etc/debian_version{%ends%}
+* (c) {%s%}uname -r{%ends%}
 
 ### 5. Wer ist gerade auf dem System angemeldet?
 Lösung: {%s%}w{%ends%}
@@ -31,11 +27,11 @@ Lösung: {%s%}w{%ends%}
 Lösung: {%s%}dpkg -l{%ends%}
 
 ### 7. Welche Prozesse laufen derzeit auf dem System?
-Lösung: {%s%}top{%ends%}
-Lösung: {%s%}ps -e{%ends%}
+Lösung:
+* {%s%}top{%ends%}
+* {%s%}ps -e{%ends%}
 
 ### 8. Welche Netzwerkverbindungen sind gerade aktiv?
-Lösung: {%s%}
-* netstat -i
-* netstat -r
-* {%ends%}
+Lösung:
+* {%s%}netstat -i{%ends%}
+* {%s%}netstat -r{%ends%}
