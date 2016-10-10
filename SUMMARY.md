@@ -9,7 +9,7 @@
    * [2.1 Referat zu Pro & Contra von Open Source](02_1_referat_zu_pro_&_contra_von_open_source.md)
    * [2.2 Open Source Software zur Verarbeitung und Analyse von Metadaten](02_2_open_source_software_zur_verarbeitung_und_analyse_.md)
    * [2.3 Auswahl der Software für das Seminar](02_3_auswahl_der_software_fuer_das_seminar.md)
-* [3. Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
+* [3 Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
    * [3.1 Installation der Systemumgebung](03_1_installation_der_systemumgebung.md)
    * [3.2 Einführung in die Linux Konsole](03_2_einfuehrung_in_die_linux_konsole.md)
    * [3.3 Verbinden mit dem Server über SSH](03_3_verbinden_mit_dem_server_ueber_ssh.md)
