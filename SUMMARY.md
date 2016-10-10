@@ -18,4 +18,5 @@
    * [3.6 Übung: Text durchsuchen und Wörter zählen](03_6_uebung_text_durchsuchen_und_woerter_zaehlen.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
+* 4. Schnittstellen zum Laden der Metadaten
 
