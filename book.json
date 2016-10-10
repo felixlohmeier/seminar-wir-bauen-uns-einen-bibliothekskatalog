@@ -1,6 +1,5 @@
 {
     "plugins": [
-        "-exercises",
         "spoiler"
     ],
     "pluginsConfig": {}
