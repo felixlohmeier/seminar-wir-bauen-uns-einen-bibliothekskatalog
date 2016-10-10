@@ -19,6 +19,7 @@
 * [4 Schnittstellen zum Laden der Metadaten](04_0_schnittstellen_zum_laden_der_metadaten.md)
    * 4.1 Schnittstellen des Bibliotheksverbunds GBV
    * 4.2 Übung: unAPI-Schnittstelle des GBV
+   * 4.3 Übung: SRU-Schnittstelle des GBV
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
