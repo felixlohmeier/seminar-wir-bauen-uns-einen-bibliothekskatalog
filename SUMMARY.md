@@ -12,7 +12,7 @@
 * [3. Grundinstallation der Arbeitsumgebung](03_0_grundinstallation_der_arbeitsumgebung.md)
    * [3.1 Installation der Systemumgebung](03_1_installation_der_systemumgebung.md)
    * [3.2 Einführung in die Linux Konsole](03_2_einfuehrung_in_die_linux_konsole.md)
-   * [3.3 Übung: Etwas über das System herausfinden](03_3_uebung_etwas_ueber_das_system_herausfinden.md)
+   * [3.4 Übung: Etwas über das System herausfinden](03_3_uebung_etwas_ueber_das_system_herausfinden.md)
    * [3.4 Einführung in Schnittstellen zum Laden der Metadaten](03_4_einfuehrung_in_schnittstellen_zum_laden_der_metadaten.md)
    * [3.5 Übung: Ausgewählte Metadaten der HAW-Bibliothek laden](03_5_uebung_ausgewaehlte_metadaten_der_haw-bibliothek_laden.md)
 * [Lerntagebücher](lerntagebucher.md)
