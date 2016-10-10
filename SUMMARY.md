@@ -17,7 +17,7 @@
    * [3.5 Übung: Text über die Konsole erstellen](03_5_uebung_text_ueber_die_konsole_erstellen.md)
    * [3.6 Übung: Text durchsuchen und Wörter zählen](03_6_uebung_text_durchsuchen_und_woerter_zaehlen.md)
 * [4 Schnittstellen zum Laden der Metadaten](04_0_schnittstellen_zum_laden_der_metadaten.md)
-   * 4.1 Schnittstellen des Bibliotheksverbunds GBV
+   * [4.1 Schnittstellen des Bibliotheksverbunds GBV](04_1_schnittstellen_des_bibliotheksverbunds_gbv.md)
    * 4.2 Übung: unAPI-Schnittstelle des GBV
    * 4.3 Übung: SRU-Schnittstelle des GBV
    * 4.4 Übung: Vergleich der verschiedenen Formate
