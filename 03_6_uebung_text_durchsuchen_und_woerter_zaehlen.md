@@ -11,7 +11,5 @@
 * ```cat war_and_peace.txt | grep -i -ow peace | wc```
 
 ## Siehe auch
-Ausführlichere Übung im Blog des Projekts Librecat/Catmandu:
-https://librecatproject.wordpress.com/2014/12/04/day-4-grep-less-and-wc/
-
-Bitte beachten: Die dort referenzierte Textdatei ist anders strukturiert als die obige *war_and_peace.txt* und liefert daher andere Zählergebnisse.
+1. Ausführlichere Übung im Blog des Projekts Librecat/Catmandu: https://librecatproject.wordpress.com/2014/12/04/day-4-grep-less-and-wc/. Dabei bitte beachten: Die dort referenzierte Textdatei ist anders strukturiert als die obige *war_and_peace.txt* und liefert daher andere Zählergebnisse.
+2. Dreistündiger Einführungskurs "Shell Lessons for Librarians" im Projekt "Library Carpentry" http://data-lessons.github.io/library-shell/
