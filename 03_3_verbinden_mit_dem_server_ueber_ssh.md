@@ -1,5 +1,7 @@
 # 3.3 Verbinden mit dem Server über SSH
 
+In diesem Seminar verbinden wir uns von unseren Rechnern (auf denen z.B. Windows läuft) mit dem Linux-Server. Für die Verbindung nutzen wir das SSH-Protokoll, damit die Verbindung vollständig verschlüsselt wird. Wenn wir uns über SSH mit dem Linux-Server verbinden, dann bekommen wir die Kommandozeile von Linux angezeigt und können auf dem Linux-Server arbeiten, als wir ob direkt davor sitzen.
+
 ## Schritt 1: Verbinden
 ### mit Windows
 Verbinden mit dem Server über SSH-Protokoll mit der kleinen Software Putty:
@@ -11,6 +13,9 @@ Verbinden mit dem Server über SSH-Protokoll mit der kleinen Software Putty:
 ### mit Linux oder Mac OS X
 * Terminal aufrufen
 * ssh *user*@*ip* (Beispiel: ```ssh felix@192.168.1.1```)
+
+### über die Weboberfläche von TurnKey Core
+Wenn Sie in Schritt 3.1 Turnkey Core installiert haben, dann können Sie auch das Web-Terminal aufrufen: 
 
 ## Schritt 2: Neues Passwort setzen
 1. Sicheres Passwort unter http://passwordsgenerator.net/ generieren (Empfehlung: Checkbox "Exclude Ambiguous Characters" aktivieren, das macht es leichter das Passwort einzutippen)
