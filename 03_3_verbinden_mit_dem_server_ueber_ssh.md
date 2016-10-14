@@ -8,12 +8,9 @@ Verbinden mit dem Server über SSH-Protokoll mit der kleinen Software Putty:
 * SSH-Verbindung starten
 * Kopieren und einfügen funktioniert bei Putty etwas anders als gewohnt. Das Einfügen aus der Zwischenablage erfolgt über einen einfachen *Rechtsklick*, es gibt kein Kontextmenü wie sonst unter Windows. Siehe dazu auch: https://kb.site5.com/shell-access-ssh/putty/putty-how-to-copy-and-paste-to-and-from-a-putty-window/
 
-### mit Linux
+### mit Linux oder Mac OS X
 * Terminal aufrufen
 * ssh *user*@*ip* (Beispiel: ```ssh felix@192.168.1.1```)
-
-### mit Mac OS X
-...
 
 ## Schritt 2: Neues Passwort setzen
 1. Sicheres Passwort unter http://passwordsgenerator.net/ generieren (Empfehlung: Checkbox "Exclude Ambiguous Characters" aktivieren, das macht es leichter das Passwort einzutippen)
