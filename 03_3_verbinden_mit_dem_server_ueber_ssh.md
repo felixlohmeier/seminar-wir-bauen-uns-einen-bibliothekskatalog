@@ -4,7 +4,7 @@ In diesem Seminar verbinden wir uns von unseren Rechnern (auf denen z.B. Windows
 
 ## Schritt 1: Verbinden
 ### mit Windows
-Verbinden mit dem Server über SSH-Protokoll mit der kleinen Software Putty:
+Verbinden mit dem Server über SSH-Protokoll mit der kleinen Software [Putty](http://www.putty.org):
 * putty.exe von http://www.putty.org herunterladen und ausführen
 * in das Feld "Host name" Benutzername@IP-Adresse eintragen (Beispiel: ```felix@192.168.1.1```)
 * SSH-Verbindung starten
@@ -15,7 +15,7 @@ Verbinden mit dem Server über SSH-Protokoll mit der kleinen Software Putty:
 * ssh *user*@*ip* (Beispiel: ```ssh felix@192.168.1.1```)
 
 ### über die Weboberfläche von TurnKey Core
-Wenn Sie in Schritt 3.1 Turnkey Core installiert haben, dann können Sie auch das Web-Terminal aufrufen: 
+Wenn Sie in Schritt 3.1 Turnkey Core installiert haben, dann können Sie auch das Web-Terminal aufrufen. Beispiel: https://192.168.1.1:12320 (192.168.1.1 durch die IP-Adresse ersetzen)
 
 ## Schritt 2: Neues Passwort setzen
 1. Sicheres Passwort unter http://passwordsgenerator.net/ generieren (Empfehlung: Checkbox "Exclude Ambiguous Characters" aktivieren, das macht es leichter das Passwort einzutippen)
