@@ -7,6 +7,7 @@ Die öffentlichen Lerntagebücher haben zwei Ziele:
 2. Anreiz für andere Studierende (auch außerhalb der Hochschule) sich mit dem Skript im Selbststudium zu beschäftigen.
 
 ## Blogs der Studierenden
-* Lena entdeckt: https://lenaentdeckt.wordpress.com/
+* Lena entdeckt: https://lenaentdeckt.wordpress.com
 * Dennis lernt nicht aus: http://dennislerntnichtaus.wordpress.com
 * Yu's Blog: http://xyopendiscovery.wordpress.com
+* eine Reise um das Programmieren in 133 Tagen: https://jgoouh.wordpress.com
