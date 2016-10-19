@@ -2,6 +2,8 @@
 
 Wer Webserver administrieren möchte, der kommt an der [Kommandozeile](https://de.wikipedia.org/wiki/Kommandozeile) von Linux nicht vorbei. In Textform lassen sich Server einfach sicherer und schneller steuern als über grafische Oberflächen.
 
+![](images/putty2.png)
+
 Eine gute Einführung in die Linux-Kommandozeile bietet [http://linuxcommand.org](http://linuxcommand.org) von William E. Shotts, der auch ein kostenfreies [540-Seiten-Buch](http://linuxcommand.org/tlcl.php) darüber geschrieben hat.
 
 Es gibt sehr viele praktische kleine Programme auf der Kommandozeile. Zur Übersicht eignet sich daher ein Spickzettel ("Cheatsheet") sehr gut. Ein Beispiel für die unzähligen Cheatsheets: [http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/](http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/).
