@@ -11,3 +11,4 @@ Die öffentlichen Lerntagebücher haben zwei Ziele:
 * Dennis lernt nicht aus: http://dennislerntnichtaus.wordpress.com
 * Yu's Blog: http://xyopendiscovery.wordpress.com
 * eine Reise um das Programmieren in 133 Tagen: https://jgoouh.wordpress.com
+* Julia baut: https://juliabaut.wordpress.com
