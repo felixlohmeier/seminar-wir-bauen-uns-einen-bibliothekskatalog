@@ -11,3 +11,6 @@ Inhalte:
 1. [Referat zu Pro & Contra von Open Source](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_1_referat_zu_pro_&_contra_von_open_source.html)
 2. [Open Source Software zur Verarbeitung und Analyse von Metadaten](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_2_open_source_software_zur_verarbeitung_und_analyse_.html) (Pfeffer 2016)
 3. [Auswahl der Software für das Seminar](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_3_auswahl_der_software_fuer_das_seminar.html)
+
+Beiträge in den Lerntagebüchern der Studierenden:
+* [Muss es denn immer etwas kosten?](https://dennislerntnichtaus.wordpress.com/2016/09/27/muss-es-denn-immer-etwas-kosten/)
