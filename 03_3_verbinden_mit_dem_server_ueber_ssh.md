@@ -10,9 +10,17 @@ Verbinden mit dem Server über SSH-Protokoll mit der kleinen Software [Putty](ht
 * SSH-Verbindung starten
 * Kopieren und einfügen funktioniert bei Putty etwas anders als gewohnt. Das Einfügen aus der Zwischenablage erfolgt über einen einfachen *Rechtsklick*, es gibt kein Kontextmenü wie sonst unter Windows. Siehe dazu auch: https://kb.site5.com/shell-access-ssh/putty/putty-how-to-copy-and-paste-to-and-from-a-putty-window/
 
-### mit Linux oder Mac OS X
+![](images/putty.png)
+
+### mit Linux
 * Terminal aufrufen
 * ssh *user*@*ip* (Beispiel: ```ssh felix@192.168.1.1```)
+* siehe auch: https://wiki.ubuntuusers.de/SSH/#Der-SSH-Client
+
+### mit Mac OS X
+* Terminal aufrufen
+* ssh *user*@*ip* (Beispiel: ```ssh felix@192.168.1.1```)
+* siehe auch: http://macs-moritz.com/ssh-verbindung-via-terminal-unter-mac-os-x
 
 ### über die Weboberfläche von TurnKey Core
 Wenn Sie in Schritt 3.1 Turnkey Core installiert haben, dann können Sie auch das Web-Terminal aufrufen. Beispiel: https://192.168.1.1:12320 (192.168.1.1 durch die IP-Adresse ersetzen)
