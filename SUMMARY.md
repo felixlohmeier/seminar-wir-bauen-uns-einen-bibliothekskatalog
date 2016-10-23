@@ -21,8 +21,8 @@
    * [4.2 Übung: unAPI-Schnittstelle des GBV](04_2_uebung_unapi-schnittstelle_des_gbv.md)
    * [4.3 Übung: Vergleich der verschiedenen Formate](04_3_uebung_vergleich_der_verschiedenen_formate.md)
    * [4.4 Download der Metadaten](04_4_download_der_metadaten.md)
-* [Lerntagebücher](lerntagebucher.md)
-* [Prüfungsleistungen](pruefungsleistungen.md)
 * [5 Exkurs zu Metadaten in Bibliotheken](05_0_exkurs_zu_metadaten_in_bibliotheken.md)
    * 5.1 Einführung in Metadatenformate
+* [Lerntagebücher](lerntagebucher.md)
+* [Prüfungsleistungen](pruefungsleistungen.md)
 
