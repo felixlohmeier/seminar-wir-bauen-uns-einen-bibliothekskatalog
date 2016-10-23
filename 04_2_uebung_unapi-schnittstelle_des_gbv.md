@@ -1,8 +1,12 @@
 # 4.2 Übung: unAPI-Schnittstelle des GBV
 
+Die Verbundzentrale des Bibliotheksverbunds bietet derzeit keinen einfachen Weg an, um regelmäßig vollständige Abzüge der Daten einer Bibliothek zu bekommen. Dafür gibt es aber mehrere Schnittstellen, die einen Abruf einzelner Datensätze erlauben. Wir nutzen eine dieser Schnittstellen, die sogenannte "unAPI".
+
 Informationen zur unAPI-Schnittstelle des GBV: https://www.gbv.de/wikis/cls/unAPI
 
-Für die unAPI wird stets eine PPN eines Datensatzes benötigt.
+Für den Abruf von Datensätzen über die unAPI wird die jeweilige Identifikationsnummer des Datensatzes (in den Bibliothekssystemen des GBV "PPN" genannt) benötigt. Diese wird im Bibliothekskatalog angezeigt.
+
+![Screenshot des HAW-Katalogs](images/screenshot-haw-katalog-ppn.png)
 
 ## Aufgabe: Download mit curl
 
