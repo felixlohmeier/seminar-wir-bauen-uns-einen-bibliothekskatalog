@@ -23,4 +23,5 @@
    * [4.4 Download der Metadaten](04_4_download_der_metadaten.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
+* 5 Exkurs zu Metadaten in Bibliotheken
 
