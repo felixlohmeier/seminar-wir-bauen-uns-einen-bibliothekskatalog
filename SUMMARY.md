@@ -23,6 +23,7 @@
    * [4.4 Download der Metadaten](04_4_download_der_metadaten.md)
 * [5 Exkurs zu Metadaten in Bibliotheken](05_0_exkurs_zu_metadaten_in_bibliotheken.md)
    * 5.1 Einführung in Metadatenformate
+   * 5.2 Linked Data
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
