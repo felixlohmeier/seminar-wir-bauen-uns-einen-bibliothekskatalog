@@ -22,7 +22,7 @@
    * [4.3 Übung: Vergleich der verschiedenen Formate](04_3_uebung_vergleich_der_verschiedenen_formate.md)
    * [4.4 Download der Metadaten](04_4_download_der_metadaten.md)
 * [5 Exkurs zu Metadaten in Bibliotheken](05_0_exkurs_zu_metadaten_in_bibliotheken.md)
-   * 5.1 Einführung in Metadatenformate
+   * [5.1 Einführung in Metadatenformate](05_1_einfuehrung_in_metadatenformate.md)
    * 5.2 Linked Data
    * 5.3 Initiativen zum Austausch von Metadaten
 * [Lerntagebücher](lerntagebucher.md)
