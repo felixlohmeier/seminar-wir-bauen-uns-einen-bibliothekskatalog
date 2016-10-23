@@ -4,7 +4,7 @@
 
 http://www.slideshare.net/suvanni/auf-du-und-du-mit-dublin-core-co-berufsfeld-metadatenmanagement-im-kontext-der-bibliothek-der-zukunft
 
-[![Screenshot Präsentation Kirsten Jeude](images/screenshot-jeude-2013.png)](de.slideshare.net/suvanni/auf-du-und-du-mit-dublin-core-co-berufsfeld-metadatenmanagement-im-kontext-der-bibliothek-der-zukunft)
+[![Screenshot Präsentation Kirsten Jeude](images/screenshot-jeude-2013.png)](http://www.slideshare.net/suvanni/auf-du-und-du-mit-dublin-core-co-berufsfeld-metadatenmanagement-im-kontext-der-bibliothek-der-zukunft)
 
 ## Interview mit Kirsten Jeude
 ZBW Podcast: ["Kirsten Jeude - Die Datenübersetzerin"](https://www.youtube.com/watch?v=YwbRTDvt_sA)
