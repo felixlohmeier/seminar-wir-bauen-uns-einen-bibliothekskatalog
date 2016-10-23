@@ -7,7 +7,6 @@ Inhalte:
 2. Übung: unAPI-Schnittstelle des GBV
 3. Übung: Vergleich der verschiedenen Formate
 4. Übung: SRU-Schnittstelle des GBV
-5. Download der Metadaten
 
 Beiträge der Studierenden in den Lerntagebüchern:
 * [Was sind eigentlich Metadaten und wie bekomme ich die nun?]( https://dennislerntnichtaus.wordpress.com/2016/10/19/was-sind-eigentlich-metadaten-und-wie-bekomme-ich-die-nun/)
