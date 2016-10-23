@@ -2,17 +2,34 @@
 
 ## Aufgabe 1: Shell-Script zum Download der Metadaten schreiben
 
-* Mit curl über die unAPI-Schnittstelle
+* Mit curl über die unAPI-Schnittstelle wie in Kapitel 4.2
 * Format: PICAXML
-* Nicht zuviele Abfragen auf einmal, daher Wartezeit 1 Sekunde einbauen
-* Liste der PPNs schwierig zu generieren, wird bereitgestellt
+* Bei zu schnell aufeinander folgenden Abfragen verweigert die Schnittstelle evtl. die Antwort, daher Wartezeit 1 Sekunde zwischen den Abfragen einbauen
+* Eine Liste der PPNs ist schwierig zu generieren, hier eine Datei mit 100 Stück: [100ppns.txt](data/100ppns.txt)
 
 **Literaturtipps:**
 * https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/
 * http://stackoverflow.com/questions/16131321/shell-script-using-curl-to-loop-through-urls
 
 ## Lösung
-...
+
+```
+#!/bin/bash
+url=curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:"
+format=picaxml
+while read ppn
+do
+    content=$(curl "{$url}${ppn}&format=${format}")
+    echo $ppn
+    echo $content >> $ppn.picaxml
+    sleep 1
+done < 100ppns.txt
+```
+
+* Diesen Textinhalt in einer Datei abspeichern, z.B. mit ```nano download.sh```
+* Danach muss das Script noch ausführbar gemacht werden: chmod +x download.sh
+* Im gleichen Ordner muss die Datei 100ppns.txt liegen, Download z.B. mit ```curl ```
+* Script starten mit ./download.sh
 
 ## Aufgabe 2: Heruntergeladene XML-Dateien zusammenführen
 
