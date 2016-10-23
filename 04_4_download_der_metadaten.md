@@ -1,8 +1,8 @@
 # 4.4 Download der Metadaten
 
-## Aufgabe 1: 100 PPNs aus dem Katalog notieren
+## Aufgabe 1: 100 PPNs aus dem Katalog in einer Text-Datei notieren
 
-Für die Abfrage über die unAPI-Schnittstelle benötigen wir die Identifikationsnummern (hier PPNs) derjenigen Datensätze, die wir abfragen wollen. Also brauchen wir eine Liste der PPns, z.B. in einer einfachen Text-Datei.
+Für die Abfrage über die unAPI-Schnittstelle benötigen wir die Identifikationsnummern (hier PPNs) derjenigen Datensätze, die wir abfragen wollen. Also brauchen wir eine Liste der PPNs, z.B. in einer einfachen Text-Datei.
 
 ## Lösung
 
@@ -10,12 +10,9 @@ Folgende Abfrage über die [SRU-Schnittstelle des GBV](https://www.gbv.de/wikis/
 
 {%s%}http://sru.gbv.de/opac-de-18-302?operation=searchRetrieve&query=pica.all%3Dopen&maximumRecords=100&startRecord=1&recordSchema=picaxml{%ends%}
 
-Daraus können wir die PPNs im Feld 003@ mit grep extrahieren:
-{%s%}http://sru.gbv.de/opac-de-18-302?operation=searchRetrieve&query=pica.all%3Dopen&maximumRecords=100&startRecord=1&recordSchema=picaxml{%ends%}
+Daraus können wir die PPNs im Feld 003@ mit grep und sed extrahieren:
 
-curl "http://sru.gbv.de/opac-de-18-302?operation=searchRetrieve&query=pica.all%3Dopen&maximumRecords=100&startRecord=1&recordSchema=picaxml" | grep -A 1 "003" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | > 100ppns_sru-open.txt
-
-
+{%s%}curl "http://sru.gbv.de/opac-de-18-302?operation=searchRetrieve&query=pica.all%3Dopen&maximumRecords=100&startRecord=1&recordSchema=picaxml" | grep --no-group-separator -A 1 "003@" | sed 's/^ *//; s/ *$//; s/<[^>]*>//g; /^$/d' > 100ppns.txt{%ends%}
 
 ## Aufgabe 2: Shell-Script zum Download der Metadaten schreiben
 
@@ -35,12 +32,10 @@ curl "http://sru.gbv.de/opac-de-18-302?operation=searchRetrieve&query=pica.all%3
 url=http://unapi.gbv.de/?id=opac-de-18-302:ppn:
 format=picaxml
 mkdir download
-curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/data/100ppns.txt
 
 while read ppn
 do
     content=$(curl "{$url}${ppn}&format=${format}")
-    echo $ppn
     echo $content >> download/$ppn.picaxml
     sleep 1
 done < 100ppns.txt
