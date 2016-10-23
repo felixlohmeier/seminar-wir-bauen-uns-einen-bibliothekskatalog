@@ -14,3 +14,4 @@ Inhalte:
 
 Beiträge in den Lerntagebüchern der Studierenden:
 * [Muss es denn immer etwas kosten?](https://dennislerntnichtaus.wordpress.com/2016/09/27/muss-es-denn-immer-etwas-kosten/)
+[* Die Sache mit der Katze im Sack… oder in der Decke – Teil 2](https://jgoouh.wordpress.com/2016/10/16/die-sache-mit-der-katze-im-sack-oder-in-der-decke-teil-2-achtung-dieser-beitrag-beinhaltet-echten-cat-content/)
