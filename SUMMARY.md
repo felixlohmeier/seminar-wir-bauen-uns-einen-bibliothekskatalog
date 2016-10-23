@@ -24,4 +24,5 @@
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 * [5 Exkurs zu Metadaten in Bibliotheken](05_0_exkurs_zu_metadaten_in_bibliotheken.md)
+   * 5.1 Einführung in Metadatenformate
 
