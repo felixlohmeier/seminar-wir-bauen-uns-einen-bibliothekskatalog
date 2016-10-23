@@ -24,7 +24,7 @@
 * [5 Exkurs zu Metadaten in Bibliotheken](05_0_exkurs_zu_metadaten_in_bibliotheken.md)
    * [5.1 Einführung in Metadatenformate](05_1_einfuehrung_in_metadatenformate.md)
    * [5.2 Linked Data](05_2_linked_data.md)
-   * 5.3 Initiativen zum Austausch von Metadaten
+   * [5.3 Initiativen zum Austausch von Metadaten](05_3_initiativen_zum_austausch_von_metadaten.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
