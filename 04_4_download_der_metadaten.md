@@ -4,6 +4,8 @@
 
 * Mit curl über die unAPI-Schnittstelle
 * Format: PICAXML
+* Nicht zuviele Abfragen auf einmal, daher Wartezeit 1 Sekunde einbauen
+* Liste der PPNs schwierig zu generieren, wird bereitgestellt
 
 **Literaturtipps:**
 * https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/
