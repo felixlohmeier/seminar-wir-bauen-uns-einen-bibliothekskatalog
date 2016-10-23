@@ -1,53 +1,59 @@
 # 4.3 Übung: Vergleich der verschiedenen Formate
 
-XML-Formate lassen sich leichter vergleichen
-Umwandlung PP in PICAXML und MARC21 in MARCXML ist verlustfrei
+Im vorigen Abschnitt haben wir beispielhaft Katalogdaten in verschiedenen Formaten heruntergeladen. Jetzt stellt sich die Frage, mit welchem dieser Formate wir weiterarbeiten wollen. Wie eingangs beschrieben, suchen wir ein einfach zu verarbeitendes, gut strukturiertes Format, dass alle benötigten Daten beinhaltet. Um eine Entscheidung für eines der Formate treffen zu können, sollten wir die heruntergeladenen Metadaten mit dem OPAC abgleichen (Aufgabe 1) und die Formate untereinander vergleichen (Aufgabe 2).
 
-Kopie in die Zwischenablage in Putty:
-"PuTTY's copy and paste works entirely with the mouse. In order to copy text to the clipboard, you just click the left mouse button in the terminal window, and drag to select text. When you let go of the button, the text is automatically copied to the clipboard."
-siehe http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter3.html#3.1.1
+## Aufgabe 1: Heruntergeladene Metadaten mit der Anzeige im OPAC abgleichen
 
-PPN: 834422018
-https://kataloge.uni-hamburg.de/DB=2/XMLPRS=N/PPN?PPN=834422018
+Im [Katalog der HAW Hamburg](https://kataloge.uni-hamburg.de/LNG=DU/DB=2/) werden in der Detailansicht eine ganze Reihe von Metadaten zu den Bibliotheksbeständen angezeigt, die wir auch in unserem zukünftigen Katalog verwenden wollen. Suchen Sie einzelne Wörter aus dem Katalogeintrag in den heruntergeladenen Metadaten, um festzustellen, ob diese Wörter in den jeweiligen Formaten überhaupt enthalten sind.
 
-curl -s => silent
-sed 's/^ *//'  => left trim
-sed 's/ *$//'  => right trim
-sed '/^$/d'    => remove empty line
-sed 's/--/\n/g' => break -- (marcxml)
-sed 's/^*// => einleitendes Sternchen entfernen (isbd)
-sort => 
-uniq => 
+Am einfachsten ist es, wenn Sie dazu Texte im OPAC markieren und in die Zwischenablage kopieren. In den meisten Browsern funktioniert dies über die Tastenkombination ```STRG+C```. Das Einfügen in Putty hingegen funktioniert anders als erwartet mit einem Rechtsklick.
 
-XPATH ODER SED?
-s/<[^>]*>//g'
-xpath -q -e "string(*)"
+Aus dem [Benutzerhandbuch von Putty](http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter3.html#3.1.1):
+> "PuTTY's copy and paste works entirely with the mouse. In order to copy text to the clipboard, you just click the left mouse button in the terminal window, and drag to select text. When you let go of the button, the text is automatically copied to the clipboard."
 
-picaxml
-curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picaxml" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.picaxml.strip
+## Lösung
 
-marcxml
-curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marcxml" | sed 's/--/\n/g' | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.marcxml.strip
+PPN 834422018 direkt im OPAC aufrufen:
+* {%s%}https://kataloge.uni-hamburg.de/DB=2/XMLPRS=N/PPN?PPN=834422018{%ends%}
+* {%s%}Die Zahl am Ende der URL kann entsprechend angepasst werden.{%ends%}
 
-dc
-curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=dc" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.dc.strip
+Suche nach Wörtern in den heruntergeladenen Metadaten:
+* {%s%}```grep -i -n -H "Lehrbuch" 834422018*```{%ends%}
+* {%s%}Im Ordner mit den Dateien ausführen{%ends%}
 
-mods
-curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=mods" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.mods.strip
+## Aufgabe 2: Direkter Vergleich der Metadatenformate
 
-isbd
-curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=isbd" | sed 's/^*//; /^$/d' | sort | uniq > 834422018.isbd.strip
+Vergleichen Sie das interne Format des Bibliothekssystems (PICA+/PICAXML) mit den ebenfalls über die Schnittstellen des GBV angebotenen Formaten MARC21/MARCXML, DC und MODS. Die Umwandlung von PICA+ in PICAXML und MARC21 in MARCXML ist verlustfrei, so dass drei Vergleiche zu tätigen sind:
+1. PICAXML vs. MARCXML
+2. PICAXML vs. DC
+3. PICAXML vs. MODS
 
-diff -u 834422018.picaxml.strip 834422018.marcxml.strip
-diff -u 834422018.picaxml.strip 834422018.dc.strip
-diff -u 834422018.picaxml.strip 834422018.mods.strip
+Für den Vergleich können Sie Onlinetools wie [Diff Checker](https://www.diffchecker.com/) oder [Tools auf der Kommandozeile](http://www.tecmint.com/best-linux-file-diff-tools-comparison/) verwenden.
 
-vimdiff 834422018.picaxml.strip 834422018.marcxml.strip
-vimdiff 834422018.picaxml.strip 834422018.dc.strip
-vimdiff 834422018.picaxml.strip 834422018.mods.strip
-(Beenden mit zweimal :q <enter>)
+## Lösung
 
-Suche nach Begriffen aus Katalogeintrag:
-https://kataloge.uni-hamburg.de/DB=2/XMLPRS=N/PPN?PPN=834422018
-Im Ordner mit den Dateien ausführen
-grep -i -n -H "Lehrbuch" 834422018*
+Vorverarbeitung:
+* picaxml: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picaxml" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.picaxml.strip```{%ends%}
+* marcxml: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marcxml" | sed 's/--/\n/g' | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.marcxml.strip```{%ends%}
+* dc: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=dc" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.dc.strip```{%ends%}
+* mods: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=mods" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.mods.strip```{%ends%}
+
+Vergleich picaxml mit marcmxl/dc/mods:
+* picaxml vs. marcxml: {%s%}```diff -u 834422018.picaxml.strip 834422018.marcxml.strip```{%ends%}
+* picaxml vs. dc: {%s%}```diff -u 834422018.picaxml.strip 834422018.dc.strip```{%ends%}
+* picaxml vs. mods: {%s%}```diff -u 834422018.picaxml.strip 834422018.mods.strip```{%ends%}
+
+Grafischer Vergleich picaxml mit marcxml/dc/mods:
+* picaxml vs. marcxml: {%s%}```vimdiff 834422018.picaxml.strip 834422018.marcxml.strip```{%ends%}
+* picaxml vs. dc: {%s%}```vimdiff 834422018.picaxml.strip 834422018.dc.strip```{%ends%}
+* picaxml vs. mods: {%s%}```vimdiff 834422018.picaxml.strip 834422018.mods.strip```{%ends%}
+* Tipp: {%s%}Beenden von vimdiff mit zweimal ```:q``` und enter{%ends%}
+
+Erläuterungen zu einzelnen Schritten der Vorverarbeitung:
+* {%s%}```curl -s``` => keine Statusinfos ausgeben (silent){%ends%}
+* {%s%}```sed 's/^ *//'``` => Leerzeichen links entfernen{%ends%}
+* {%s%}```sed 's/ *$//'``` => Leerzeichen rechts entfernen{%ends%}
+* {%s%}```sed '/^$/d'``` => leere Zeilen entfernen{%ends%}
+* {%s%}```sed 's/--/\n/g'``` => Trennzeichen ```--``` durch Zeilenumbrüche ersetzen(marcxml){%ends%}
+* {%s%}sort => Alle Zeilen alphanumerisch sortieren{%ends%}
+* {%s%}uniq => Doppelte Zeilen entfernen{%ends%}
