@@ -18,7 +18,7 @@ PPN 834422018 direkt im OPAC aufrufen:
 * {%s%}Die Zahl am Ende der URL kann entsprechend angepasst werden.{%ends%}
 
 Suche nach Wörtern in den heruntergeladenen Metadaten:
-* {%s%}```grep -i -n -H "Lehrbuch" 834422018*```{%ends%}
+* {%s%}grep -i -n -H "Lehrbuch" 834422018*{%ends%}
 * {%s%}Im Ordner mit den Dateien ausführen{%ends%}
 
 ## Aufgabe 2: Direkter Vergleich der Metadatenformate
@@ -33,27 +33,27 @@ Für den Vergleich können Sie Onlinetools wie [Diff Checker](https://www.diffch
 ## Lösung
 
 Vorverarbeitung:
-* picaxml: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picaxml" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.picaxml.strip```{%ends%}
-* marcxml: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marcxml" | sed 's/--/\n/g' | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.marcxml.strip```{%ends%}
-* dc: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=dc" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.dc.strip```{%ends%}
-* mods: {%s%}```curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=mods" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.mods.strip```{%ends%}
+* picaxml: {%s%}curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picaxml" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.picaxml.strip{%ends%}
+* marcxml: {%s%}curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marcxml" | sed 's/--/\n/g' | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.marcxml.strip{%ends%}
+* dc: {%s%}curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=dc" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.dc.strip{%ends%}
+* mods: {%s%}curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=mods" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.mods.strip{%ends%}
 
 Vergleich picaxml mit marcmxl/dc/mods:
-* picaxml vs. marcxml: {%s%}```diff -u 834422018.picaxml.strip 834422018.marcxml.strip```{%ends%}
-* picaxml vs. dc: {%s%}```diff -u 834422018.picaxml.strip 834422018.dc.strip```{%ends%}
-* picaxml vs. mods: {%s%}```diff -u 834422018.picaxml.strip 834422018.mods.strip```{%ends%}
+* picaxml vs. marcxml: {%s%}diff -u 834422018.picaxml.strip 834422018.marcxml.strip{%ends%}
+* picaxml vs. dc: {%s%}diff -u 834422018.picaxml.strip 834422018.dc.strip{%ends%}
+* picaxml vs. mods: {%s%}diff -u 834422018.picaxml.strip 834422018.mods.strip{%ends%}
 
 Grafischer Vergleich picaxml mit marcxml/dc/mods:
-* picaxml vs. marcxml: {%s%}```vimdiff 834422018.picaxml.strip 834422018.marcxml.strip```{%ends%}
-* picaxml vs. dc: {%s%}```vimdiff 834422018.picaxml.strip 834422018.dc.strip```{%ends%}
-* picaxml vs. mods: {%s%}```vimdiff 834422018.picaxml.strip 834422018.mods.strip```{%ends%}
-* Tipp: {%s%}Beenden von vimdiff mit zweimal ```:q``` und enter{%ends%}
+* picaxml vs. marcxml: {%s%}vimdiff 834422018.picaxml.strip 834422018.marcxml.strip{%ends%}
+* picaxml vs. dc: {%s%}vimdiff 834422018.picaxml.strip 834422018.dc.strip{%ends%}
+* picaxml vs. mods: {%s%}vimdiff 834422018.picaxml.strip 834422018.mods.strip{%ends%}
+* Tipp: {%s%}Beenden von vimdiff mit zweimal :q und enter{%ends%}
 
 Erläuterungen zu einzelnen Schritten der Vorverarbeitung:
-* {%s%}```curl -s``` => keine Statusinfos ausgeben (silent){%ends%}
-* {%s%}```sed 's/^ *//'``` => Leerzeichen links entfernen{%ends%}
-* {%s%}```sed 's/ *$//'``` => Leerzeichen rechts entfernen{%ends%}
-* {%s%}```sed '/^$/d'``` => leere Zeilen entfernen{%ends%}
-* {%s%}```sed 's/--/\n/g'``` => Trennzeichen ```--``` durch Zeilenumbrüche ersetzen(marcxml){%ends%}
-* {%s%}sort => Alle Zeilen alphanumerisch sortieren{%ends%}
-* {%s%}uniq => Doppelte Zeilen entfernen{%ends%}
+* keine Statusinfos ausgeben (silent): {%s%}curl -s{%ends%}
+* Leerzeichen links entfernen: {%s%}sed 's/^ *//'{%ends%}
+* Leerzeichen rechts entfernen: {%s%}sed 's/ *$//'{%ends%}
+* Leere Zeilen entfernen: {%s%}sed '/^$/d'{%ends%}
+* Trennzeichen -- durch Zeilenumbrüche ersetzen(marcxml): {%s%}sed 's/--/\n/g'{%ends%}
+* Alle Zeilen alphanumerisch sortieren: {%s%}sort{%ends%}
+* Doppelte Zeilen entfernen: {%s%}uniq{%ends%}
