@@ -12,3 +12,4 @@ Beiträge der Studierenden in den Lerntagebüchern:
 * [Was sind eigentlich Metadaten und wie bekomme ich die nun?]( https://dennislerntnichtaus.wordpress.com/2016/10/19/was-sind-eigentlich-metadaten-und-wie-bekomme-ich-die-nun/)
 * [Metadaten](https://juliabaut.wordpress.com/2016/10/23/metadaten/)
 * [Schnittstellen zum Laden der Metadaten](https://lenaentdeckt.wordpress.com/2016/10/23/schnittstellen-zum-laden-der-metadaten/)
+* [Metadaten Day](https://xyopendiscovery.wordpress.com/2016/10/24/metadaten-day/)
