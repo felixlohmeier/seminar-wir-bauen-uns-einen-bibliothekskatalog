@@ -17,3 +17,4 @@ Beiträge der Studierenden in den Lerntagebüchern:
 * [Erste Schritte mit der Linuxkonsole](https://lenaentdeckt.wordpress.com/2016/10/13/erste-schritte-mit-der-linuxkonsole/) und [Linux und das Ninjapasswort](https://lenaentdeckt.wordpress.com/2016/10/13/linux-und-das-ninjapasswort/)
 * [Die Sache mit der Katze im Sack… oder in der Decke – Teil 2](https://jgoouh.wordpress.com/2016/10/16/die-sache-mit-der-katze-im-sack-oder-in-der-decke-teil-2-achtung-dieser-beitrag-beinhaltet-echten-cat-content/)
 * [Textbearbeitung mit Linux](https://lenaentdeckt.wordpress.com/2016/10/23/textbearbeitung-mit-linux/)
+* [Wie oft kommt in dem Roman Carmilla eigentlich ihr Name vor?](https://danielacodes.wordpress.com/2016/10/22/wie-oft-kommt-in-dem-roman-carmilla-eigentlich-ihr-name-vor/)
