@@ -1,6 +1,6 @@
 # 4.2 Übung: unAPI-Schnittstelle des GBV
 
-Die Verbundzentrale des Bibliotheksverbunds bietet derzeit keinen einfachen Weg an, um regelmäßig vollständige Abzüge der Daten einer Bibliothek zu bekommen. Dafür gibt es aber mehrere Schnittstellen, die einen Abruf einzelner Datensätze erlauben. Wir nutzen eine dieser Schnittstellen, die sogenannte "unAPI".
+Die Verbundzentrale des Bibliotheksverbunds bietet derzeit keinen einfachen Weg an, um regelmäßig vollständige Abzüge der Daten einer Bibliothek zu bekommen. Dafür gibt es aber mehrere Schnittstellen, die einen Abruf einzelner Datensätze erlauben. Wir nutzen für diese Übung eine dieser Schnittstellen, die sogenannte "unAPI".
 
 Informationen zur unAPI-Schnittstelle des GBV: https://www.gbv.de/wikis/cls/unAPI
 
@@ -14,10 +14,10 @@ Lesen Sie die Dokumentation im Wiki des GBV und laden Sie mit dem Programm **cur
 ```
 http://unapi.gbv.de/?id=gvk:ppn:56677741X&format=mods
 ```
-die Metadaten für einen beliebigen Katalogdatensatz der HAW-Bibliothek.
+die Metadaten für einen beliebigen Katalogdatensatz der HAW-Bibliothek in allen vom GBV angebotenen Formaten (PICA+, PICA-XML, MARC21, etc.).
 
 **Hinweise:**
-* Sie können die Beispielanfrage auch in einem Browser aufrufen.
+* Sie können die Anfragen auch direkt in einem Browser aufrufen.
 * Die http-Adresse müssen Sie bei **curl** in Anführungszeichen setzen, weil das Format mit einem &-Symbol übergeben wird, das sonst als Steuerzeichen interpretiert wird.
 ```
 curl "http://..."
@@ -39,7 +39,7 @@ Beispiel:
 ### PICA-XML
 {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picaxml" > 834422018.picaxml{%ends%}
 
-### MARC 21
+### MARC21
 {%s%}curl "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=marc21" > 834422018.marc21{%ends%}
 
 ### Weitere Formate
