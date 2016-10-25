@@ -93,7 +93,7 @@ exit
 * Anfangs werden die Variablen ```url```, ```startRecord``` und ```counter``` definiert, die später mit ```${url}``` usw. wieder abgerufen werden. Der Wert für die Variable ```url``` muss in Anführungszeichen gesetzt werden, weil sonst das &-Zeichen von der Shell missverstanden würde.
 * Als Schleife wurde hier die Form ```while [ ] ; do``` (...) ```done``` gewählt. Die Testbedingung ```"$counter" -le 1000``` innerhalb der eckigen Klammern des ```while```-Kommandos bedeutet, dass die Schleife solange ausgeführt wird, bis die Variable ```counter``` den Wert 1000 erreicht.
 * Der curl-Befehl lautet nach Auflösung der Variablen genauso wie aus den vorigen Aufgaben bekannt. Der Dateiname unter dem das jeweilige Ergebnis gespeichert werden soll, setzt sich aus den Variablen ```startRecord``` und ```counter``` zusammen.
-* Bevor der curl-Befehl erneut ausgeführt wird, sorgen die beiden ```let```-Befehle dafür, dass ```startRecord``` und ```counter``` jeweils um 100 erhöht werden. Somit lädt der zweite Durchlauf der Schleife die Records 101 bis 200.
+* Bevor der curl-Befehl erneut ausgeführt wird, sorgen die beiden ```let```-Befehle dafür, dass ```startRecord``` und ```counter``` jeweils um 100 erhöht werden. Somit lädt der zweite Durchlauf der Schleife die Records 101 bis 200 (und so weiter).
 
 ## Aufgabe 4: Download der vollständigen Metadaten des HAW-Katalogs
 
