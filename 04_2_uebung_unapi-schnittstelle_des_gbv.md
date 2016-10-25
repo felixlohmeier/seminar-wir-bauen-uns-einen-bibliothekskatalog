@@ -1,6 +1,6 @@
 # 4.2 Übung: unAPI-Schnittstelle des GBV
 
-Die Verbundzentrale des Bibliotheksverbunds GBV bietet mehrere Schnittstellen, die einen Abruf einzelner Datensätze erlauben. Wir nutzen für diese Übung die sogenannte "unAPI".
+Die Verbundzentrale des Bibliotheksverbunds GBV bietet mehrere [Schnittstellen](https://www.gbv.de/wikis/cls/Schnittstellen), die einen Abruf einzelner Datensätze erlauben. Wir nutzen für diese Übung die sogenannte "unAPI".
 
 Dokumentation der unAPI-Schnittstelle des GBV: https://www.gbv.de/wikis/cls/unAPI
 
