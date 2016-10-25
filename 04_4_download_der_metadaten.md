@@ -1,5 +1,7 @@
 # 4.4 Download der Metadaten
 
+Die Verbundzentrale des Bibliotheksverbunds bietet derzeit keinen einfachen Weg an, um regelmäßig vollständige Abzüge der Daten einer Bibliothek zu bekommen. 
+
 ## Aufgabe 1: 100 PPNs aus dem Katalog in einer Text-Datei notieren
 
 Für die Abfrage über die unAPI-Schnittstelle benötigen wir die Identifikationsnummern (hier PPNs) derjenigen Datensätze, die wir abfragen wollen. Also brauchen wir eine Liste der PPNs, z.B. in einer einfachen Text-Datei.
