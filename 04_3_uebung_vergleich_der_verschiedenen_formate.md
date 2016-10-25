@@ -9,28 +9,35 @@ Im [Katalog der HAW Hamburg](https://kataloge.uni-hamburg.de/LNG=DU/DB=2/) werde
 Am einfachsten ist es, wenn Sie dazu Texte im OPAC markieren und in die Zwischenablage kopieren. In den meisten Browsern funktioniert dies über die Tastenkombination ```STRG+C```. Das Einfügen in Putty hingegen funktioniert anders als erwartet mit einem Rechtsklick.
 
 Aus dem [Benutzerhandbuch von Putty](http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter3.html#3.1.1):
-> "PuTTY's copy and paste works entirely with the mouse. In order to copy text to the clipboard, you just click the left mouse button in the terminal window, and drag to select text. When you let go of the button, the text is automatically copied to the clipboard."
+> PuTTY's copy and paste works entirely with the mouse. (...) Pasting is done using the right button (...). When you click the right mouse button, PuTTY will read whatever is in the Windows Clipboard and paste it into your session, exactly as if it had been typed at the keyboard.
 
 ## Lösung
 
-PPN 834422018 direkt im OPAC aufrufen:
-* {%s%}https://kataloge.uni-hamburg.de/DB=2/XMLPRS=N/PPN?PPN=834422018{%ends%}
-* {%s%}Die Zahl am Ende der URL kann entsprechend angepasst werden.{%ends%}
+Hier ein Beispiel für die PPN 834422018. Wenn Sie in der vorigen Übung andere Beispieldaten heruntergeladen haben, müssen Sie die Zahl entsprechend ersetzen.
 
-Suche nach Wörtern in den heruntergeladenen Metadaten:
+PPN direkt im OPAC aufrufen:
+* {%s%}https://kataloge.uni-hamburg.de/DB=2/XMLPRS=N/PPN?PPN=834422018{%ends%}
+
+Suche nach Textschnipseln in den heruntergeladenen Metadaten:
 * {%s%}grep -i -n -H "Lehrbuch" 834422018*{%ends%}
-* {%s%}Im Ordner mit den Dateien ausführen{%ends%}
 
 ## Aufgabe 2: Direkter Vergleich der Metadatenformate
 
-Vergleichen Sie das interne Format des Bibliothekssystems (PICA+/PICAXML) mit den ebenfalls über die Schnittstellen des GBV angebotenen Formaten MARC21/MARCXML, DC und MODS. Die Umwandlung von PICA+ in PICAXML und MARC21 in MARCXML ist verlustfrei, so dass drei Vergleiche zu tätigen sind:
+Vergleichen Sie das interne Format des Bibliothekssystems (PICA+/PICAXML) mit den ebenfalls über die Schnittstellen des GBV angebotenen Formaten MARC21/MARCXML, DC und MODS. Die Umwandlung von PICA+ in PICAXML und MARC21 in MARCXML ist verlustfrei, so dass nur drei Vergleiche zu tätigen sind:
 1. PICAXML vs. MARCXML
 2. PICAXML vs. DC
 3. PICAXML vs. MODS
 
-Für den Vergleich können Sie Onlinetools wie [Diff Checker](https://www.diffchecker.com/) oder [Tools auf der Kommandozeile](http://www.tecmint.com/best-linux-file-diff-tools-comparison/) verwenden.
+Hinweise:
+* Für den Vergleich können Sie Onlinetools wie [Diff Checker](https://www.diffchecker.com/) oder [Tools auf der Kommandozeile](http://www.tecmint.com/best-linux-file-diff-tools-comparison/) verwenden.
+* Zeigen Sie sich die heruntergeladenen Metadaten mit **cat** an und markieren Sie den entsprechenden Abschnitt in Putty mit der linken Maustaste. Dadurch wird der Inhalt automatisch in die Windows-Zwischenablage kopiert und ermöglicht Ihnen die Daten in ihrem gewohnten Textprogramm (z.B. Microsoft Word) einzufügen.
+
+Aus dem [Benutzerhandbuch von Putty](http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter3.html#3.1.1):
+> In order to copy text to the clipboard, you just click the left mouse button in the terminal window, and drag to select text. When you let go of the button, the text is automatically copied to the clipboard.
 
 ## Lösung
+
+Im Folgenden wird eine mögliche Lösung beschrieben, die Tools auf der Kommandozeile nutzt, um die heruntergeladenen Daten zu vereinheitlichen und dann automatisch zu vergleichen. Wenn Sie die jeweiligen Formate manuell miteinander verglichen haben, ist das auch vollkommen ok. In dieser Übung geht es nicht um Tricks auf der Kommandozeile, sondern um die Unterschiede der Metadatenformate ;-).
 
 Vorverarbeitung:
 * picaxml: {%s%}curl -s "http://unapi.gbv.de/?id=opac-de-18-302:ppn:834422018&format=picaxml" | sed 's/^ *//; s/ *$//; /^$/d; s/<[^>]*>//g' | sort | uniq > 834422018.picaxml.strip{%ends%}
