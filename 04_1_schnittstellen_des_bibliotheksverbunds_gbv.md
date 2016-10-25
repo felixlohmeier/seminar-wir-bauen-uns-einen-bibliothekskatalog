@@ -16,4 +16,4 @@ Ausgehend vom internen Datenformat PICA+ werden die übrigen Formate automatisch
 
 Wenn alle Daten "verlustfrei" verarbeitet werden sollen, muss also grundsätzlich entweder mit dem internen (auch: [nativ](http://www.duden.de/rechtschreibung/nativ)en) Datenformat gearbeitet werden oder es muss genau (in der Dokumentation) geprüft werden, ob der Crosswalk zum Zielformat wirklich vollständig ist.
 
-In der folgenden Übung laden wir daher Beispieldatensätze und prüfen welche Daten in den verschiedenen Formaten enthalten sind.
+In den folgenden beiden Übungen laden wir daher Beispieldatensätze und prüfen welche Daten in den verschiedenen Formaten enthalten sind.
