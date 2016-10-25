@@ -74,7 +74,7 @@ startRecord=1
 counter=100
 
 while [ "$counter" -le 1000 ] ; do
-    curl "${url}${startRecord}" > ${startRecord}-${counter}.picaxml
+    curl "${url}${startRecord}" > ${startRecord}-${counter}.marcxml
     let counter=counter+100
     let startRecord=startRecord+100
 done
