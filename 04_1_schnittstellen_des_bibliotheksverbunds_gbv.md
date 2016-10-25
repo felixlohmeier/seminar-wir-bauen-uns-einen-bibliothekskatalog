@@ -10,8 +10,10 @@ Das interne Datenformat ist PICA+, das im Plain-Text-Format oder als XML-Format 
 * MODS
 * ISBD
 
+Informationen zum PICA-Format: https://www.gbv.de/wikis/cls/PICA-Format
+
 Ausgehend vom internen Datenformat PICA+ werden die übrigen Formate automatisch hergestellt. Dazu werden Übereinstimmungen zwischen den Feldern definiert, die als Mapping oder [Crosswalk](https://en.wikipedia.org/wiki/Schema_crosswalk) bezeichnet werden. Wenn nicht alle Daten aus dem internen Datenformat in das Zielformat passen (wie zum Beispiel beim "kleinsten gemeinsamen Nenner" der Metadatenformate: Dublin Core), dann gehen bei diesem Prozess Informationen verloren.
 
-Wenn alle Daten "verlustfrei" verarbeitet werden sollen, muss also entweder mit dem internen (auch: [nativ](http://www.duden.de/rechtschreibung/nativ)en) Datenformat gearbeitet werden oder es muss genau (in der Dokumentation) geprüft werden, ob der Crosswalk zum Zielformat wirklich vollständig ist.
+Wenn alle Daten "verlustfrei" verarbeitet werden sollen, muss also grundsätzlich entweder mit dem internen (auch: [nativ](http://www.duden.de/rechtschreibung/nativ)en) Datenformat gearbeitet werden oder es muss genau (in der Dokumentation) geprüft werden, ob der Crosswalk zum Zielformat wirklich vollständig ist.
 
-Informationen zum PICA-Format: https://www.gbv.de/wikis/cls/PICA-Format
+In der folgenden Übung laden wir daher Beispieldatensätze und prüfen welche Daten in den verschiedenen Formaten enthalten sind.
