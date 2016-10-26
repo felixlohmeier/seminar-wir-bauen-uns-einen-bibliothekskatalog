@@ -207,3 +207,27 @@ exit
 * Diesen Textinhalt in einer Datei abspeichern, z.B. mit ```nano download.sh```
 * Danach muss das Script noch ausführbar gemacht werden: ```chmod +x download.sh```
 * Script starten mit ```./download.sh```
+
+## Aufgabe 5: Grobe Prüfung der heruntergeladenen Dateien
+
+Das Script benötigt für einen Komplettdurchlauf etwa 6 Stunden. Sie werden also bestimmt nicht jede Transaktion aufmerksam am Bildschirm verfolgt haben. So oder so ist es sinnvoll mit ein paar Tests die Plausibilität der heruntergeladenen Dateien zu prüfen. Bitte beantworten Sie folgende Fragen:
+
+1. Wie groß sind a) alle heruntergeladenen Dateien und b) die kleinste(n) der Dateien? Gibt es c) Auffälligkeiten bei den Dateigrößen?
+2. Wieviele Records wurden heruntergeladen? (Tipp: nutzen Sie dazu das Feld bzw. den Pfad ```<controlfield tag="001">```...```</controlfield>```)
+3. Gibt es Dubletten? Wenn ja, a) welche, b) wieviele und c) wo?
+
+## Lösung
+
+(1) Prüfung Dateigrößen:
+* a) alle: {%s%}du -h{%ends%}
+* b) die kleinste(n): {%s%}ls -1 -s -S{%ends%}
+* c) Auffälligkeiten: {%s%}achten Sie auf kleine und gleiche Dateigrößen, ebenfalls mit ls -1 -s -S{%ends%}
+
+(2) Prüfung Anzahl Records:
+* alle: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | wc -l{%ends%}
+* ohne Dubletten: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq | wc -l{%ends%}
+
+(3) Dubletten ausgeben:
+a) welche: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D{%ends%}
+b) wieviele: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -c -d{%ends%}
+c) wo: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D | grep -f - *.{%ends%}
