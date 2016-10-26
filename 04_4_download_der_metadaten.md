@@ -224,10 +224,10 @@ Das Script benötigt für einen Komplettdurchlauf etwa 6 Stunden. Sie werden als
 * c) Auffälligkeiten: {%s%}achten Sie auf kleine und gleiche Dateigrößen, ebenfalls mit ls -1 -s -S{%ends%}
 
 (2) Prüfung Anzahl Records:
-* alle: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | wc -l{%ends%}
-* ohne Dubletten: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq | wc -l{%ends%}
+* alle: ```grep -h "<controlfield tag=\"001\">" *.marcxml | wc -l```
+* ohne Dubletten: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq | wc -l```
 
 (3) Dubletten ausgeben:
-a) welche: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D{%ends%}
-b) wieviele: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -c -d{%ends%}
-c) wo: {%s%}grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D | grep -f - *.{%ends%}
+a) welche: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D```
+b) wieviele: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -c -d```
+c) wo: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D | grep -f - *.```
