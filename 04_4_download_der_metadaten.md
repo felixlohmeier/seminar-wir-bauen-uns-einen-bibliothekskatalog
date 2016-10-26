@@ -213,7 +213,7 @@ exit
 Das Script benötigt für einen Komplettdurchlauf etwa 6 Stunden. Sie werden also bestimmt nicht jede Transaktion aufmerksam am Bildschirm verfolgt haben. So oder so ist es sinnvoll mit ein paar Tests die Plausibilität der heruntergeladenen Dateien zu prüfen. Bitte beantworten Sie folgende Fragen:
 
 1. Wie groß sind a) alle heruntergeladenen Dateien und b) die kleinste(n) der Dateien? Gibt es c) Auffälligkeiten bei den Dateigrößen?
-2. Wieviele Records wurden heruntergeladen? (Tipp: nutzen Sie dazu das Feld bzw. den Pfad ```<controlfield tag="001">```...```</controlfield>```)
+2. Wieviele Records wurden heruntergeladen? (Tipp: nutzen Sie dazu das Feld bzw. den Pfad ```<controlfield tag="001">```)
 3. Gibt es Dubletten? Wenn ja, a) welche, b) wieviele und c) wo?
 
 ## Lösung
