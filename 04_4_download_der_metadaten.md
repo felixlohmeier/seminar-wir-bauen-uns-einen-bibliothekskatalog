@@ -112,7 +112,8 @@ In der vorigen Aufgabe haben Sie mit einem Script mehrere 100er-Pakete für den 
 Folgende Anfrage an die SRU-Schnittstelle liefert die Gesamtmenge zurück:
 * Suchanfrage: {%s%}pica.ppn=.*{%ends%}
 * Beispiel: {%s%}http://sru.gbv.de/opac-de-18-302?operation=searchRetrieve&query=pica.ppn=.*&maximumRecords=100&startRecord=1&recordSchema=marcxml{%ends%}
-* Gesamtanzahl der Records: {%s%}450.101 (Stand: 25.10.2016){%ends%}
+* entspricht folgender Suche im Katalog: {%s%}https://kataloge.uni-hamburg.de/DB=2/SET=5/CMD?ACT=SRCH&TRM=PPN+.%3F{%ends%}
+* Gesamtanzahl der Records: {%s%}450.109 (Stand: 25.10.2016){%ends%}
 
 ### Variante 1: Download-Script "light"
 
