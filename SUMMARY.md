@@ -27,6 +27,6 @@
    * [5.3 Initiativen zum Austausch von Metadaten](05_3_initiativen_zum_austausch_von_metadaten.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
-* 6 Installation von OpenRefine mit Docker
+* [6 Installation von OpenRefine mit Docker](06_0_installation_von_openrefine_mit_docker.md)
 * 7 Datentransformation mit OpenRefine
 
