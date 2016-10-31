@@ -26,7 +26,7 @@
    * [5.2 Linked Data](05_2_linked_data.md)
    * [5.3 Initiativen zum Austausch von Metadaten](05_3_initiativen_zum_austausch_von_metadaten.md)
 * [6 Installation von OpenRefine mit Docker](06_0_installation_von_openrefine_mit_docker.md)
-   * 6.1 Installation Docker
+   * [6.1 Installation Docker](06_1_installation_docker.md)
    * 6.2 Installation OpenRefine
    * 6.3 OpenRefine starten und Daten laden
 * [Lerntagebücher](lerntagebucher.md)
