@@ -25,9 +25,9 @@
    * [5.1 Einführung in Metadatenformate](05_1_einfuehrung_in_metadatenformate.md)
    * [5.2 Linked Data](05_2_linked_data.md)
    * [5.3 Initiativen zum Austausch von Metadaten](05_3_initiativen_zum_austausch_von_metadaten.md)
-* [Lerntagebücher](lerntagebucher.md)
-* [Prüfungsleistungen](pruefungsleistungen.md)
 * [6 Installation von OpenRefine mit Docker](06_0_installation_von_openrefine_mit_docker.md)
    * 6.1 Installation Docker
+* [Lerntagebücher](lerntagebucher.md)
+* [Prüfungsleistungen](pruefungsleistungen.md)
 * [7 Datentransformation mit OpenRefine](07_0_datentransformation_mit_openrefine.md)
 
