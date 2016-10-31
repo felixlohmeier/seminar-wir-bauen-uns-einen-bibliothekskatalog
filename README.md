@@ -29,8 +29,8 @@ Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei
 3. Praxis: [Grundinstallation der Arbeitsumgebung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/03_0_grundinstallation_der_arbeitsumgebung.html) (10.10.2016)
 4. Praxis: [Schnittstellen zum Laden der Metadaten](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_0_schnittstellen_zum_laden_der_metadaten.html) (17.10.2016) 
 5. Vorlesung: Exkurs zu Metadaten in Bibliotheken (24.10.2016)
-6. Praxis: Installation von OpenRefine mit Docker (31.10.2016)
-7. Praxis [2x]: Datentransformation mit OpenRefine (07.11.2016, 14.11.2016)
+6. Praxis: [Installation von OpenRefine mit Docker](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_0_installation_von_openrefine_mit_docker.html) (31.10.2016)
+7. Praxis [2x]: [Datentransformation mit OpenRefine](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_0_datentransformation_mit_openrefine.html) (07.11.2016, 14.11.2016)
 8. Praxis: Installation des Suchmaschinenindex (Solr) (21.11.2016)
 9. Praxis [2x]: Konfiguration und Übungen mit Solr
 10. Vorlesung: Relevanzranking, Facettierung und weitere Katalogfunktionen
