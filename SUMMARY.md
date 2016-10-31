@@ -28,4 +28,5 @@
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 * 6 Installation von OpenRefine mit Docker
+* 7 Datentransformation mit OpenRefine
 
