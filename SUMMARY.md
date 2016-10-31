@@ -29,7 +29,7 @@
    * [6.1 Installation Docker](06_1_installation_docker.md)
    * [6.2 Installation OpenRefine](06_2_installation_openrefine.md)
    * [6.3 OpenRefine starten und Daten laden](06_3_openrefine_starten_und_daten_laden.md)
+* [7 Datentransformation mit OpenRefine](07_0_datentransformation_mit_openrefine.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
-* [7 Datentransformation mit OpenRefine](07_0_datentransformation_mit_openrefine.md)
 
