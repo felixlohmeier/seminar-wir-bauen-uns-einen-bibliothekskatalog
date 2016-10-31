@@ -4,7 +4,7 @@
 
 Unterschied zwischen Virtualisierung (beispielsweise mit Virtualbox, vgl. Kapitel 3.1) und Container-Lösungen (wie z.B. Docker)
 
-
+[![Vergleich von docker.com](images/screenshot-docker-comparison.png)](https://www.docker.com/what-docker)
 
 Beides lässt sich kombinieren: Wir installieren Docker innerhalb der virtuellen Maschine (VM).
 
