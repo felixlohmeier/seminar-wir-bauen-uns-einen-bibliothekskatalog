@@ -34,9 +34,9 @@
    * [7.2 Records bilden](07_2_records_bilden.md)
    * [7.3 Für jedes MARC-Feld eine Spalte](07_3_fuer_jedes_marc-feld_eine_spalte.md)
    * 7.4 Alle Daten in ein Projekt laden
+   * 7.6 Transformationen auf alle Daten anwenden
    * 7.4 Daten bereinigen
    * 7.5 Felder definieren
-   * 7.6 Transformationen auf alle Daten anwenden
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
