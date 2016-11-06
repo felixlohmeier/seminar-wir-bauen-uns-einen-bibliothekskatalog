@@ -31,8 +31,8 @@
    * [6.3 OpenRefine starten und Daten laden](06_3_openrefine_starten_und_daten_laden.md)
 * [7 Datentransformation mit OpenRefine](07_0_datentransformation_mit_openrefine.md)
    * [7.1 Facetten und Text Filter](07_1_facetten_und_text_filter.md)
+   * [7.3 Für jedes MARC-Feld eine Spalte](07_3_fuer_jedes_marc-feld_eine_spalte.md)
    * [7.2 Records bilden](07_2_records_bilden.md)
-* [7.3 Für jedes MARC-Feld eine Spalte](07_3_fuer_jedes_marc-feld_eine_spalte.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
