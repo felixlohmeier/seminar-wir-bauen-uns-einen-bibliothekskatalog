@@ -36,7 +36,7 @@
    * 7.4 Daten bereinigen
    * 7.5 Felder definieren
    * 7.6 Transformationen auf alle Daten anwenden
-   * Alle Daten in ein Projekt laden
+   * 7.4 Alle Daten in ein Projekt laden
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
