@@ -37,6 +37,7 @@
    * 7.5 Transformationen anwenden
    * 7.6 Daten bereinigen
    * 7.7 Felder definieren
+   * 7.8 Daten exportieren
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
