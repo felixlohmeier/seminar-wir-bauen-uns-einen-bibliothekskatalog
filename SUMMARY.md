@@ -32,6 +32,7 @@
 * [7 Datentransformation mit OpenRefine](07_0_datentransformation_mit_openrefine.md)
    * [7.1 Facetten und Text Filter](07_1_facetten_und_text_filter.md)
    * [7.2 Records bilden](07_2_records_bilden.md)
+       * 7.3 Für jedes MARC-Feld eine Spalte
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 
