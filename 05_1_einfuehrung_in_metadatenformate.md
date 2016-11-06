@@ -1,6 +1,6 @@
 # 5.1 Einführung in Metadatenformate
 
-## Präsentation Kisten Jeude (2013)
+## Präsentation Kirsten Jeude (2013)
 
 http://www.slideshare.net/suvanni/auf-du-und-du-mit-dublin-core-co-berufsfeld-metadatenmanagement-im-kontext-der-bibliothek-der-zukunft
 
