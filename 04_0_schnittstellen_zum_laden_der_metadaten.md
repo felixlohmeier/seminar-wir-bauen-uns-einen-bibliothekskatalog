@@ -11,5 +11,5 @@ Inhalte:
 Beiträge der Studierenden in den Lerntagebüchern:
 * [Was sind eigentlich Metadaten und wie bekomme ich die nun?]( https://dennislerntnichtaus.wordpress.com/2016/10/19/was-sind-eigentlich-metadaten-und-wie-bekomme-ich-die-nun/) und [Minizusammenfassung der letzten Stunde und Ausblick](https://dennislerntnichtaus.wordpress.com/2016/10/27/minizusammenfassung-der-letzten-stunde/)
 * [Metadaten](https://juliabaut.wordpress.com/2016/10/23/metadaten/)
-* [Schnittstellen zum Laden der Metadaten](https://lenaentdeckt.wordpress.com/2016/10/23/schnittstellen-zum-laden-der-metadaten/)
+* [Schnittstellen zum Laden der Metadaten](https://lenaentdeckt.wordpress.com/2016/10/23/schnittstellen-zum-laden-der-metadaten/) und [Vergleich der verschiedenen Formate](https://lenaentdeckt.wordpress.com/2016/10/30/vergleich-der-verschiedenen-formate/)
 * [Metadaten Day](https://xyopendiscovery.wordpress.com/2016/10/24/metadaten-day/) und [Metadaten // Schnittstellen //Befehl °-°](https://xyopendiscovery.wordpress.com/2016/10/27/metadaten-schnittstellen-befehl/)
