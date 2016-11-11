@@ -13,3 +13,5 @@ Die öffentlichen Lerntagebücher haben zwei Ziele:
 * eine Reise um das Programmieren in 133 Tagen: https://jgoouh.wordpress.com
 * Julia baut: https://juliabaut.wordpress.com
 * Daniela codes: https://danielacodes.wordpress.com
+* Bibliothekskatalog selbstgemacht: https://discoverysystembauen.wordpress.com/
+* Nurce codes: https://nurcecodes.wordpress.com/
