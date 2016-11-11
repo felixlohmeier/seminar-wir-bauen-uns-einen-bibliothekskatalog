@@ -18,3 +18,5 @@ Beiträge der Studierenden in den Lerntagebüchern:
 * [Die Sache mit der Katze im Sack… oder in der Decke – Teil 2](https://jgoouh.wordpress.com/2016/10/16/die-sache-mit-der-katze-im-sack-oder-in-der-decke-teil-2-achtung-dieser-beitrag-beinhaltet-echten-cat-content/)
 * [Textbearbeitung mit Linux](https://lenaentdeckt.wordpress.com/2016/10/23/textbearbeitung-mit-linux/)
 * [Wie oft kommt in dem Roman Carmilla eigentlich ihr Name vor?](https://danielacodes.wordpress.com/2016/10/22/wie-oft-kommt-in-dem-roman-carmilla-eigentlich-ihr-name-vor/)
+* [Praxis-Tag 1 – Es beginnt](https://discoverysystembauen.wordpress.com/2016/10/15/praxistag-1-es-beginnt/) und [Praxis- Tag 2](https://discoverysystembauen.wordpress.com/2016/10/19/praxis-tag-2/)
+[* Linux 101: Ein Command Line Crashkurs](https://nurcecodes.wordpress.com/2016/11/01/linux-101-ein-command-line-crash-course/) und [SSH and VM: jetzt haben wir den (Buchstaben-)Salat](https://nurcecodes.wordpress.com/2016/11/02/ssh-and-vm-jetzt-haben-wir-den-buchstaben-salat/) und [Regex und andere Spielereien](https://nurcecodes.wordpress.com/2016/11/03/regex-und-andere-spielereien/)
