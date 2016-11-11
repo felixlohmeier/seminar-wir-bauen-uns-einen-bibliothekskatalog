@@ -13,4 +13,4 @@ Inhalte:
 8. Daten exportieren
 
 Beiträge der Studierenden in den Lerntagebüchern:
-* ...
+* [Noch ein paar kleine Übungen zum warm werden mit OpenRefine](https://dennislerntnichtaus.wordpress.com/2016/11/08/noch-ein-paar-kleine-uebungen-zum-warm-werden-mit-openrefine/)
