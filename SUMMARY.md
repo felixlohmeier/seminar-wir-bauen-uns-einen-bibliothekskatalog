@@ -35,7 +35,7 @@
    * [7.3 Für jedes MARC-Feld eine Spalte](07_3_fuer_jedes_marc-feld_eine_spalte.md)
    * [7.4 Alle Daten in ein Projekt laden](07_4_alle_daten_in_ein_projekt_laden.md)
    * [7.5 Transformationen anwenden](07_5_transformationen_anwenden.md)
-   * 7.6 Daten bereinigen
+   * [7.6 Daten bereinigen](07_6_daten_bereinigen.md)
    * 7.7 Felder definieren
    * 7.8 Daten exportieren
 * [Lerntagebücher](lerntagebucher.md)
