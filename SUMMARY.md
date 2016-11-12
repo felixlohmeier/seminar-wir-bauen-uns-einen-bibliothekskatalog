@@ -36,7 +36,7 @@
    * [7.4 Alle Daten in ein Projekt laden](07_4_alle_daten_in_ein_projekt_laden.md)
    * [7.5 Transformationen anwenden](07_5_transformationen_anwenden.md)
    * [7.6 Daten bereinigen](07_6_daten_bereinigen.md)
-   * 7.7 Felder definieren
+   * [7.7 Felder definieren](07_7_felder_definieren.md)
    * 7.8 Daten exportieren
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
