@@ -10,8 +10,10 @@ https://hub.docker.com/r/felixlohmeier/openrefine/
 Einer der Vorteile von Docker ist, dass mit einem einzigen Befehl der Download und das Starten von Containern aus dem Docker Hub ermöglicht wird:
 
 ```
-sudo docker run --rm -p 8888:3333 felixlohmeier/openrefine:2.6rc2
+sudo docker run --rm -p 8888:3333 felixlohmeier/openrefine:2.6rc1
 ```
+
+Anschließend im Browser (z.B. Firefox) auf dem lokalen Rechner OpenRefine aufrufen. OpenRefine ist unter der IP-Adresse des Webservers, gefolgt von Port 8888 erreichbar (Beispiel: https://192.168.1.1:8888).
 
 Erläuterungen:
 * Da der Container noch nicht lokal vorliegt, wird er automatisch von Docker Hub heruntergeladen (in Teilbestandteilen)
@@ -28,7 +30,7 @@ Erläuterungen:
 
 2. Docker starten mit zusätzlichen Parametern:
 ```
-sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data
+sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m 3G -d /data
 ```
 
 Erläuterungen:
