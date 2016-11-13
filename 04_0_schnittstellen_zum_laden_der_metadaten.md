@@ -15,3 +15,4 @@ Beiträge der Studierenden in den Lerntagebüchern:
 * [Metadaten Day](https://xyopendiscovery.wordpress.com/2016/10/24/metadaten-day/) und [Metadaten // Schnittstellen //Befehl °-°](https://xyopendiscovery.wordpress.com/2016/10/27/metadaten-schnittstellen-befehl/)
 * [Praxis- Tag 3](https://discoverysystembauen.wordpress.com/2016/11/02/praxis-tag-3/)
 * [Praxisaufgaben mit Metadaten – Gesundheit?](https://jgoouh.wordpress.com/2016/10/31/praxisaufgaben-mit-metadaten-gesundheit/)
+* [Metadaten. Wait, what?](http://disco.blacky-smith.de/?p=24)

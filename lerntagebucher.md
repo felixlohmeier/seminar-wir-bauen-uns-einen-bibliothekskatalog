@@ -15,3 +15,4 @@ Die öffentlichen Lerntagebücher haben zwei Ziele:
 * Daniela codes: https://danielacodes.wordpress.com
 * Bibliothekskatalog selbstgemacht: https://discoverysystembauen.wordpress.com/
 * Nurce codes: https://nurcecodes.wordpress.com/
+* Sabrinas Lerntagebuch zum Wahlpflichtkurs: http://disco.blacky-smith.de/
