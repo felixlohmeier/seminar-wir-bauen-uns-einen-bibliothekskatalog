@@ -38,6 +38,7 @@
    * [7.6 Daten bereinigen](07_6_daten_bereinigen.md)
    * [7.7 Felder definieren](07_7_felder_definieren.md)
    * [7.8 Daten exportieren](07_8_daten_exportieren.md)
+   * [7.9 Automatisierung](07_9_automatisierung.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
 

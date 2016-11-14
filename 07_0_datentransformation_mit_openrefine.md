@@ -12,6 +12,7 @@ Inhalte:
 6. Daten bereinigen
 7. Felder definieren
 8. Daten exportieren
+9. Automatisierung
 
 Beiträge der Studierenden in den Lerntagebüchern:
 
