@@ -10,8 +10,8 @@ Hinweise:
 
 Literatur:
 
-* [...](http://www.)
-* [...](http://www.)
+* [History-Funktionen in OpenRefine Dokumentation](https://github.com/OpenRefine/OpenRefine/wiki/History)
+* [JSON and my notepad or how to write script in google refine](http://kb.refinepro.com/2012/06/google-refine-json-and-my-notepad-or.html)
 
 ## Lösung
 
