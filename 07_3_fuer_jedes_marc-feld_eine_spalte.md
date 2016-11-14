@@ -46,7 +46,7 @@ Sortieren und Aufräumen
 * {%s%}Spalte "PPN" / Edit cells / Fill down{%ends%}
 * {%s%}Spalte "PPN" / Sort...{%ends%}
 * {%s%}Spalte "record - datafield - tag" / Sort...{%ends%}
-* {%s%}Im neu verfügbaren Menü "Sort" den Menüpunkt "Reorder rows permanently" auswählen
+* {%s%}Im neu verfügbaren Menü "Sort" den Menüpunkt "Reorder rows permanently" auswählen{%ends%}
 * {%s%}Spalte "PPN" / Edit column / Remove this column{%ends%}
 
 MARC-Feld mit Feld MARC-Code zusammenfassen
