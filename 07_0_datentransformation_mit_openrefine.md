@@ -17,5 +17,5 @@ Inhalte:
 Beiträge der Studierenden in den Lerntagebüchern:
 
 * [Noch ein paar kleine Übungen zum warm werden mit OpenRefine](https://dennislerntnichtaus.wordpress.com/2016/11/08/noch-ein-paar-kleine-uebungen-zum-warm-werden-mit-openrefine/)
-* [Datentransformation mit OpenRefine Teil 0](https://xyopendiscovery.wordpress.com/2016/11/08/datentransformation-mit-openrefine-teil-0/)
+* [Datentransformation mit OpenRefine Teil 0](https://xyopendiscovery.wordpress.com/2016/11/08/datentransformation-mit-openrefine-teil-0/) und [Datentransformation: Transform… // Remove // Move column to …](https://xyopendiscovery.wordpress.com/2016/11/14/datentransformation-transform-remove-move-column-to/)
 * [Zwischenstand Bibliothekskatalog](https://lenaentdeckt.wordpress.com/2016/11/13/zwischenstand-bibliothekskatalog/) und [Datentransformation mit OpenRefine](https://lenaentdeckt.wordpress.com/2016/11/13/datentransformation-mit-openrefine/)

@@ -209,6 +209,8 @@ exit
 * Danach muss das Script noch ausführbar gemacht werden: ```chmod +x download.sh```
 * Script starten mit ```./download.sh```
 
+Script als Datei: [download.sh](scripte/download.sh)
+
 ## Aufgabe 5: Grobe Prüfung der heruntergeladenen Dateien
 
 Das Script benötigt für einen Komplettdurchlauf etwa 6 Stunden. Sie werden also bestimmt nicht jede Transaktion aufmerksam am Bildschirm verfolgt haben. So oder so ist es sinnvoll mit ein paar Tests die Plausibilität der heruntergeladenen Dateien zu prüfen. Bitte beantworten Sie folgende Fragen:
