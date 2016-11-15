@@ -2,7 +2,7 @@
 
 ## Kernpunkte
 
-Aus dem Referat von Kristin Ameis und Kirstin Grantz am 24.10.2016 (vgl. [Präsentationsfolien](slides/05_3_initiativen_zum_austausch_von_metadaten.pptx)
+Aus dem Referat von Kristin Ameis und Kirstin Grantz am 24.10.2016 (vgl. [Präsentationsfolien](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/slides/05_3_initiativen_zum_austausch_von_metadaten.pptx))
 
 ### ...
 

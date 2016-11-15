@@ -10,7 +10,7 @@ Informationswissenschaft. http://hdl.handle.net/10760/29324
 
 ## Kernpunkte
 
-Aus dem Referat von Jana Baier am 26.9.2016 (vgl. [Präsentationsfolien](slides/02_1_referat_zu_pro_&_contra_von_open_source.pptx)
+Aus dem Referat von Jana Baier am 26.9.2016 (vgl. [Präsentationsfolien](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/slides/02_1_referat_zu_pro_&_contra_von_open_source.pptx))
 
 ### Vorteile von Open Source Software
 

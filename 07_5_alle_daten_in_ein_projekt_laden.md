@@ -11,7 +11,7 @@ Hinweise:
 
 Hinweise:
 * Beobachten Sie auch hier den Speicherbedarf und notieren Sie sich die Laufzeit.
-* Nutzen Sie Ihre gespeicherten Transformationsregeln oder die aus der Datei [7-3.json](openrefine/7-3.json)
+* Nutzen Sie Ihre gespeicherten Transformationsregeln oder die aus der Datei [07-3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07-3.json)
 
 ## Aufgabe 3: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf alle 4500 Datensätze an
 

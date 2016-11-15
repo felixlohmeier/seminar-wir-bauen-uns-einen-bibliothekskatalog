@@ -209,7 +209,7 @@ exit
 * Danach muss das Script noch ausführbar gemacht werden: ```chmod +x download.sh```
 * Script starten mit ```./download.sh```
 
-Script als Datei: [download.sh](scripte/download.sh)
+Script als Datei: [download.sh](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/download.sh)
 
 ## Aufgabe 5: Grobe Prüfung der heruntergeladenen Dateien
 
