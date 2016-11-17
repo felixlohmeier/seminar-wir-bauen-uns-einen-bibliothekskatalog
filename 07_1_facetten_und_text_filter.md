@@ -8,6 +8,10 @@ OpenRefine "versteht" das MARC-Format nicht. Es interpretiert die Daten daher ge
 
 siehe [Seite zur Facettierung in der Dokumentation von OpenRefine](https://github.com/OpenRefine/OpenRefine/wiki/Faceting)
 
+## Literatur
+
+* Library Carpentry OpenRefine: [Basic OpenRefine Functions I: Working with columns, sorting, faceting, filtering and clustering](https://data-lessons.github.io/library-openrefine/03-basic-functions-I/)
+
 ## Bonusaufgabe: Laden Sie die Arbeitstabelle der DNB in OpenRefine
 
 Die Dokumentation der DNB steht auch als Tabellendokument zur Verfügung. Da OpenRefine auf die Bearbeitung von tabellarischen Daten ausgelegt ist, können Sie die Arbeitstabelle anstatt in Excel/LibreOffice auch gleich in OpenRefine als neues Projekt anlegen.

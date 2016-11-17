@@ -52,3 +52,7 @@ Hinweise:
 ## Lösung
 
 ...
+
+## Literatur
+
+* Die [FAQ aus der OpenRefine Dokumentation](https://github.com/OpenRefine/OpenRefine/wiki/FAQ) behandeln auch, wie OpenRefine programmatisch als Server genutzt werden kann.
