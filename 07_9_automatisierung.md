@@ -17,7 +17,7 @@ Hinweise:
 ## Lösung
 
 * Server starten: {%s%}sudo docker run --rm --name=refine-server -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m 3G -d /data{%ends%}
-* Python-Client starten: {%s%}docker run --rm --link refine-server -v stud/refine:/data felixlohmeier/openrefine-client-py{%ends%}
+* Python-Client starten: {%s%}sudo docker run --rm --link refine-server -v stud/refine:/data felixlohmeier/openrefine-client-py{%ends%}
 
 ## Aufgabe 2: Wenden Sie die in Kap. 7.3 gespeicherten Transformationsregeln auf ein neues Projekt an
 
