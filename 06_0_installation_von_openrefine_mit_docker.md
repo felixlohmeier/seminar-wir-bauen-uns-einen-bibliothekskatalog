@@ -7,6 +7,7 @@ Inhalte:
 1. [Installation Docker](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_1_installation_docker.html)
 2. [Installation OpenRefine](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_2_installation_openrefine.html)
 3. [OpenRefine starten und Daten laden](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html)
+4. [Zwischenfazit](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_4_zwischenfazit.html)
 
 Beiträge der Studierenden in den Lerntagebüchern:
 
