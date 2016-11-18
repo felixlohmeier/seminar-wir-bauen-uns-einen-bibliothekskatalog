@@ -9,7 +9,7 @@ Hinweise:
 
 * Wir nutzen dazu die Funktion "Transpose / Columnize by key/value columns". Vor dem Transpose müssen die Daten in zwei Spalten zusammengeführt werden.
 * Für manche zeilenbasierte Operationen müssen Sie wieder auf den Modus "Rows" (statt "Records") wechseln.
-* In der Version 2.6rc2 von OpenRefine ist ein Bug in der Transpose-Funktion, daher müssen wir die Version 2.6rc1 oder die aktuelle Entwicklungsversion nutzen.
+* In der Version 2.6rc2 von OpenRefine ist ein [Bug in der Funktion Columnize by key/value columns](https://github.com/OpenRefine/OpenRefine/issues/1093), daher müssen wir für diese Aufgabe die Version 2.6rc1 oder die aktuelle Entwicklungsversion nutzen.
 
 ```
 sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m 3G -d /data

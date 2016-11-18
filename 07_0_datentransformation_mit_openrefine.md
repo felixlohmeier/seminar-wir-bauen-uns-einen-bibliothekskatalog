@@ -1,6 +1,6 @@
 # 7 Datentransformation mit OpenRefine
 
-Ziel: Grundfunktionen von OpenRefine kennenlernen, Daten von MARCXML in eine Tabellenstruktur transformieren und für den Suchindex im Format CSV exportieren
+Ziel: Grundfunktionen von OpenRefine kennenlernen, Daten von MARCXML in eine Tabellenstruktur transformieren, exemplarisch Felder für den Suchindex bilden und Daten im Format TSV exportieren
 
 Inhalte:
 
