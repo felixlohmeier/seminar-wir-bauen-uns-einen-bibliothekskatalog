@@ -47,4 +47,4 @@ OpenRefine ist also nur Mittel zum Zweck, um die Daten in ein Format zu transfor
 * Von ihrem Rechner oder einem anderen Rechner in Ihrem Netzwerk können Sie auf den Webserver zugreifen:
 * mit Putty über das SSH-Protokoll auf die Kommandozeile des Linux-Betriebssystems (Debian 8.5) ihres Webservers . Damit haben Sie die gleichen Möglichkeiten, als wenn Sie an den Server einen Bildschirm, eine Maus und eine Tastatur anschließen würden.
 * mit WinSCP über das SCP-Protokoll auf die Dateien ihres Webservers. Sie können damit Dateien herunterladen oder hochladen.
-* mit einem Browser (Firefox, Chrome, usw.) auf OpenRefine unter der Adresse http://<IP-Adresse>:8888 (Beispiel: http://192.168.1.1:8888), später auf Solr (http://192.168.1.1:8983), TYPO3 (http://192.168.1.1/typo3) und den Bibliothekskatalog 192.168.1.1 (also ganz ohne Port).
+* mit einem Browser (Firefox, Chrome, usw.) auf OpenRefine unter der Adresse http://<IP-Adresse>:8888 (Beispiel: http://192.168.1.1:8888), später auf Solr (http://192.168.1.1:8983), TYPO3 (http://192.168.1.1/typo3) und den Bibliothekskatalog http://192.168.1.1 (also ganz ohne Port).
