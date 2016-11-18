@@ -4,7 +4,7 @@ Die Systemarchitektur von OpenRefine macht es möglich, die Anwendung nicht nur 
 
 >"And it's possible to make the server-side scriptable from the command line."
 
-Das machen wir uns zunutze. Die [HTTP-API von OpenRefine](https://github.com/OpenRefine/OpenRefine/wiki/OpenRefine-API) kann theoretisch auch direkt angesprochen werden, aber da sie nur rudimentär dokumentiert ist, nutzen wir einen der verschiedenen Clients, die andere schon für OpenRefine entwickelt haben. Es gibt Clients in Python, Ruby, node.js und für R. Am ausgereiftesten ist der [Python-Client von Paul Makepeace](https://github.com/PaulMakepeace/refine-client-py/).
+Das machen wir uns zunutze. Die [HTTP-API von OpenRefine](https://github.com/OpenRefine/OpenRefine/wiki/OpenRefine-API) kann theoretisch auch direkt angesprochen werden, aber da sie nur rudimentär dokumentiert ist, nutzen wir einen der verschiedenen Clients, die andere schon für OpenRefine entwickelt haben. Es gibt Clients in Python, Ruby, node.js, PHP und für R. Am ausgereiftesten ist der [Python-Client von Paul Makepeace](https://github.com/PaulMakepeace/refine-client-py/).
 
 Der Client kann ebenso wie OpenRefine lokal installiert werden. Um die Installation und Bedienung zu vereinfachen, habe ich einen Docker-Container gebaut (vgl. [Repository felixlohmeier/openrefine in Docker Hub](https://hub.docker.com/r/felixlohmeier/openrefine/)).
 
