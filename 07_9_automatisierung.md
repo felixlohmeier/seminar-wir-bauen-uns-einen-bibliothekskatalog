@@ -13,7 +13,7 @@ Der Client kann ebenso wie OpenRefine lokal installiert werden. Um die Installat
 Hinweise:
 
 * Die Bedienung ist im Abschnitt "**batch processing with python-client**" im [Repository in Docker Hub](https://hub.docker.com/r/felixlohmeier/openrefine/)) beschrieben. Schauen Sie sich die unter der Überschrift "example for customized run command in interactive mode (e.g. for usage in terminals)" gelisteten Docker-Startbefehle an und wandeln Sie diese so ab, dass sie mit den Parametern im [Kapitel 6.3](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html) beschriebenen Docker-Startbefehl zusammen passen.
-* Starten Sie Putty zweimal und bauen Sie jeweils eine SSH-Verbindung auf. Dann können Sie den Server im ersten Putty-Fenster (nennen wir dies im Folgenden Terminal 1) starten und den Client im Zweiten (nennen wir dies im Folgenden Terminal 2).
+* **Starten Sie Putty zweimal** und bauen Sie jeweils eine SSH-Verbindung auf. Dann können Sie den Server im ersten Putty-Fenster (nennen wir dies im Folgenden Terminal 1) starten und den Client im Zweiten (nennen wir dies im Folgenden Terminal 2).
 
 ## Lösung
 
@@ -26,7 +26,7 @@ Hinweise:
 
 * Erstellen Sie ein neues Projekt auf gewohnte Weise (vgl. [Kapitel 6.3](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html), Aufgabe 2)
 * Nutzen Sie entweder Ihre selbst erstellten Transformationsregeln aus [Kapitel 7.3](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_3_fuer_jedes_marc-feld_eine_spalte.html) oder die aus der folgenden Datei: [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json). Speichern Sie diese Transformationsregeln in einer Datei auf dem Webserver, z.B. **a)** über die Zwischenablage mit ```nano``` (vgl. [Kapitel 3.5](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/03_5_uebung_text_ueber_die_konsole_erstellen.html))
-** oder **b)** laden Sie die Datei mit ```curl``` (vgl. [Kapitel 4.2](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_2_uebung_unapi-schnittstelle_des_gbv.html). Die Datei muss im Arbeitsverzeichnis liegen (in unserem Beispiel also in ```/home/stud/refine/```).
+ODER **b)** laden Sie die Datei mit ```curl``` (vgl. [Kapitel 4.2](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_2_uebung_unapi-schnittstelle_des_gbv.html). Die Datei muss im Arbeitsverzeichnis liegen (in unserem Beispiel also in ```/home/stud/refine/```).
 
 ## Lösung
 
@@ -54,13 +54,13 @@ Hinweise:
 Hinweise:
 
 * Schauen Sie sich die Grundlagen für Shell-Scripte in [Kapitel 4.4](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_4_download_der_metadaten.html), Aufgabe 3 nochmal an.
-* Shell-Scripte führen die im Script enthaltenen Befehle Zeile für Zeile einen nach dem anderen aus, sobald der vorige Befehle abgeschlossen ist. Bislang haben wir den OpenRefine-Server im interaktiven Modus gestartet, d.h. der Startbefehl kommt nie von alleine zu Ende und würde die Bearbeitung des restlichen Teils vom Script blockieren. Verwenden Sie daher im Startbefehl des Servers den Parameter ```-d``` anstelle von ```--rm```. Der Server läuft dann endlos im Hintergrund. Sie müssen ihn abschließend manuell beenden mit dem Befehl ```sudo docker stop refine-server```` und löschen mit ```sudo docker rm refine-server```
+* Shell-Scripte führen die im Script enthaltenen Befehle Zeile für Zeile einen nach dem anderen aus, sobald der vorige Befehle abgeschlossen ist. Bislang haben wir den OpenRefine-Server im interaktiven Modus gestartet, d.h. der Startbefehl kommt nie von alleine zu Ende und würde die Bearbeitung des restlichen Teils vom Script blockieren. Verwenden Sie daher im Startbefehl des Servers den Parameter ```-d``` anstelle von ```--rm```. Der Server läuft dann endlos im Hintergrund. Sie müssen ihn abschließend manuell beenden mit dem Befehl ```sudo docker stop refine-server``` und löschen mit ```sudo docker rm refine-server```
 * Der Docker-Container mit dem Server muss vollständig gestartet sein, bevor Sie den Client starten können, denn sonst liefe der ins Leere. Daher sollten Sie eine gewisse Wartezeit einbauen, z.B. mit dem Befehl ```sleep 15```.
 * Verwenden Sie ein neues Projekt für Ihre Tests. Wenn Sie Transformationsregeln ein zweites Mal auf ein Projekt anwenden, dann laufen die Transformationen auf den bereits transformierten Daten ab. Das führt mit Sicherheit zu unerwünschten Ergebnissen.
 
 ## Lösung
 
-Erläuterungen folgen direkt in den Skripten mit ```#```. Die erste Variante ist der einfachere Lösungsweg, aber nicht so komfortabel. Verwenden Sie Variante 2, wenn Sie damit arbeiten wollen.
+Erläuterungen folgen direkt in den Skripten mit ```#```. Die erste Variante ist der einfachere Lösungsweg, aber nicht so komfortabel. Verwenden Sie Variante 2, wenn Sie damit richtig arbeiten wollen.
 
 ### Variante 1: Transformations+Export-Script "minimal"
 
@@ -257,4 +257,4 @@ Script als Datei: [transform+export.sh](https://felixlohmeier.gitbooks.io/semina
 
 ## Literatur
 
-* Die [FAQ aus der OpenRefine Dokumentation](https://github.com/OpenRefine/OpenRefine/wiki/FAQ) behandeln auch, wie OpenRefine programmatisch als Server genutzt werden kann.
+* In der Rubrik [häufig gestellte Fragen (FAQ)]((https://github.com/OpenRefine/OpenRefine/wiki/FAQ)) der OpenRefine Dokumentation stehen auch ein paar Tipps, wie OpenRefine programmatisch als Server genutzt werden kann.
