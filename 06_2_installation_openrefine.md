@@ -10,7 +10,7 @@ https://hub.docker.com/r/felixlohmeier/openrefine/
 Einer der Vorteile von Docker ist, dass mit einem einzigen Befehl der Download und das Starten von Containern aus dem Docker Hub ermöglicht wird:
 
 ```
-sudo docker run --rm -p 8888:3333 felixlohmeier/openrefine:2.6rc1
+sudo docker run --rm -p 8888:3333 felixlohmeier/openrefine:2.6rc2
 ```
 
 Anschließend im Browser (z.B. Firefox) auf dem lokalen Rechner OpenRefine aufrufen. OpenRefine ist unter der IP-Adresse des Webservers, gefolgt von Port 8888 erreichbar (Beispiel: https://192.168.1.1:8888).
@@ -20,7 +20,7 @@ Erläuterungen:
 * ```felixlohmeier/openrefine:2.6rc2``` ist die Kennzeichnung des Images im Docker Hub
 * ```--rm``` löscht den Container nach dem Beenden wieder, damit die Festplatte nicht zumüllt
 * ```-p 8888:3333``` richtet ein sogenanntes Port Forwarding im Netzwerk ein. Port 8888 außen wird auf Port 3333 innen gemappt. Somit ist der Docker-Container über http://<ip-adresse>:8888 von außen erreichbar
-* Bei dieser Variante werden Daten innerhalb des Containers gespeichert. Da wir das Kommando ```--rm``` verwenden, werden die Daten nach Beenden ebenfalls gelöscht.
+* Bei dieser Variante werden Daten innerhalb des Containers gespeichert. Da wir das Kommando ```--rm``` verwenden, **werden die Daten nach Beenden ebenfalls gelöscht**. Wählen Sie daher zukünftig immer die untenstehende erweiterte Variante mit lokalem Arbeitsverzeichnis!
 * Beenden von Docker im Terminal mit ```STRG+C```
 
 ## Laden und Starten von OpenRefine mit lokalem Arbeitsverzeichnis
@@ -30,7 +30,7 @@ Erläuterungen:
 
 2. Docker starten mit zusätzlichen Parametern:
 ```
-sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m 3G -d /data
+sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data
 ```
 
 Erläuterungen:

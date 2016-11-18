@@ -20,6 +20,6 @@ Hinweise:
 
 ## Lösung
 
-* OpenRefine auf dem Webserver starten: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m 3G -d /data{%ends%}
+* OpenRefine auf dem Webserver starten: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 * OpenRefine aufrufen: {%s%}Auf dem lokalen Rechner im Browser (z.B. Firefox) die IP-Adresse des Webservers gefolgt mit Port 8888 aufrufen. Beispiel: https://192.168.1.1:8888{%ends%}
 * Projekt erstellen: {%s%}Auf den Button "Durchsuchen" klicken und eine der in Aufgabe 1 heruntergeladenen Dateien auswählen. Im nächsten Bildschirm unten links bei Parse data as "XML files" auswählen, dann im Vorschaubildschirm auf den Pfad <record xmlns... klicken und dann oben rechts den Button "Create Project" drücken.{%ends%}
