@@ -24,7 +24,7 @@ Hinweise:
 Hinweise:
 
 * Erstellen Sie ein neues Projekt auf gewohnte Weise (vgl. [Kapitel 6.3](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html), Aufgabe 2)
-* Nutzen Sie entweder Ihre selbst gespeicherten Transformationsregeln aus [Kapitel 7.3](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_3_fuer_jedes_marc-feld_eine_spalte.html) oder die aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json). Speichern Sie die Transformationsregeln in einer Datei auf dem Webserver, z.B. mit ```nano``` (vgl. [Kapitel 3.5](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/03_5_uebung_text_ueber_die_konsole_erstellen.html))
+* Nutzen Sie entweder Ihre selbst gespeicherten Transformationsregeln aus [Kapitel 7.3](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_3_fuer_jedes_marc-feld_eine_spalte.html) oder die aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json). Speichern Sie die Transformationsregeln in einer Datei auf dem Webserver, z.B. mit ```nano``` (vgl. [Kapitel 3.5](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/03_5_uebung_text_ueber_die_konsole_erstellen.html)) oder laden Sie die Datei mit ```curl``` (vgl. [Kapitel 4.2](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_2_uebung_unapi-schnittstelle_des_gbv.html).
 
 ## Lösung
 
