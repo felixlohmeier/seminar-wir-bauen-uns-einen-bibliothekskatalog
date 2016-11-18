@@ -4,12 +4,12 @@
 
 ### a) Was haben wir bislang gemacht (Kapitel im Skript und jeweiliges Ziel)
 
-1) Einführung in Discovery-Systeme in Bibliotheken: Einstieg ins Thema
-2) Open-Source-Software für Bibliothekskataloge: Potentiale für den Einsatz von Open Source Software im Bibliothekswesen realistisch einschätzen können
-3) Grundinstallation der Arbeitsumgebung: Arbeitsumgebung einrichten und sich auf der Linux Konsole zurechtfinden
-4) Schnittstellen zum Laden der Metadaten: Metadaten der HAW-Bibliothek über eine Schnittstelle laden und verschiedene Metadatenformate kennenlernen
-5) Exkurs zu Metadaten in Bibliotheken: Kleiner thereotischer Exkurs zu Metadatenstandards, bevor wir weiter mit den Daten arbeiten.
-6) Installation von OpenRefine mit Docker: Container-Lösungen am Beispiel von Docker kennenlernen, OpenRefine installieren und Daten in ein neues Projekt in OpenRefine laden
+1. Einführung in Discovery-Systeme in Bibliotheken: Einstieg ins Thema
+2. Open-Source-Software für Bibliothekskataloge: Potentiale für den Einsatz von Open Source Software im Bibliothekswesen realistisch einschätzen können
+3. Grundinstallation der Arbeitsumgebung: Arbeitsumgebung einrichten und sich auf der Linux Konsole zurechtfinden
+4. Schnittstellen zum Laden der Metadaten: Metadaten der HAW-Bibliothek über eine Schnittstelle laden und verschiedene Metadatenformate kennenlernen
+5. Exkurs zu Metadaten in Bibliotheken: Kleiner thereotischer Exkurs zu Metadatenstandards, bevor wir weiter mit den Daten arbeiten.
+6. Installation von OpenRefine mit Docker: Container-Lösungen am Beispiel von Docker kennenlernen, OpenRefine installieren und Daten in ein neues Projekt in OpenRefine laden
 
 ### b) Wo stehen wir auf dem Weg zum eigenen Bibliothekskatalog?
 
