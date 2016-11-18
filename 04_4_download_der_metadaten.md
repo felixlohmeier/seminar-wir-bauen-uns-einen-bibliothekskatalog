@@ -115,7 +115,7 @@ Folgende Anfrage an die SRU-Schnittstelle liefert die Gesamtmenge zurück:
 * entspricht folgender Suche im Katalog: {%s%}https://kataloge.uni-hamburg.de/DB=2/SET=5/CMD?ACT=SRCH&TRM=PPN+.%3F{%ends%}
 * Gesamtanzahl der Records: {%s%}450.109 (Stand: 25.10.2016){%ends%}
 
-### Variante 1: Download-Script "light"
+### Variante 1: Download-Script "minimal"
 
 Mit dem Shell-Script aus Aufgabe 3 als Vorlage, der neuen Suchanfrage und der Gesamtanzahl der Records haben wir schon alle Bestandteile, die wir benötigen. Folgendes Script lädt alle Records herunter (vergleichen Sie es mit dem Script aus Aufgabe 3):
 
@@ -135,9 +135,10 @@ exit
 ```
 
 **Ausführen:**
-* Diesen Textinhalt in einer Datei abspeichern, z.B. mit ```nano download-light.sh```
-* Danach muss das Script noch ausführbar gemacht werden: ```chmod +x download-light.sh```
-* Script starten mit ```./download-light.sh```
+
+* Diesen Textinhalt in einer Datei abspeichern, z.B. mit ```nano download-minimal.sh```
+* Danach muss das Script noch ausführbar gemacht werden: ```chmod +x download-minimal.sh```
+* Script starten mit ```./download-minimal.sh```
 
 ### Variante 2: Download-Script "comfort"
 
@@ -204,12 +205,13 @@ grep "<controlfield tag=\"001\">" $dir/*.marcxml | wc -l
 exit
 ```
 
-**Ausführen:**
-* Diesen Textinhalt in einer Datei abspeichern, z.B. mit ```nano download.sh```
-* Danach muss das Script noch ausführbar gemacht werden: ```chmod +x download.sh```
-* Script starten mit ```./download.sh```
-
 Script als Datei: [download.sh](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/download.sh)
+
+**Ausführen:**
+
+* Script mit ```curl``` auf den Server laden: ```curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/download.sh```)
+* Script ausführbar machen: ```chmod +x download.sh```
+* Script starten mit ```./download.sh```
 
 ## Aufgabe 5: Grobe Prüfung der heruntergeladenen Dateien
 
