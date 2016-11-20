@@ -117,6 +117,7 @@ Wie Variante 1 mit folgenden Verbesserungen:
 * Die IDs der zu verarbeitenden Projekte können nun an den Befehl zum Aufruf des Scripts angehängt werden. Wenn keine Projekt-IDs angegeben werden, dann werden diejenigen Projekte verarbeitet, deren Name mit ```TRANSFORM``` beginnt. Dazu werden die vorhandenen Projekte ausgelesen und daraus die Projektnummern mit einem grep-Befehl ausgefiltert und in eine Variable geschrieben.
 * Die anzuwendenden Transformationsdateien werden zu Beginn in einer Variable ```jsonfiles``` definiert (und können direkt im Script geändert werden). Das Script wendet diese Transformationsdateien in der genannten Reihenfolge auf alle zu verarbeitenden Projekte an.
 * Das Script lädt selbsttätig die aktuellen Transformationsdateien aus dem Script in Gitbook, d.h. aus dem Verzeichnis https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/ in das Arbeitsverzeichnis von OpenRefine und überschreibt ggf. gleichlautende Dateien.
+* Der Server wird für jedes Projekt einzeln gestartet und beendet, damit der Arbeitsspeicher nicht voll läuft.
 * Statt der festen Wartezeit (sleep 15) erfolgt eine Abfrage, ob der Server erreichbar ist, bevor das Script fortschreitet. Das beschleunigt die Verarbeitung, wenn der Server schneller als in 15 Sekunden startet und beugt Fehlern vor, falls der Server ausgelastet ist und mal länger als 15 Sekunden braucht.
 * Am Ende werden zur Erfolgskontrolle die exportierten TSV-Dateien ausgegeben.
 * Das Script gibt die Konfigurationswerte sowie regelmäßig Start- und Endzeitpunkte aus.
@@ -125,7 +126,7 @@ Wie Variante 1 mit folgenden Verbesserungen:
 ```
 #!/bin/bash
 # Script zur Transformation und zum Export von Projekten mit OpenRefine
-# Variante "Komfort", Stand: 18.11.2016
+# Variante "Komfort", Stand: 20.11.2016
 #
 # Voraussetzungen:
 # 1. Docker
@@ -210,10 +211,23 @@ if [ -z "$1" ]
     echo ""
 fi
 
+# Server beenden und Container löschen
+echo "Server beenden und Container löschen..."
+sudo docker stop refine-server
+sudo docker rm refine-server
+echo ""
+
 # Schleife für Transformation und Export der Projekte
 for projectid in "${projects[@]}" ; do
 
     echo "Start Projekt $projectid @ $(date)"
+
+    # Server starten
+    echo "Server starten..."
+    sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
+
+    # Warten bis Server vollständig gestartet ist
+    until curl --silent http://localhost:${port} | grep -q -o "OpenRefine" >/dev/null ; do sleep 1; done
         
     # Transformationen durchführen
     for jsonfile in "${jsonfiles[@]}" ; do
@@ -225,14 +239,14 @@ for projectid in "${projects[@]}" ; do
     echo "Exportiere in ${projectid}.tsv"
     sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py -E --output=${projectid}.tsv ${projectid}
 
+    # Server beenden und Container löschen
+    echo "Server beenden und Container löschen..."
+    sudo docker stop refine-server
+    sudo docker rm refine-server
+
     echo "Ende Projekt $projectid @ $(date)"
     echo ""
 done
-
-# Server beenden und Container löschen
-echo "Server beenden und Container löschen..."
-sudo docker stop refine-server
-sudo docker rm refine-server
 
 # Endzeitpunkt ausgeben
 echo "Endzeitpunkt: $(date)"

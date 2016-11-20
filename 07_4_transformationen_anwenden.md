@@ -6,9 +6,22 @@ OpenRefine verfügt über hilfreiche Undo/Redo-Funktionen, mit denen Sie auch al
 
 Hinweise:
 
-* Nutzen Sie die Funktion "Extract" im Bereich Undo/Redo und speichern Sie die Regeln in einer Textdatei zwischen (z.B. mit Windows Editor). Wenden Sie diese anschließend über die Funktion "Apply" in einem neuen Projekt an.
+* Nutzen Sie die Funktion "Extract" im Bereich Undo/Redo und speichern Sie die Regeln in einer Textdatei zwischen (z.B. mit Windows Editor).
+* Wenden Sie diese anschließend über die Funktion "Apply" in einem neuen Projekt an (z.B. per copy & paste)
 
-Literatur:
+## Lösung
+
+Transformationsregeln extrahieren (altes Projekt):
+
+* {%s%}Oben links Menü Undo / Redo den Button Extract... drücken{%ends%}
+* {%s%}Alles im rechten Textfeld in die Zwischenablage kopieren (z.B. mit STRG+A und STRG+C){%ends%}
+
+Transformationsregeln anwenden (neues Projekt):
+
+* {%s%}Oben links Menü Undo / Redo den Button Apply... drücken{%ends%}
+* {%s%}Den Inhalt der Zwischenablage einfügen (z.B. mit STRG+V) und den Button Perform Operations drücken.{%ends%}
+
+## Literatur
 
 * [History-Funktionen in OpenRefine Dokumentation](https://github.com/OpenRefine/OpenRefine/wiki/History)
 * [JSON and my notepad or how to write script in google refine](http://kb.refinepro.com/2012/06/google-refine-json-and-my-notepad-or.html)
