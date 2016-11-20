@@ -50,7 +50,7 @@ sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data feli
 echo ""
 
 # Warten bis Server vollständig gestartet ist
-until curl --silent http://localhost:${port} | grep -q -o "OpenRefine" >/dev/null ; do sleep 1; done
+until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
 
 # Abfrage der Projekt-IDs, wenn mit dem Startbefehl keine benannt wurden
 if [ -z "$1" ]
@@ -101,7 +101,7 @@ for projectid in "${projects[@]}" ; do
     sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
 
     # Warten bis Server vollständig gestartet ist
-    until curl --silent http://localhost:${port} | grep -q -o "OpenRefine" >/dev/null ; do sleep 1; done
+    until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
         
     # Transformationen durchführen
     for jsonfile in "${jsonfiles[@]}" ; do
