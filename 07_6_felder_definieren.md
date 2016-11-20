@@ -20,6 +20,8 @@ Hinweise:
 
 * Wenn Sie nicht wissen, wo Sie beginnen sollen, dann versuchen Sie zunächst mit einem kleinen Satz von Feldern anzufangen. In Kapitel 4 haben Sie das Format Dublin Core als einen "kleinsten gemeinsamen Nenner" kennengelernt. Sie können damit beginnen diese Felder zu bilden. Die Library of Congress hat einen [Crosswalk von MARC21 zu Dublin Core](http://www.loc.gov/marc/marc2dc.html) bereitgestellt, den Sie zur Orientierung nutzen können.
 
+<!---
+
 ## Lösung
 
 Vorgehen für Felder, die im Crosswalk von MARC21 zu Dublin Core (unqualified) genannt sind:
@@ -28,21 +30,25 @@ Vorgehen für Felder, die im Crosswalk von MARC21 zu Dublin Core (unqualified) g
 
 **Als JSON-Datei: [07_6-2.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_6-2.json)**
 
-## Aufgabe 3: Daten bereinigen
+--->
 
-??? Datumskonvertierung: value.toDate()
-??? Störende Zeichen
+## Aufgabe 3: Daten bereinigen
 
 Hinweise:
 
-* Am schnellsten geht es über die Funktion zum Neusortieren der Spalten. Alternativ könnten Sie auch beim Export nur einzelne Spalten auswählen.
+* Prüfen Sie, ob in den Feldern noch unerwünschte Zeichen vorkommen, die nicht im Suchindex landen sollen.
+* Versuchen Sie außerdem Datumsangaben mit der Funktion ```toDate()``` in maschinenlesbare Datumsformate nach ISO-8601 zu wandeln.
 * Der Suchindex erwartet eine eindeutige Identifikationsnummer in der ersten Spalte. Das Feld wird üblicherweise ```id``` benannt. Benennen Sie die Spalte mit dem MARC-Feld ```001``` in ```id``` um und verschieben Sie diese in die erste Spalte (falls Sie dort nicht ohnehin stehen sollte).
+
+<!---
 
 ## Lösung (für die Felder aus Lösung Aufgabe 2)
 
 ...
 
 ** Als JSON-Datei (für die Felder aus Lösung Aufgabe 2): [07_6-3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_6-3.json)****
+
+--->
 
 ## Literatur
 

@@ -192,8 +192,7 @@ Hinweise:
 
 Bedarf an Arbeitsspeicher:
 
-* Alle Daten alle Felder (07_5-6_all.json): Beim Importieren ... GB, Fertiges Projekt laden ... GB
-* Reduzierte Felder (07_5-6_minimal.json): Beim Importieren ... GB, Fertiges Projekt laden ... GB
+* Reduzierte Felder (07_5-6_minimal.json): 2,78 GB
 
 ## Lösung
 
@@ -201,3 +200,116 @@ Bedarf an Arbeitsspeicher:
 * {%s%}Parse data as CSV / TSV / separator-based files{%ends%}
 * {%s%}Character encoding: UTF-8{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen vergeben und Button "Create Project" drücken{%ends%}
+
+## Aufgabe 8: Prüfen, wie häufig Felder belegt sind
+
+Sie können sich mit den Facetten in OpenRefine einen Überblick über die Belegung der Spalten verschaffen. Wählen Sie dazu ```Facet -> Customized facets -> Facet by blank```.
+
+Alternativ können Sie TSV-Dateien auch auf der Kommandozeile durchzählen. Folgendes Script zählt alle Werte in den Spalten einer TSV-Datei.
+
+### Vorgehen
+
+```
+#!/bin/bash
+# Script zur Zählung von Feldbelegungen in TSV-Dateien
+# Stand: 20.11.2016
+# Nutzung: ./count-tsv.sh file.tsv
+
+# Abfrage der Dateinamen
+if [ -z "$1" ]
+  then
+    echo "Bitte Dateinamen angeben!"
+    echo "Beispiel: ./count.sh file.tsv"
+    exit
+  else
+    echo "Folgende Dateien werden untersucht:"
+    files=($*)
+    echo ${files[@]}
+    echo ""
+fi
+
+# Schleife für mehrere Dateien
+for file in "${files[@]}"; do
+
+	# Spaltennamen erfassen
+	readarray columns < <(head -q -n1 haw_000001_450200_minimal.tsv | tr '\t' '\n' | cat)
+
+	# Belegte Zellen in Spalten zählen und ausgeben
+	number=1
+	for column in "${columns[@]}"; do
+	echo -e ${column} "\t\t" $(cut -d$'\t' -f ${number} ${file} | grep -v '^$' | wc -l)
+	number=$(($number+1))
+	done
+done
+```
+
+Script als Datei: [count-tsv.sh](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/count-tsv.sh)
+
+**Ausführen:**
+
+* Script mit ```curl``` auf den Server laden: ```curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/count-tsv.sh```
+* Script ausführbar machen: ```chmod +x count-tsv.sh```
+* Script starten mit ```./count-tsv.sh```
+
+### Ergebnis
+
+Folgende Spalten sind weniger als 10x belegt und könnten wohl gelöscht werden:
+
+| Spalte  | Anzahl belegter Felder  |
+|---|---|
+|	082 : c 	|	2	|
+|	100 : 6 	|	2	|
+|	100 : h 	|	2	|
+|	535 : a 	|	2	|
+|	551 : 5 	|	2	|
+|	583 : c 	|	2	|
+|	600 : e 	|	2	|
+|	600 : l 	|	2	|
+|	600 : p 	|	2	|
+|	610 : d 	|	2	|
+|	610 : g 	|	2	|
+|	610 : l 	|	2	|
+|	630 : p 	|	2	|
+|	650 : b 	|	2	|
+|	650 : d 	|	2	|
+|	651 : s 	|	2	|
+|	653 : f 	|	2	|
+|	653 : x 	|	2	|
+|	700 : t 	|	2	|
+|	700 : v 	|	2	|
+|	700 : w 	|	2	|
+|	751 : 9 	|	2	|
+|	502 : g 	|	3	|
+|	511 : e 	|	3	|
+|	611 : x 	|	3	|
+|	630 : 2 	|	3	|
+|	630 : f 	|	3	|
+|	630 : s 	|	3	|
+|	100 : m 	|	4	|
+|	100 : r 	|	4	|
+|	550 : x 	|	4	|
+|	630 : l 	|	4	|
+|	653 : t 	|	4	|
+|	700 : 5 	|	4	|
+|	776 : o 	|	4	|
+|	611 : v 	|	5	|
+|	653 : h 	|	5	|
+|	710 : 9 	|	5	|
+|	711 : 0 	|	5	|
+|	711 : 2 	|	5	|
+|	100 : n 	|	6	|
+|	510 : x 	|	7	|
+|	600 : z 	|	7	|
+|	100 : p 	|	8	|
+|	551 : x 	|	8	|
+|	653 : g 	|	8	|
+|	655 : x 	|	8	|
+|	700 : 6 	|	8	|
+|	610 : y 	|	9	|
+
+### Transformation anwenden
+
+Wenn Sie die geringfügig belegten Felder löschen wollen, dann wenden Sie die folgende Transformationsdatei an.
+
+* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
+* Den Inhalt aus der Datei [07_5-8_reduzieren.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-8_reduzieren.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
