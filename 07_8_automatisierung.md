@@ -268,7 +268,7 @@ Script als Datei: [transform+export.sh](https://felixlohmeier.gitbooks.io/semina
 * Script ausführbar machen: ```chmod +x transform+export.sh```
 * Script starten mit ```./transform+export.sh```
 
-## Aufgabe 6: Führen Sie mit dem Script ALLE Transformationsschritte aus Kapitel 7 durch
+## Aufgabe 5: Führen Sie mit dem Script ALLE Transformationsschritte aus Kapitel 7 durch
 
 Hinweise:
 
