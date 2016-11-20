@@ -192,11 +192,12 @@ Hinweise:
 
 Bedarf an Arbeitsspeicher:
 
-* Alle Daten alle Felder (07_5-6_all.json): Während der Transformation ... GB, Fertiges Projekt laden ... GB
-* Reduzierte Felder (07_5-6_minimal.json): Während der Transformation ... GB, Fertiges Projekt laden ... GB
+* Alle Daten alle Felder (07_5-6_all.json): Beim Importieren ... GB, Fertiges Projekt laden ... GB
+* Reduzierte Felder (07_5-6_minimal.json): Beim Importieren ... GB, Fertiges Projekt laden ... GB
 
 ## Lösung
 
 * {%s%}Create Project / Durchsuchen... / TSV Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as CSV / TSV / separator-based files{%ends%}
+* {%s%}Character encoding: UTF-8{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen vergeben und Button "Create Project" drücken{%ends%}

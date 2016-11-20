@@ -298,6 +298,7 @@ Server Starten:
 Projekt anlegen:
 * {%s%}Create Project / Durchsuchen... / Alle TSV Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as CSV / TSV / separator-based files{%ends%}
+* {%s%}Character encoding: UTF-8{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen inkl. Codewort TRANSFORM vergeben und Button "Create Project" drücken{%ends%}
 
 **Teil 3: mit Script**
