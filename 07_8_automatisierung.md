@@ -281,7 +281,9 @@ Hinweise:
 **Teil 1: mit Script**
 
 * Arbeitsverzeichnis löschen (Achtung: Bei Bedarf vorher eine Kopie anlegen!): {%s%}sudo rm -r -f refine{%ends%}
-* Backup aus Kapitel 7.5, Aufgabe 3 wiederherstellen: {%s%}cp -r refine-backup refine{%ends%}
+* Backup aus Kapitel 7.5, Aufgabe 3 wiederherstellen: {%s%}cp -r refine-backup_07_5-3 refine{%ends%}
+* Script mit ```curl``` auf den Server laden: {%s%}curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/transform+export.sh{%ends%}
+* Script ausführbar machen: {%s%}chmod +x transform+export.sh{%ends%}
 * Projekte umbenennen: {%s%}Codewort TRANSFORM in alle Projektnamen schreiben{%ends%}
 * Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_3.json 07_5-6_minimal.json) ersetzen.{%ends%}
 * Script ausführen (Achtung: Mehrere Stunden Laufzeit!): {%s%}./transform+export.sh{%ends%}
@@ -299,7 +301,8 @@ Projekt anlegen:
 * {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen inkl. Codewort TRANSFORM vergeben und Button "Create Project" drücken{%ends%}
 
 **Teil 3: mit Script**
-* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_6-2.json 07_6-3.json 07_6-4.json) ersetzen.{%ends%}
+* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_6-2.json 07_6-3.json) ersetzen.{%ends%}
+* Script ausführen: {%s%}./transform+export.sh{%ends%}
 
 ## Literatur
 

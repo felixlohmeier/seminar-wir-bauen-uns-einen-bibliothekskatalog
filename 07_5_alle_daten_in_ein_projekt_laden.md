@@ -73,7 +73,7 @@ Projekte erstellen:
 * {%s%}In der Vorschauansicht an die Stelle <record xmlns="http://www.loc.gov/MARC21/slim"> klicken{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren / Zweite Zahl im Projektnamen anpassen und Button "Create Project" drücken{%ends%}
 
-## Aufgabe 4: Wenden Sie die Transformationsregeln auf alle in Aufgabe 3 erstellten Projekte an
+## Aufgabe 4: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf alle in Aufgabe 3 erstellten Projekte an
 
 Hinweise:
 
@@ -81,14 +81,14 @@ Hinweise:
 * Da Sie die viele Klickarbeit aus Aufgabe 3 bestimmt nicht wiederholen wollen, erstellen Sie zunächst eine Sicherheitskopie der Daten. Beenden Sie dazu den Dockercontainer und führen Sie den folgenden Kopierbefehl aus:
 
 ```
-cp -r refine refine-backup
+cp -r refine refine-backup_07_5-3
 ```
 
 * Falls bei den Transformationen etwas schiefgehen sollte, können Sie die Daten aus dem Backup wie folgt zurückspielen:
 
 ```
 rm -r -f refine
-cp -r refine-backup refine
+cp -r refine-backup_07_5-3 refine
 ```
 
 ## Lösung
@@ -96,7 +96,7 @@ cp -r refine-backup refine
 In OpenRefine Projekte nacheinander laden und jeweils...
 
 * Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
-* Den Inhalt aus der Datei [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json) bzw. [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
+* Den Inhalt aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
 
 ## Aufgabe 5: Alle Projekte einzeln als TSV exportieren
 
@@ -171,8 +171,6 @@ Hier sind zwei Beispielkonfigurationen:
 
 **4) Transformationsdatei auf Projekte mit bereits transformierten Daten anwenden**
 
-Erstellen Sie zunächst ein Backup mit ```cp -r refine refine-backup-transformed```.
-
 In OpenRefine Projekte nacheinander laden und jeweils...
 
 * Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
@@ -194,8 +192,8 @@ Hinweise:
 
 Bedarf an Arbeitsspeicher:
 
-* Alle Daten alle Felder (07_5-6_all.json): ... GB
-* Reduzierte Felder (07_5-6_minimal.json): ... GB
+* Alle Daten alle Felder (07_5-6_all.json): Beim Transformieren ... GB, Fertig transformierte Daten laden ... GB
+* Reduzierte Felder (07_5-6_minimal.json): Beim Transformieren ... GB, Fertig transformierte Daten laden ... GB
 
 ## Lösung
 

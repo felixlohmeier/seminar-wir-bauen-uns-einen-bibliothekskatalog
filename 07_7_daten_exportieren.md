@@ -10,8 +10,8 @@ Hinweise:
 ## Lösung
 
 * Export: {%s%}Projekte nacheinander in OpenRefine laden und im Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
-* Zählung der Zeilen der TSV-Dateien (sollte der Anzahl der Records minus 1 entsprechen): ```wc -l -c *.tsv```
-* Erste Zeile der TSV-Dateien anzeigen (sollte die Spaltenüberschriften beinhalten): ```head -n1 *.tsv```
+* Zählung der Zeilen der TSV-Dateien (sollte der Anzahl der Records minus 1 entsprechen): {%s%}wc -l -c *.tsv{%ends%}
+* Erste Zeile der TSV-Dateien anzeigen (sollte die Spaltenüberschriften beinhalten): {%s%}head -n1 *.tsv{%ends%}
 
 ## Literatur
 

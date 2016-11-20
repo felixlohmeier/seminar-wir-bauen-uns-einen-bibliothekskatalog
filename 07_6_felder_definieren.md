@@ -30,24 +30,19 @@ Vorgehen für Felder, die im Crosswalk von MARC21 zu Dublin Core (unqualified) g
 
 ## Aufgabe 3: Daten bereinigen
 
-...
-Datumskonvertierung: value.toDate()
-Störende Zeichen
-
-** Als JSON-Datei (für die Felder aus Lösung Aufgabe 2): [07_6-3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_6-3.json)****
-
-## Aufgabe 4: Alle nicht benötigten Daten löschen
+??? Datumskonvertierung: value.toDate()
+??? Störende Zeichen
 
 Hinweise:
 
 * Am schnellsten geht es über die Funktion zum Neusortieren der Spalten. Alternativ könnten Sie auch beim Export nur einzelne Spalten auswählen.
 * Der Suchindex erwartet eine eindeutige Identifikationsnummer in der ersten Spalte. Das Feld wird üblicherweise ```id``` benannt. Benennen Sie die Spalte mit dem MARC-Feld ```001``` in ```id``` um und verschieben Sie diese in die erste Spalte (falls Sie dort nicht ohnehin stehen sollte).
 
-## Lösung
+## Lösung (für die Felder aus Lösung Aufgabe 2)
 
 ...
 
-** Als JSON-Datei (für die Felder aus Lösung Aufgabe 2): [07_6-4.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_6-4.json)****
+** Als JSON-Datei (für die Felder aus Lösung Aufgabe 2): [07_6-3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_6-3.json)****
 
 ## Literatur
 
