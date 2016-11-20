@@ -192,8 +192,8 @@ Hinweise:
 
 Bedarf an Arbeitsspeicher:
 
-* Alle Daten alle Felder (07_5-6_all.json): Beim Transformieren ... GB, Fertig transformierte Daten laden ... GB
-* Reduzierte Felder (07_5-6_minimal.json): Beim Transformieren ... GB, Fertig transformierte Daten laden ... GB
+* Alle Daten alle Felder (07_5-6_all.json): Während der Transformation ... GB, Fertiges Projekt laden ... GB
+* Reduzierte Felder (07_5-6_minimal.json): Während der Transformation ... GB, Fertiges Projekt laden ... GB
 
 ## Lösung
 
