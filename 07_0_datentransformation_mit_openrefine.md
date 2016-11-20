@@ -9,10 +9,9 @@ Inhalte:
 3. [Für jedes MARC-Feld eine Spalte](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_3_fuer_jedes_marc-feld_eine_spalte.html)
 4. [Transformationen anwenden](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_4_transformationen_anwenden.html)
 5. [Alle Daten in ein Projekt laden](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_5_alle_daten_in_ein_projekt_laden.html)
-6. [Daten bereinigen](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_6_daten_bereinigen.html)
-7. [Felder definieren](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_7_felder_definieren.html)
-8. [Daten exportieren](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_8_daten_exportieren.html)
-9. [Automatisierung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_9_automatisierung.html)
+6. [Felder definieren](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_6_felder_definieren.html)
+7. [Daten exportieren](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_7_daten_exportieren.html)
+8. [Automatisierung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_8_automatisierung.html)
 
 Beiträge der Studierenden in den Lerntagebüchern:
 

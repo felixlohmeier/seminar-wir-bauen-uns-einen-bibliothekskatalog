@@ -1,4 +1,4 @@
-# 7.9 Automatisierung
+# 7.8 Automatisierung
 
 Die Systemarchitektur von OpenRefine macht es möglich, die Anwendung nicht nur über die grafische Oberfläche, sondern auch über eine API "fernzusteuern". Im Punkt zur Systemarchitektur in der [Dokumentation für Entwickler](https://github.com/OpenRefine/OpenRefine/wiki/Documentation-For-Developers) heißt es:
 
@@ -268,6 +268,38 @@ Script als Datei: [transform+export.sh](https://felixlohmeier.gitbooks.io/semina
 * Script ausführbar machen: ```chmod +x transform+export.sh```
 * Script starten mit ```./transform+export.sh```
 
+## Aufgabe 6: Führen Sie mit dem Script ALLE Transformationsschritte aus Kapitel 7 durch
+
+Hinweise:
+
+* Passen Sie die Zeile ```jsonfiles=(07_3.json test.json)``` so an, dass die gewünschten Transformationsdateien in der richtigen Reihenfolge abgearbeitet werden.
+* Als Ausgangsbasis benötigen Sie das Ergebnis von Kapitel 7.5, Aufgabe 3. Wenn Sie damals das Backup, wie vorgeschlagen, erstellt haben, können Sie dies nun wiederherstellen.
+* Da das Script bzw. der Python-Client keine Projekte erstellen kann, müssen Sie Kapitel 7.5, Aufgabe 7 manuell durchführen.
+
+## Lösung
+
+**Teil 1: mit Script**
+
+* Arbeitsverzeichnis löschen (Achtung: Bei Bedarf vorher eine Kopie anlegen!): {%s%}sudo rm -r -f refine{%ends%}
+* Backup aus Kapitel 7.5, Aufgabe 3 wiederherstellen: {%s%}cp -r refine-backup refine{%ends%}
+* Projekte umbenennen: {%s%}Codewort TRANSFORM in alle Projektnamen schreiben{%ends%}
+* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_3.json 07_5-6_minimal.json) ersetzen.{%ends%}
+* Script ausführen (Achtung: Mehrere Stunden Laufzeit!): {%s%}./transform+export.sh{%ends%}
+* TSV-Dateien mit WinSCP herunterladen: {%s%}vgl. Lösung in Kapitel 6.3, Aufgabe 1{%ends%}
+* Arbeitsverzeichnis leeren: {%s%}sudo rm -r -f refine/*{%ends%}
+
+**Teil 2: manuell**
+
+Server Starten:
+* {%s%}```sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data```{%ends%}
+
+Projekt anlegen:
+* {%s%}Create Project / Durchsuchen... / Alle TSV Dateien auswählen / Next / Configure Parsing Options{%ends%}
+* {%s%}Parse data as CSV / TSV / separator-based files{%ends%}
+* {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen inkl. Codewort TRANSFORM vergeben und Button "Create Project" drücken{%ends%}
+
+**Teil 3: mit Script**
+* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_6-2.json 07_6-3.json 07_6-4.json) ersetzen.{%ends%}
 
 ## Literatur
 

@@ -63,8 +63,15 @@ Hinweise:
 
 ## Lösung
 
-* wie in Aufgabe 1
 * Empfohlene Paketgröße: {%s%}30 Projekte mit je 150 Dateien bei 3GB Arbeitsspeicher für OpenRefine{%ends%}
+* Server starten: {%s%}sudo docker run --name=refine-server --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
+
+Projekte erstellen:
+
+* {%s%}Create Project / Durchsuchen... / 150 Dateien auswählen / Next / Configure Parsing Options{%ends%}
+* {%s%}Parse data as XML files{%ends%}
+* {%s%}In der Vorschauansicht an die Stelle <record xmlns="http://www.loc.gov/MARC21/slim"> klicken{%ends%}
+* {%s%}Checkbox "Store file source..." deaktivieren / Zweite Zahl im Projektnamen anpassen und Button "Create Project" drücken{%ends%}
 
 ## Aufgabe 4: Wenden Sie die Transformationsregeln auf alle in Aufgabe 3 erstellten Projekte an
 
@@ -86,7 +93,10 @@ cp -r refine-backup refine
 
 ## Lösung
 
-* wie in Aufgabe 2
+In OpenRefine Projekte nacheinander laden und jeweils...
+
+* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
+* Den Inhalt aus der Datei [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json) bzw. [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
 
 ## Aufgabe 5: Alle Projekte einzeln als TSV exportieren
 
@@ -98,12 +108,94 @@ Hinweise:
 
 * {%s%}Projekte nacheinander in OpenRefine laden und im Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
 
-## Aufgabe 6: Neues Projekt aus den TSV Dateien erstellen
+## Aufgabe 6: Spalten einheitlich sortieren (und nicht benötigte MARC-Felder löschen)
+
+Schauen Sie sich die ersten Zeilen der TSV-Dateien mit ```head -n1 *.tsv``` an. Die verschiedenen Pakete enthalten sehr unterschiedliche Spalten und sie sind in unterschiedlicher Reihenfolge sortiert. Mit dem Befehl ```head -q -n1 *.tsv | tr "\t" "\n" | sort | uniq -c``` können Sie sich einen Überblick darüber verschaffen, wie oft eine Spalte in den verschiedenen TSV-Dateien vorkommt. Leider sind die Daten uneinheitlich codiert, so dass sehr viele unterschiedliche MARC-Felder belegt sind. Die daraus resultierende hohe Anzahl an Spalten stellt hohe Leistungsanforderungen an OpenRefine. Der Arbeitsspeicher wird vermutlich nicht ausreichen, um alle Daten in ein Projekt zu laden. Führen Sie die folgenden Schritte aus, um die Spalten einheitlich zu sortieren und die Anzahl der Felder zu reduzieren.
+
+## Vorgehen
+
+**1) Zwischenergebnis analysieren**
+
+```head -q -n1 *.tsv | tr "\t" "\n" | sort | uniq -c```
+
+Sie werden feststellen, dass manche Spalten sehr selten vorkommen. Sie können die [Dokumentation des MARC21 Formats](http://www.dnb.de/DE/Standardisierung/Formate/MARC21/marc21_node.html) konsultieren, um zu prüfen, ob Sie die Informationen aus diesen Feldern wirklich benötigen.
+
+Ohne den Parameter ```-c``` erhalten Sie alle Spalten ohne Dubletten.
+
+**2) Transformationsdatei für OpenRefine generieren**
+
+Wenn Sie die Funktion ```All / Edit Columns / Re-order / remove columns...``` über die grafische Oberfläche durchführen und anschließend die Funktion ```Undo / Redo / Extract ...``` aufrufen, können Sie sich anschauen, wie die Transformationsregel in JSON definiert ist. Diese ist sehr einfach aufgebaut und sieht ungefähr so aus (in diesem Beispiel werden nur die Spalten A, B, C erhalten):
+
+```
+[
+  {
+    "op": "core/column-reorder",
+    "description": "Reorder columns",
+    "columnNames": [
+       "A",
+       "B",
+       "C"
+    ]
+  }
+]
+```
+
+Das ermöglicht uns mit dem Befehl aus Schritt 1 und ein paar Texttransformationen mit ```sed``` die Konfigurationsdatei automatisch zu generieren:
+
+* Die Spalten müssen in die eckigen Klammern nach ```"columnNames":``` eingefügt werden.
+* Die Spalten müssen von Anführungszeichen umschlossen sein.
+* Zwischen den Spalten steht ein Komma (nach der letzten Spalte also keins!).
+
+Lösungsansätze:
+
+* Spalten in Anführungszeichen setzen und ein Komma anfügen:  ```sed 's/^/"/' | sed 's/$/",/'```
+* Anfang der Datei ergänzen: ```sed '1i [ { "op": "core/column-reorder", "description": "Reorder columns", "columnNames": ['```
+* Ende der Datei ergänzen und das Komma bei der letzten Spalte entfernen: ```sed '$ s/,$/\n ] } ]/'```
+
+Zusammen mit Schritt 1 ergibt das folgende Lösung:
+
+```
+head -q -n1 *.tsv | tr "\t" "\n" | sort | uniq | sed 's/^/"/' | sed 's/$/",/' | sed '1i [ { "op": "core/column-reorder", "description": "Reorder columns", "columnNames": [' | sed '$ s/,$/\n ] } ]/' > 07_5-6_all.json
+```
+
+In der Datei ```07_5-6_all.json``` haben Sie nun eine valide Transformationsdatei für OpenRefine, die alle in den Daten enthaltenen Felder alphabetisch sortiert.
+
+**3) Nicht benötigte Spalten löschen**
+
+Danach können wir die Datei mit ```nano 07_5-6_all.json``` bearbeiten und alle nicht benötigten Felder löschen, indem wir einfach die entsprechende Zeile der Datei entfernen. Je weniger Spalten enthalten sind, desto übersichtlicher wird die weitere Bearbeitung in den folgenden Kapiteln und desto geringer wird der Bedarf an Arbeitsspeicher.
+
+Hier sind zwei Beispielkonfigurationen:
+
+1. Alle Felder: [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json)
+2. Nur Felder für [Dublin Core (unqualified)](http://www.loc.gov/marc/marc2dc.html): [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json)
+
+**4) Transformationsdatei auf Projekte mit bereits transformierten Daten anwenden**
+
+Erstellen Sie zunächst ein Backup mit ```cp -r refine refine-backup-transformed```.
+
+In OpenRefine Projekte nacheinander laden und jeweils...
+
+* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
+* Den Inhalt aus der Datei [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json) bzw. [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
+
+**5) Alle Projekte erneut als TSV exportieren**
+
+Projekte nacheinander in OpenRefine laden und im Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.
+
+Wenn Sie die exportierten Dateien wieder mit mit ```head -n1 *.tsv``` prüfen, dann werden Sie feststellen, dass nur diejenigen Spalten im Export enthalten sind, in denen auch tatsächlich Felder belegt sind.
+
+## Aufgabe 7: Neues Projekt aus den TSV Dateien erstellen
 
 Hinweise:
 
+* OpenRefine führt unterschiedliche Datenstrukturen sinnvoll zusammen. Wenn die Dateien unterschiedlich viele Spalten oder eine andere Reihenfolge der Spalten haben, so ist das kein Problem. OpenRefine nimmt alle Spalten der ersten Datei auf und belegt diese mit neuen Zeilen. Sobald in einer weiteren Datei eine neue Spalte auftaucht, die OpenRefine noch nicht bekannt ist, so wird diese hinten angehängt. Das führt dazu, dass die Reihenfolge sich ändert. Wenn Sie wieder die alphabetische Sortierung der Spalten haben wollen, dann wenden Sie die Transformation aus Datei [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json) bzw. [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json) einfach noch einmal an.
 * Vermeiden Sie es, die Dateinamen von OpenRefine in den Daten speichern zu lassen. Das ist das Standardverhalten, kann aber mit einer Checkbox beim Import abgeschaltet werden.
-* Wenn der Arbeitsspeicher nicht ausreicht, um alle Daten in ein Projekt zu laden, dann müssen Sie wohl oder übel mit mehreren Projekten arbeiten.
+* Wenn Sie nicht über ausreichend Arbeitsspeicher für OpenRefine verfügen und die Feldliste nicht vorab reduzieren können, dann müssen Sie wohl oder übel mit mehreren Projekten arbeiten. Das erschwert allerdings die Arbeit enorm, weil Sie die Feldbelegungen immer in mehreren Projekten prüfen müssen und Bezüge zwischen den Datensätzen schwerer herzustellen sind.
+
+Bedarf an Arbeitsspeicher:
+
+* Alle Daten alle Felder (07_5-6_all.json): ... GB
+* Reduzierte Felder (07_5-6_minimal.json): ... GB
 
 ## Lösung
 
