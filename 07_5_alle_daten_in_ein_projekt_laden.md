@@ -23,8 +23,10 @@ In der grafischen Oberfläche von OpenRefine:
 
 * {%s%}Create Project / Durchsuchen... / 100 Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as XML files{%ends%}
-* {%s%}In der Vorschauansicht an die Stelle <record xmlns="http://www.loc.gov/MARC21/slim"> klicken{%ends%}
+* {%s%}In der Vorschauansicht an die Stelle record xmlns="http://www.loc.gov/MARC21/slim" klicken{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen vergeben und Button "Create Project" drücken{%ends%}
+
+Das Ergebnis sehen Sie in in Terminal 1 in ```top``` (etwa 0,7 GB)
 
 ## Aufgabe 2: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf das neue Projekt an und beobachten Sie den Speicherbedarf
 
@@ -40,17 +42,18 @@ sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openr
 
 ## Lösung
 
-Putty zweimal starten wie in Lösung zu Aufgabe 1 und ```top``` weiterhin beobachten
+Putty zweimal starten und jeweils per SSH verbinden:
+
+* Terminal 1: {%s%}top eingeben und mehrfach > drücken, um die Sortierung bis zur Spalte RES zu verschieben. Die Spalte RES zeigt den Ressourcenverbrauch an Arbeitsspeicher für jeden Prozess. Wenn OpenRefine wie oben im Docker Startbefehl 3GB zugeteilt sind, dann darf diese Angabe niemals 3,0g überschreiten.{%ends%}
+* Terminal 2: {%s%}sudo docker run --name=refine-server --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 
 In OpenRefine Projekt aus Aufgabe 1 laden und...
 
 * {%s%}Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken {%ends%}
 * {%s%}Den Inhalt aus der Datei 07_3.json in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken{%ends%}
 
-Speicherbedarf beim Laden von transformierten Projekten prüfen:
+Das Ergebnis sehen Sie in Terminal 1 in ```top``` (etwa 1,5 GB). Wenn Sie den Docker-Container neu starten und das fertig transformierte Projekt laden, dann wird weniger Arbeitsspeicher verbraucht (nur etwa 0,24 GB). Die Transformation der Daten hat also zu einem geringeren Ressourcenverbrauch geführt.
 
-* {%s%}Docker-Container mit STRG+C beenden und noch gleich mit dem bekannten Kommando wieder starten{%ends%}
-* {%s%}Im Browser das Projekt in OpenRefine laden und in top den Speicherbedarf prüfen.{%ends%}
 
 ## Aufgabe 3: Erstellen Sie Projekte für alle 4.500 Dateien in geeigneten Paketgrößen
 
@@ -70,7 +73,7 @@ Projekte erstellen:
 
 * {%s%}Create Project / Durchsuchen... / 150 Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as XML files{%ends%}
-* {%s%}In der Vorschauansicht an die Stelle <record xmlns="http://www.loc.gov/MARC21/slim"> klicken{%ends%}
+* {%s%}In der Vorschauansicht an die Stelle record xmlns="http://www.loc.gov/MARC21/slim" klicken{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren / Zweite Zahl im Projektnamen anpassen und Button "Create Project" drücken{%ends%}
 
 ## Aufgabe 4: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf alle in Aufgabe 3 erstellten Projekte an
