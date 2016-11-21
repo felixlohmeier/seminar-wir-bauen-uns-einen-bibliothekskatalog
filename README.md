@@ -31,11 +31,10 @@ Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei
 5. Vorlesung: Exkurs zu Metadaten in Bibliotheken (24.10.2016)
 6. Praxis: [Installation von OpenRefine mit Docker](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_0_installation_von_openrefine_mit_docker.html) (31.10.2016)
 7. Praxis [4x]: [Datentransformation mit OpenRefine](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_0_datentransformation_mit_openrefine.html) (07.11.2016, 14.11.2016, 18.11.2016, 21.11.2016)
-8. Praxis [2x]: Installation und Konfiguration des Suchmaschinenindex (Solr) (05.12.2016, 12.12.2016)
-9. Praxis: Installation der Katalogoberfläche (TYPO3-find) (19.12.2016)
-10. Vorlesung: Exkurs zu Relevanzranking, Facettierung und weiteren Katalogfunktionen (02.01.2016)
-11. Praxis [2x]: Konfiguration von TYPO3-find (09.01.2016, 16.01.2016)
-12. Abschluss: Was fehlt noch für einen Produktivbetrieb? (23.01.2016)
+8. Praxis: Installation und Konfiguration des Suchmaschinenindex (Solr) (05.12.2016)
+9. Praxis: Installation der Katalogoberfläche (TYPO3-find) (12.12.2016)
+10. Vorlesung: Exkurs zu Relevanzranking, Facettierung und weiteren Katalogfunktionen (19.12.2016)
+11. Abschluss: Projektpräsentationen und Diskussion zur Frage "Was fehlt noch für einen Produktivbetrieb?" (09.01.2016)
 
 ## Lerntagebücher
 
