@@ -52,7 +52,7 @@ In OpenRefine Projekt aus Aufgabe 1 laden und...
 * {%s%}Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken {%ends%}
 * {%s%}Den Inhalt aus der Datei 07_3.json in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken{%ends%}
 
-Das Ergebnis sehen Sie in Terminal 1 in ```top``` (etwa 1,5 GB). Wenn Sie den Docker-Container neu starten und das fertig transformierte Projekt laden, dann wird weniger Arbeitsspeicher verbraucht (nur etwa 0,24 GB). Die Transformation der Daten hat also zu einem geringeren Ressourcenverbrauch geführt.
+Das Ergebnis sehen Sie in Terminal 1 in ```top``` (etwa 1,5 GB). Wenn Sie den Docker-Container neu starten und das fertig transformierte Projekt laden, dann wird weniger Arbeitsspeicher verbraucht (nur etwa 0,25 GB). Die Transformation der Daten hat also zu einem geringeren Ressourcenverbrauch geführt.
 
 
 ## Aufgabe 3: Erstellen Sie Projekte für alle 4.500 Dateien in geeigneten Paketgrößen
