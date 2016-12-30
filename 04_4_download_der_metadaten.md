@@ -224,7 +224,7 @@ Das Script benötigt für einen Komplettdurchlauf etwa 6 Stunden. Sie werden als
 ## Lösung
 
 (1) Prüfung Dateigrößen:
-* a) alle: {%s%}du -h{%ends%}
+* a) alle: {%s%}du -a -h{%ends%}
 * b) die kleinste(n): {%s%}ls -1 -s -S{%ends%}
 * c) Auffälligkeiten: {%s%}achten Sie auf kleine und gleiche Dateigrößen, ebenfalls mit ls -1 -s -S{%ends%}
 
@@ -235,4 +235,4 @@ Das Script benötigt für einen Komplettdurchlauf etwa 6 Stunden. Sie werden als
 (3) Dubletten ausgeben:
 * a) welche: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D```
 * b) wieviele: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -c -d```
-* c) wo: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D | grep -f - *.```
+* c) wo: ```grep -h "<controlfield tag=\"001\">" *.marcxml | sed 's/<[^>]*>//g; s/^ *//' | uniq -D | grep -f - *```

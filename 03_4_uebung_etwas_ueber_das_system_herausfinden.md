@@ -18,7 +18,7 @@ Welche Linux-Kommandos liefern die Antworten auf die folgenden Fragen? Ein Teil 
 Lösung: {%s%}free -h{%ends%}
 
 ### 2. Wieviel Festplattenspeicher ist auf dem System frei?
-Lösung: {%s%}df -H{%ends%}
+Lösung: {%s%}df -h{%ends%}
 
 ### 3. Welche(r) Prozessor(en) stehen dem System zur Verfügung?
 Lösung: {%s%}lscpu{%ends%}
@@ -42,5 +42,4 @@ Lösung:
 
 ### 8. Welche Netzwerkverbindungen sind gerade aktiv?
 Lösung:
-* {%s%}netstat -i{%ends%}
-* {%s%}netstat -r{%ends%}
+* {%s%}netstat{%ends%}

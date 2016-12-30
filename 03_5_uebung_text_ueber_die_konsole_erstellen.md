@@ -7,4 +7,3 @@
 
 ## Schritt 2: Anzeige von Dateien mit cat
 * ```cat readme.txt```
-* ... mit Bildschirmseiten für größere Dateien: ```cat readme.txt | less```

@@ -51,6 +51,7 @@ Vergleich picaxml mit marcmxl/dc/mods:
 * picaxml vs. mods: {%s%}diff -u 834422018.picaxml.strip 834422018.mods.strip{%ends%}
 
 Grafischer Vergleich picaxml mit marcxml/dc/mods:
+* Installation vim: {%s%}sudo apt-get install vim{%ends%}
 * picaxml vs. marcxml: {%s%}vimdiff 834422018.picaxml.strip 834422018.marcxml.strip{%ends%}
 * picaxml vs. dc: {%s%}vimdiff 834422018.picaxml.strip 834422018.dc.strip{%ends%}
 * picaxml vs. mods: {%s%}vimdiff 834422018.picaxml.strip 834422018.mods.strip{%ends%}
