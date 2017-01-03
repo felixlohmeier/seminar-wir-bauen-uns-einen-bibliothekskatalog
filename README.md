@@ -1,13 +1,13 @@
-# Skript zum Seminar "(Open) Discovery: Wir bauen uns einen Bibliothekskatalog"
+# Skript zum Seminar "(Open) Discovery: Wir bauen uns einen Bibliothekskatalog" (WS 2016/17)
 
 ## Formate
 * Lesefassung bei GitBook (HTML): https://www.gitbook.com/read/book/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog
 * Druckfassung bei GitBook (PDF): https://www.gitbook.com/download/pdf/book/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog
-* Repository bei GitHub (zum Nachnutzen): https://github.com/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog 
+* Repository bei GitHub (zum Nachnutzen): https://github.com/felixlohmeier/seminar-wir-bauen-uns-einen-bibliothekskatalog
 
 ## Lehrveranstaltung
 
-Dieses Skript entsteht im Rahmen der folgenden Lehrveranstaltung:
+Dieses Skript entstand in der Zeit vom 01.09.2016 bis 09.01.2017 im Rahmen der folgenden Lehrveranstaltung:
 
 * Seminar (Open) Discovery: Wir bauen uns einen Bibliothekskatalog
 * Dozent: [Felix Lohmeier](http://felixlohmeier.de)
@@ -22,23 +22,23 @@ Soweit möglich werden die Materialien für die Lehrveranstaltung an dieser Stel
 
 ## Inhalte
 
-Die Inhalte werden sukzessive hier bereitgestellt. Jede Lerneinheit umfasst zwei akademische Doppelstunden, also insgesamt 3 Zeitstunden. Folgender Ablauf ist vorgesehen:
+Jede Lerneinheit umfasste zwei akademische Doppelstunden, also insgesamt 3 Zeitstunden. Das Seminar ist wie folgt abgelaufen:
 
 1. Vorlesung: [Einführung in Discovery-Systeme in Bibliotheken](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/01_0_Einfuehrung-Discovery-Systeme.html) (19.09.2016) 
 2. Vorlesung: [Open-Source-Software für Bibliothekskataloge](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_0_Open-Source-Software_fuer_Bibliothekskataloge.html) (26.09.2016) 
 3. Praxis: [Grundinstallation der Arbeitsumgebung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/03_0_grundinstallation_der_arbeitsumgebung.html) (10.10.2016)
 4. Praxis: [Schnittstellen zum Laden der Metadaten](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/04_0_schnittstellen_zum_laden_der_metadaten.html) (17.10.2016) 
-5. Vorlesung: Exkurs zu Metadaten in Bibliotheken (24.10.2016)
+5. Vorlesung: [Exkurs zu Metadaten in Bibliotheken](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/05_0_exkurs_zu_metadaten_in_bibliotheken.html) (24.10.2016)
 6. Praxis: [Installation von OpenRefine mit Docker](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_0_installation_von_openrefine_mit_docker.html) (31.10.2016)
 7. Praxis [4x]: [Datentransformation mit OpenRefine](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_0_datentransformation_mit_openrefine.html) (07.11.2016, 14.11.2016, 18.11.2016, 21.11.2016)
-8. Praxis: Installation und Konfiguration des Suchmaschinenindex (Solr) (05.12.2016)
-9. Praxis: Installation der Katalogoberfläche (TYPO3-find) (12.12.2016)
-10. Vorlesung: Exkurs zu Relevanzranking, Facettierung und weiteren Katalogfunktionen (19.12.2016)
-11. Abschluss: Projektpräsentationen und Diskussion zur Frage "Was fehlt noch für einen Produktivbetrieb?" (09.01.2016)
+8. Praxis: [Installation und Konfiguration des Suchmaschinenindex Solr](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/08_0_installation-und-konfiguration-des-suchmaschinenindex-solr.md) (05.12.2016)
+9. Praxis: [Installation der Katalogoberfläche TYPO3-find](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/09_0_installation-der-katalogoberflaeche-typo3-find.md) (12.12.2016)
+10. Vorlesung: [Exkurs zu Relevanzranking](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/10_0_exkurs-zu-relevanzranking.md) (19.12.2016)
+11. Abschluss: [Projektpräsentationen und Abschlussdiskussion](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/11_0_projektpraesentationen-und-abschlussdiskussion.md) (09.01.2016)
 
 ## Lerntagebücher
 
-Als eine mögliche [Prüfungsleistung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/pruefungsleistungen.html) schreiben Studierende öffentliche Lerntagebücher, in denen sie von ihren Erkenntnissen berichten und sich mit dem Inhalt des Seminars auseinandersetzen.
+Als eine mögliche [Prüfungsleistung](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/pruefungsleistungen.html) haben Studierende öffentliche Lerntagebücher geschrieben, in denen sie von ihren Erkenntnissen berichten und sich mit dem Inhalt des Seminars auseinandersetzen.
 
 Die Blogs der Studierenden sind unter der Rubrik [Lerntagebücher](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/lerntagebucher.html) aufgeführt. Thematisch relevante Beiträge sind in den jeweiligen Kapiteln im Skript verlinkt.
 
@@ -50,7 +50,7 @@ Der Einstieg in die mysteriös anmutende Discovery-Technik fällt oft schwer, di
 
 In diesem Wahlpflichtmodul werden wir in praktischen Übungen reale Bibliotheksdaten verarbeiten und einen Prototyp eines modernen Discovery-Systems aufsetzen. Programmierkenntnisse sind dafür nicht erforderlich. Der Kurs ist ausgerichtet auf Studierende für Bibliotheks- und Informationsmanagement, aber aufgrund des praxisnahen Einsatzes von Suchmaschinentechnologien auch für den Studiengang Medien und Information relevant. Die praktischen Übungen werden in der Vorlesungszeit in den PC-Pools der HAW durchgeführt.
 
-## Literaturempfehlungen
+## Literaturempfehlungen zum Einstieg
 
 * Anne Christensen (2013): Warum BibliothekarInnen bei Discovery mitmischen sollten, trotz allem. In: Blog "A growing organism - Bibliothekarische An- und Aussichten von Anne Christensen", 20.4.2013: https://xenzen.wordpress.com/2013/04/20/discovery-mitmischen/
 * Prof. Magnus Pfeffer (2016): Open Source Software zur Verarbeitung und Analyse von Metadaten. Präsentation auf dem 6. Bibliothekskongress. http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:0290-opus4-24490

@@ -2,7 +2,7 @@
 
 ## Schritt 1: Text erstellen mit Texteditor nano
 * ```nano readme.txt```
-* Text eingeben
+* Beliebigen Text eingeben
 * Beenden mit *Ctrl+X*
 
 ## Schritt 2: Anzeige von Dateien mit cat

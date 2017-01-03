@@ -54,51 +54,55 @@ Nehmen Sie weitere Einstellungen vor, die Sie zu Ihrem Computer passen. Empfehlu
 
 Klicken Sie auf "Start", es öffnet sich ein neues Fenster, in dem der Startvorgang durchläuft (etwa 1 Minute). Dann erscheint ein Bildschirm mit Dialogen:
 
-* Vergeben Sie ein Passwort.
+* Vergeben Sie ein Passwort (bitte nur aus Buchstaben und Zahlen, wir ändern es später).
 * Die "Hub Services" von TurnKey können Sie überspringen (mit der Tab-Taste können Sie auf "Skip" wechseln).
-* Die E-Mail-Benachrichtigungen sind sinnvoll, können aber auch übersprungen werden (falls Sie sich registrieren wollen, aber Probleme haben, die @-Taste zu finden... auf einer englischen Tastatur ist es: ```AltGr``` und ```2```).
+* Die E-Mail-Benachrichtigungen sind sinnvoll, können aber auch übersprungen werden (falls Sie sich registrieren wollen, aber Probleme haben, die @-Taste zu finden... auf der voreingestellten englischen Tastatur ist es: ```AltGr``` und ```2```).
 * Die Sicherheitsupdates sollten Sie sofort installieren (und den Neustart bestätigen, wenn Sie dazu aufgefordert werden).
 
 Nach erfolgtem Neustart bekommen Sie die Adressen angezeigt, unter denen die virtuelle Maschine in Ihrem Netzwerk erreichbar ist. TurnKey Linux bringt eine Administrationsoberfläche und eine Kommandozeile mit, die Sie über den Browser auf Ihrem Computer aufrufen können. Notieren Sie sich die Angaben oder machen Sie einen Screenshot (Menü View / Take Screenshot).
 
-Wenn der Mauszeiger verschwunden sein sollte, müssen Sie ggf. eine Taste drücken, die unten rechts in der Fußzeile des Fensters angezeigt wird. Diese Taste (z.B. STRG rechts) hebt den Fokus auf dieses Fenster wieder auf, so dass Sie normal in Ihrem Betriebssystem navigieren können.
+Wenn der Mauszeiger verschwunden sein sollte, müssen Sie ggf. eine Taste drücken, die unten rechts in der Fußzeile des Fensters angezeigt wird. Diese Taste (z.B. STRG rechts) hebt den Fokus auf das Fenster der virtuellen Maschine wieder auf, so dass Sie normal in Ihrem Betriebssystem navigieren können.
 
 Solange das Fenster offen ist, läuft die virtuelle Maschine. Zum Beenden der virtuellen Maschine schließen Sie einfach das Fenster und wählen Sie die zweite Option "Send the shutdown signal". Um die virtuelle Maschine erneut zu starten, wählen Sie den "Start" Button in Virtualbox. Sobald der bekannte Bildschirm mit den Adressen erscheint, ist die virtuelle Maschine erreichbar.
 
 ## Schritt 3: Systemkonfiguration
 
-Rufen Sie die Web Shell im Browser auf:
+Wechseln Sie mit Enter in das "Advanced Menu" und wählen Sie dort den Menüpunkt "Quit" aus. Anschließend melden Sie sich an:
 
-    https://192.168.1.1:12320
+* core login: ```root```
+* Password: (von Ihnen während der Installation festgelegt)
 
-Die IP-Adresse 192.168.1.1 durch die Adresse Ihres Webservers ersetzen und Warnmeldungen zum SSL-Zertifikat ignorieren bzw. eine Ausnahmeregelung einrichten.
-
-Login mit ```root``` und dem von Ihnen während der Installation festgelegten Root-Passwort. Geben Sie dann folgende Befehle ein:
+Geben Sie dann folgende Befehle ein:
 
 ### 1. Tastaturlayout anpassen
 
     apt-get install console-data console-setup
 
-Im Auswahlmenü "Other", dann "German" und nochmal "German" auswählen.
+Es ist eine englische Tastatur voreingestellt, daher ist der Bindestrich an ungewohnter Stelle. Bei Ihrer Tastatur vermutlich auf der Taste des Fragezeichens (```?```). Nach Eingabe des Befehls müssen Sie den Download noch mit ```y``` (vermutlich ```z``` auf der Tastatur) bestätigen. Im Auswahlmenü wählen Sie dann "Other" (ganz unten), dann "German" und nochmal "German" (ganz oben). Danach sollte die Tastatur wie gewohnt funktionieren.
 
-### 2. Neuen Benutzer einrichten
+### 2. Root-Passwort ändern
+
+Da im Installationsbildschirm die englische Tastatur voreingestellt war, wäre es schwierig gewesen, ein komplexeres Passwort einzugeben. Setzen Sie jetzt ein komplexes Passwort mit mindestens 16 Zeichen und Sonderzeichen.
+
+1. Sicheres Passwort unter http://passwordsgenerator.net generieren (Empfehlung: Checkbox "Exclude Ambiguous Characters" aktivieren, das macht es später leichter das Passwort einzutippen)
+2. Passwort setzen mit dem Befehl ```passwd```
+
+### 3. Neuen Benutzer einrichten
 
 Aus Sicherheitsgründen sollte nicht mit dem Benutzer ```root``` gearbeitet werden, weil dieser uneingeschränkte Berechtigungen auf dem System hat. Wir richten daher einen neuen Nutzer ein:
 
-    adduser name
+    adduser stud
 
-```name``` durch einen Namen ihrer Wahl ersetzen (ein Wort und besser in Kleinschreibung). Sie werden dann aufgefordert ein Passwort zu vergeben. Die Abfragen nach weiteren Informationen können Sie jeweils leer lassen und mit ENTER bestätigen.
+Sie werden dann aufgefordert ein Passwort zu vergeben. Die Abfragen nach weiteren Informationen können Sie jeweils leer lassen und mit ENTER bestätigen.
 
 Für die Übungen im Skript werden später manchmal Administrator-Berechtigungen benötigt, daher installieren wir das Paket [sudo](https://wiki.ubuntuusers.de/sudo/) und fügen den gerade hinzugefügten Nutzer der Gruppe der Administratoren hinzu.
 
     apt-get install sudo
-    adduser name sudo
-
-```name``` wieder durch den gewählten Namen ersetzen.
+    adduser stud sudo
 
 
-### 3. Neustart
+### 4. Neustart
 
     reboot
 
-Sobald der Server neu gestartet ist (etwa 30 Sekunden), sollte ein "Connect" Button in der Web Shell erscheinen, mit dem eine neue Verbindung hergestellt werden kann. Jetzt kann der Login mit dem gerade neu angelegten Benutzer erfolgen und es sollte das neue Tastaturlayout eingestellt sein (Test z.B. mit @-Taste). Die Verbindung der Web Shell beenden Sie mit dem Befehl ```exit```.
+Sobald der Server neu gestartet ist (etwa 30 Sekunden), erscheint wieder der Empfangsbildschirm mit den Internetadressen. Sie können jetzt mit Kapitel 3.2 fortfahren. Verwenden Sie für die folgenden Aufgaben immer den Nutzer ``stud```.

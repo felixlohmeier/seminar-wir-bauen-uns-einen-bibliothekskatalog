@@ -1,4 +1,4 @@
-# 3.3 Übung: Etwas über das System herausfinden
+# 3.4 Übung: Etwas über das System herausfinden
 
 
 ## Aufgaben zu Linux-Kommandos
@@ -6,12 +6,12 @@ Welche Linux-Kommandos liefern die Antworten auf die folgenden Fragen? Ein Teil 
 
 ## Hilfreiche Grundlagen
 * Dateien und Verzeichnisse: siehe [Cheatsheet](http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/)
-* Abbruch / Programm beenden: ***Ctrl+C***
+* Abbruch / Programm beenden: ***STRG*** und ***C***
 * Kurzhilfe eines Programms aufrufen: ***Programmname* --help**
-* Handbuch eines Programms aufrufen: **man *Programmname***
-* Automatische Ergänzung: ***Tab***
+* Handbuch eines Programms aufrufen: **man** ***Programmname***
+* Automatische Ergänzung von Befehlen: ***Tab***
 * Vorige Kommandos anzeigen: ***Pfeiltaste nach oben***
-* Suche in Historie der Kommandozeile: ***Ctrl+R***
+* Suche in Historie der Kommandozeile: ***STRG*** und ***R***
 
 ### 1. Wieviel Arbeitsspeicher ist auf dem System frei?
 
@@ -25,6 +25,7 @@ Lösung: {%s%}lscpu{%ends%}
 
 ### 4. Welches Betriebssystem (a), in welcher Version (b) und mit welchem Linux-Kernel (c) ist installiert?
 Lösung:
+
 * (a) {%s%}cat /etc/issue{%ends%}
 * (b) {%s%}cat /etc/debian_version{%ends%}
 * (c) {%s%}uname -r{%ends%}
@@ -37,9 +38,15 @@ Lösung: {%s%}dpkg -l{%ends%}
 
 ### 7. Welche Prozesse laufen derzeit auf dem System?
 Lösung:
+
 * {%s%}top{%ends%}
 * {%s%}ps -e{%ends%}
 
+Hinweis:
+
+* Programme auf der Kommandozeile (wie z.B. ```top```) können in der Regel mit ```STRG``` und ```C``` beendet werden.
+
 ### 8. Welche Netzwerkverbindungen sind gerade aktiv?
 Lösung:
+
 * {%s%}netstat{%ends%}

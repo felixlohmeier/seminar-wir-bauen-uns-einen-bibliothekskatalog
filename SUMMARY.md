@@ -39,6 +39,9 @@
    * [7.6 Felder definieren](07_6_felder_definieren.md)
    * [7.7 Daten exportieren](07_7_daten_exportieren.md)
    * [7.8 Automatisierung](07_8_automatisierung.md)
+* [8 Installation und Konfiguration des Suchmaschinenindex Solr](08_0_installation-und-konfiguration-des-suchmaschinenindex-solr.md)
+* [9 Installation der Katalogoberfläche TYPO3-find](09_0_installation-der-katalogoberflaeche-typo3-find.md)
+* [10 Exkurs zu Relevanzranking](10_0_exkurs-zu-relevanzranking.md)
+* [11 Projektpräsentationen und Abschlussdiskussion](11_0_projektpraesentationen-und-abschlussdiskussion.md)
 * [Lerntagebücher](lerntagebucher.md)
 * [Prüfungsleistungen](pruefungsleistungen.md)
-

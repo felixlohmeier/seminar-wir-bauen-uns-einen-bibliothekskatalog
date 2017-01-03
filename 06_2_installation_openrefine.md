@@ -13,7 +13,7 @@ Einer der Vorteile von Docker ist, dass mit einem einzigen Befehl der Download u
 sudo docker run --rm -p 8888:3333 felixlohmeier/openrefine:2.6rc2
 ```
 
-Anschließend im Browser (z.B. Firefox) auf dem lokalen Rechner OpenRefine aufrufen. OpenRefine ist unter der IP-Adresse des Webservers, gefolgt von Port 8888 erreichbar (Beispiel: https://192.168.1.1:8888).
+Anschließend im Browser (z.B. Firefox) auf dem lokalen Rechner OpenRefine aufrufen. OpenRefine ist unter der IP-Adresse des Webservers, gefolgt von Port 8888 erreichbar (Beispiel: http://192.168.1.1:8888).
 
 Erläuterungen:
 * Da der Container noch nicht lokal vorliegt, wird er automatisch von Docker Hub heruntergeladen (in Teilbestandteilen)
