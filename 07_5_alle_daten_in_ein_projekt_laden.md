@@ -14,26 +14,29 @@ sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openr
 
 ## Lösung
 
-Putty zweimal starten und jeweils per SSH verbinden:
+Terminal 1: Beenden Sie zunächst OpenRefine auf der Kommandozeile (mit ```STRG+C```) und starten Sie die Version ```2.6rc2``` von OpenRefine mit dem obigen Befehl.
 
-* Terminal 1: {%s%}top eingeben und mehrfach > drücken, um die Sortierung bis zur Spalte RES zu verschieben. Die Spalte RES zeigt den Ressourcenverbrauch an Arbeitsspeicher für jeden Prozess. Wenn OpenRefine wie oben im Docker Startbefehl 3GB zugeteilt sind, dann darf diese Angabe niemals 3,0g überschreiten.{%ends%}
-* Terminal 2: {%s%}sudo docker run --name=refine-server --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
+Starten Sie dann ein zweites Putty (Windows) bzw. ein zweites Terminal (Mac, Linux) und bauen Sie auch dort wie gewohnt eine SSH-Verbindung zum Webserver auf. Der Webserver erlaubt mehrere Logins mit dem gleichen Benutzernamen. Wenn Sie ```w``` eintippen, sehen Sie, dass zwei Verbindungen mit ```stud``` aufgebaut sind.
+
+Terminal 2: {%s%}top eingeben und mehrfach > drücken, um die Sortierung bis zur Spalte RES zu verschieben. Die Spalte RES zeigt den Ressourcenverbrauch an Arbeitsspeicher für jeden Prozess. Wenn OpenRefine wie oben im Docker Startbefehl 3GB zugeteilt sind, dann darf diese Angabe niemals 3,0g überschreiten.{%ends%}
 
 In der grafischen Oberfläche von OpenRefine:
 
+* {%s%}Rufen Sie OpenRefine im Browser neu auf oder drücken Sie den Reload-Button im Browser, bis unten links bei der Version ```2.6-rc.2 [TRUNK]``` steht.{%ends%}
 * {%s%}Create Project / Durchsuchen... / 100 Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as XML files{%ends%}
 * {%s%}In der Vorschauansicht an die Stelle record xmlns="http://www.loc.gov/MARC21/slim" klicken{%ends%}
-* {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen vergeben und Button "Create Project" drücken{%ends%}
+* {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen vergeben (z.B. "100x marcxml") und Button "Create Project" drücken{%ends%}
 
-Das Ergebnis sehen Sie in in Terminal 1 in ```top``` (etwa 0,7 GB)
+Den Verbrauch an Arbeitsspeicher sehen Sie in Terminal 2 in ```top``` (etwa 700000 = 0,7 GB)
+
 
 ## Aufgabe 2: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf das neue Projekt an und beobachten Sie den Speicherbedarf
 
 Hinweise:
 
 * Beobachten Sie auch hier den Speicherbedarf während der Transformation. Beenden Sie anschließend den Docker-Container mit OpenRefine, starten Sie ihn neu und laden anschließend noch einmal das transformierte Projekt. Prüfen Sie erneut den Speicherbedarf.
-* Nutzen Sie Ihre gespeicherten Transformationsregeln oder die aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json)
+* Nutzen Sie Ihre gespeicherten Transformationsregeln oder die aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json). Achtung: Der Firefox-Browser hat unter Windows Probleme bei der Anzeige von Sonderzeichen (hier das verwendete Unit-Separator-Zeichen). Verwenden Sie daher unter Windows den Chrome-Browser zur Anzeige der Datei mit den Transformationsregeln.
 * In der Version 2.6rc2 von OpenRefine ist ein [Bug in der Funktion Columnize by key/value columns](https://github.com/OpenRefine/OpenRefine/issues/1093), daher müssen wir für diese Aufgabe die Version 2.6rc1 oder die aktuelle Entwicklungsversion nutzen.
 
 ```
@@ -42,20 +45,23 @@ sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openr
 
 ## Lösung
 
-Putty zweimal starten und jeweils per SSH verbinden:
+Terminal 1: {%s%}Beenden Sie zunächst OpenRefine auf der Kommandozeile (mit ```STRG+C```) und starten Sie die Version ```2.6rc1``` von OpenRefine mit dem obigen Befehl.{%ends%}
 
-* Terminal 1: {%s%}top eingeben und mehrfach > drücken, um die Sortierung bis zur Spalte RES zu verschieben. Die Spalte RES zeigt den Ressourcenverbrauch an Arbeitsspeicher für jeden Prozess. Wenn OpenRefine wie oben im Docker Startbefehl 3GB zugeteilt sind, dann darf diese Angabe niemals 3,0g überschreiten.{%ends%}
-* Terminal 2: {%s%}sudo docker run --name=refine-server --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
+Terminal 2: {%s%}top eingeben und mehrfach > drücken, um die Sortierung bis zur Spalte RES zu verschieben (falls es nicht mehr läuft){%ends%}
 
-In OpenRefine Projekt aus Aufgabe 1 laden und...
+In der grafischen Oberfläche von OpenRefine:
 
+* {%s%}Rufen Sie OpenRefine im Browser neu auf. Unten links sollte jetzt die Version ```2.6-rc1 [TRUNK]``` stehen.{%ends%}
+* {%s%}Unter "Open Project" das in Aufgabe 1 erstellte Projekt öffnen (z.B. "100x marcxml"){%ends%}
 * {%s%}Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken {%ends%}
-* {%s%}Den Inhalt aus der Datei 07_3.json in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken{%ends%}
+* {%s%}Den Inhalt aus der Datei 07_3.json (siehe Link oben) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken{%ends%}
 
-Das Ergebnis sehen Sie in Terminal 1 in ```top``` (etwa 1,5 GB). Wenn Sie den Docker-Container neu starten und das fertig transformierte Projekt laden, dann wird weniger Arbeitsspeicher verbraucht (nur etwa 0,25 GB). Die Transformation der Daten hat also zu einem geringeren Ressourcenverbrauch geführt.
+Das Ergebnis sehen Sie in Terminal 2 in ```top``` (etwa 1,6 GB). Wenn Sie den Docker-Container neu starten und das fertig transformierte Projekt laden, dann wird weniger Arbeitsspeicher verbraucht (nur etwa 0,25 GB). Die Transformation der Daten hat also zu einem geringeren Ressourcenverbrauch geführt.
 
 
 ## Aufgabe 3: Erstellen Sie Projekte für alle 4.500 Dateien in geeigneten Paketgrößen
+
+Die Erledigung dieser Aufgabe dauert etwa 2-3 Stunden, weil viel manuelle Arbeit erforderlich ist. In Kapitel 7.8 lernen Sie später Möglichkeiten zur Automatisierung kennen.
 
 Hinweise:
 
@@ -66,21 +72,23 @@ Hinweise:
 
 ## Lösung
 
-* Empfohlene Paketgröße: {%s%}30 Projekte mit je 150 Dateien bei 3GB Arbeitsspeicher für OpenRefine{%ends%}
-* Server starten: {%s%}sudo docker run --name=refine-server --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
+Empfohlene Paketgröße: {%s%}45 Projekte mit je 100 Dateien bei 3GB Arbeitsspeicher für OpenRefine{%ends%}
 
-Projekte erstellen:
+Terminal 1: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 
-* {%s%}Create Project / Durchsuchen... / 150 Dateien auswählen / Next / Configure Parsing Options{%ends%}
+In der grafischen Oberfläche von OpenRefine:
+
+* {%s%}Create Project / Durchsuchen... / 100 Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as XML files{%ends%}
 * {%s%}In der Vorschauansicht an die Stelle record xmlns="http://www.loc.gov/MARC21/slim" klicken{%ends%}
-* {%s%}Checkbox "Store file source..." deaktivieren / Zweite Zahl im Projektnamen anpassen und Button "Create Project" drücken{%ends%}
+* {%s%}Checkbox "Store file source..." deaktivieren / Zweite Zahl im Projektnamen anpassen (um den Abschnitt eindeutig zu benennen, z.B. "haw_2016 10 25_000001 010000 marcxml") und Button "Create Project" drücken{%ends%}
 
-## Aufgabe 4: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf alle in Aufgabe 3 erstellten Projekte an
+## Aufgabe 4: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf alle in Aufgabe 3 erstellten Projekte an und exportieren Sie die Projekte einzeln als TSV
 
 Hinweise:
 
 * Für das Anwenden der Transformationen müssen Sie die Version 2.6rc1 verwenden, wie in Aufgabe 2.
+* Wählen Sie das Format Tab separated value (TSV) im Export-Menü oben rechts.
 * Da Sie die viele Klickarbeit aus Aufgabe 3 bestimmt nicht wiederholen wollen, erstellen Sie zunächst eine Sicherheitskopie der Daten. Beenden Sie dazu den Dockercontainer und führen Sie den folgenden Kopierbefehl aus:
 
 ```
@@ -98,18 +106,29 @@ cp -r refine-backup_07_5-3 refine
 
 In OpenRefine Projekte nacheinander laden und jeweils...
 
-* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
-* Den Inhalt aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
+1. Transformationsregeln anwenden
 
-## Aufgabe 5: Alle Projekte einzeln als TSV exportieren
+* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
+* Den Inhalt aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken. Achtung: Der Firefox-Browser hat unter Windows Probleme bei der Anzeige von Sonderzeichen (hier das verwendete Unit-Separator-Zeichen). Verwenden Sie daher unter Windows den Chrome-Browser zur Anzeige der Datei mit den Transformationsregeln.
+
+2. Projekt als TSV exportieren
+
+* Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
+
+
+## Aufgabe 5: Heruntergeladene TSV-Dateien auf den Webserver laden
 
 Hinweise:
 
-* Wählen Sie das Format Tab separated value (TSV) im Export-Menü oben rechts.
+* Verwenden Sie ```SCP``` wie in [Kapitel 6.3 Aufgabe 1](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html)
+* Legen Sie die Dateien in einem neuen Order ```tsv``` ab.
 
-## Lösung
+Lösung:
 
-* {%s%}Projekte nacheinander in OpenRefine laden und im Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
+* Terminal auf der VM: {%s%}Neuen Ordner tsv anlegen, beispielsweise mit dem Befehl cd ~ && mkdir tsv{%ends%}
+* Variante Windows: {%s%}WinSCP.exe starten, Protokoll SCP auswählen, in das Feld "Host name" die IP-Adresse eingeben, Benutzername und Passwort eingeben und Login anklicken. Links das Verzeichnis mit den TSV-Dateien auswählen. Rechts einen neuen Ordner "tsv" anlegen und in das Verzeichnis wechseln. TSV-Dateien auswählen und per Drag & Drop von links nach rechts schieben.{%ends%}
+* Variante Mac/Linux: {%s%}Terminal auf dem Betriebssystem (nicht auf der virtuellen Maschine) starten. In das Verzeichnis mit den TSV-Dateien wechseln. Folgenden Befehl eingeben: scp *.tsv stud@192.168.1.1:tsv/{%ends%}
+
 
 ## Aufgabe 6: Spalten einheitlich sortieren (und nicht benötigte MARC-Felder löschen)
 
@@ -183,7 +202,7 @@ In OpenRefine Projekte nacheinander laden und jeweils...
 
 Projekte nacheinander in OpenRefine laden und im Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.
 
-Wenn Sie die exportierten Dateien wieder mit mit ```head -n1 *.tsv``` prüfen, dann werden Sie feststellen, dass nur diejenigen Spalten im Export enthalten sind, in denen auch tatsächlich Felder belegt sind.
+Wenn Sie die neu exportierten Dateien wie in Aufgabe 5 auf den Webserver laden und wieder mit ```head -n1 *.tsv``` prüfen, dann werden Sie feststellen, dass nur diejenigen Spalten im Export enthalten sind, in denen auch tatsächlich Felder belegt sind.
 
 ## Aufgabe 7: Neues Projekt aus den TSV Dateien erstellen
 

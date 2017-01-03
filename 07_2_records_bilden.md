@@ -22,12 +22,16 @@ Spalten ordnen
 
 Angabe in Spalte record-leader durch PPN aus Spalte "record - controlfield" ersetzen
 
+* {%s%}Modus "rows" auswählen (falls nicht vorausgewählt){%ends%}
 * {%s%}Spalte "record - controlfield - tag" / Facet / Text Facet / Wert 001 auswählen{%ends%}
 * {%s%}Spalte "record - leader" / Edit cells / Transform... und folgenden Wert eingeben: cells["record - controlfield"].value{%ends%}
+* {%s%}Facette schließen{%ends%}
 
-Leere Zeilen löschen
+Überflüssige Zeilen löschen
 
-* {%s%}Spalte "record - datafield - subfield" / Facet / Customized facets / Facet by blank / Wert true anklicken (Achtung: im Modus "rows" und vorige Facette wieder schließen){%ends%}
+* {%s%}Spalte "record - datafield - subfield" / Facet / Customized facets / Facet by blank / Wert true anklicken{%ends%}
 * {%s%}All / Edit rows / Remove all matching rows{%ends%}
+* {%s%}Facette schließen{%ends%}
+* {%s%}Modus "records" auswählen{%ends%}
 
-Records anklicken
+OpenRefine erkennt jetzt die Datensätze anhand der PPN.

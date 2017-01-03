@@ -19,17 +19,12 @@
     "op": "core/text-transform",
     "description": "Text transform on cells in column record - leader using expression grel:cells[\"record - controlfield\"].value",
     "engineConfig": {
+      "mode": "row-based",
       "facets": [
         {
-          "expression": "value",
-          "invert": false,
-          "selectError": false,
           "omitError": false,
-          "name": "record - controlfield - tag",
+          "expression": "value",
           "selectBlank": false,
-          "columnName": "record - controlfield - tag",
-          "omitBlank": false,
-          "type": "list",
           "selection": [
             {
               "v": {
@@ -37,10 +32,15 @@
                 "l": "001"
               }
             }
-          ]
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "record - controlfield - tag",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "record - controlfield - tag"
         }
-      ],
-      "mode": "row-based"
+      ]
     },
     "columnName": "record - leader",
     "expression": "grel:cells[\"record - controlfield\"].value",
@@ -52,17 +52,12 @@
     "op": "core/row-removal",
     "description": "Remove rows",
     "engineConfig": {
+      "mode": "row-based",
       "facets": [
         {
-          "expression": "isBlank(value)",
-          "invert": false,
-          "selectError": false,
           "omitError": false,
-          "name": "record - datafield - subfield",
+          "expression": "isBlank(value)",
           "selectBlank": false,
-          "columnName": "record - datafield - subfield",
-          "omitBlank": false,
-          "type": "list",
           "selection": [
             {
               "v": {
@@ -70,10 +65,15 @@
                 "l": "true"
               }
             }
-          ]
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "record - datafield - subfield",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "record - datafield - subfield"
         }
-      ],
-      "mode": "row-based"
+      ]
     }
   },
   {
@@ -90,8 +90,8 @@
     "op": "core/fill-down",
     "description": "Fill down cells in column record - datafield - tag",
     "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
+      "mode": "row-based",
+      "facets": []
     },
     "columnName": "record - datafield - tag"
   },
@@ -99,8 +99,8 @@
     "op": "core/column-addition",
     "description": "Create column NEU at index 1 based on column record - leader using expression grel:value",
     "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
+      "mode": "row-based",
+      "facets": []
     },
     "newColumnName": "NEU",
     "columnInsertIndex": 1,
@@ -123,17 +123,12 @@
     "op": "core/text-transform",
     "description": "Text transform on cells in column record - datafield - tag using expression grel:\"001\"",
     "engineConfig": {
+      "mode": "row-based",
       "facets": [
         {
-          "expression": "isBlank(value)",
-          "invert": false,
-          "selectError": false,
           "omitError": false,
-          "name": "record - datafield - tag",
+          "expression": "isBlank(value)",
           "selectBlank": false,
-          "columnName": "record - datafield - tag",
-          "omitBlank": false,
-          "type": "list",
           "selection": [
             {
               "v": {
@@ -141,10 +136,15 @@
                 "l": "true"
               }
             }
-          ]
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "record - datafield - tag",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "record - datafield - tag"
         }
-      ],
-      "mode": "row-based"
+      ]
     },
     "columnName": "record - datafield - tag",
     "expression": "grel:\"001\"",
@@ -156,17 +156,12 @@
     "op": "core/text-transform",
     "description": "Text transform on cells in column record - datafield - subfield using expression grel:cells[\"PPN\"].value",
     "engineConfig": {
+      "mode": "row-based",
       "facets": [
         {
-          "expression": "value",
-          "invert": false,
-          "selectError": false,
           "omitError": false,
-          "name": "record - datafield - tag",
+          "expression": "value",
           "selectBlank": false,
-          "columnName": "record - datafield - tag",
-          "omitBlank": false,
-          "type": "list",
           "selection": [
             {
               "v": {
@@ -174,10 +169,15 @@
                 "l": "001"
               }
             }
-          ]
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "record - datafield - tag",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "record - datafield - tag"
         }
-      ],
-      "mode": "row-based"
+      ]
     },
     "columnName": "record - datafield - subfield",
     "expression": "grel:cells[\"PPN\"].value",
@@ -186,20 +186,11 @@
     "repeatCount": 10
   },
   {
-    "op": "core/fill-down",
-    "description": "Fill down cells in column PPN",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "PPN"
-  },
-  {
     "op": "core/text-transform",
     "description": "Text transform on cells in column record - datafield - tag using expression grel:value + \" : \" + cells[\"record - datafield - subfield - code\"].value",
     "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
+      "mode": "row-based",
+      "facets": []
     },
     "columnName": "record - datafield - tag",
     "expression": "grel:value + \" : \" + cells[\"record - datafield - subfield - code\"].value",
@@ -213,26 +204,35 @@
     "columnName": "record - datafield - subfield - code"
   },
   {
+    "op": "core/fill-down",
+    "description": "Fill down cells in column PPN",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "PPN"
+  },
+  {
     "op": "core/row-reorder",
     "description": "Reorder rows",
     "mode": "record-based",
     "sorting": {
       "criteria": [
         {
-          "reverse": false,
+          "errorPosition": 1,
           "caseSensitive": false,
-          "column": "PPN",
           "valueType": "string",
+          "column": "PPN",
           "blankPosition": 2,
-          "errorPosition": 1
+          "reverse": false
         },
         {
-          "reverse": false,
+          "errorPosition": 1,
           "caseSensitive": false,
-          "column": "record - datafield - tag",
           "valueType": "string",
+          "column": "record - datafield - tag",
           "blankPosition": 2,
-          "errorPosition": 1
+          "reverse": false
         }
       ]
     }
@@ -246,8 +246,8 @@
     "op": "core/blank-down",
     "description": "Blank down cells in column record - datafield - tag",
     "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
+      "mode": "row-based",
+      "facets": []
     },
     "columnName": "record - datafield - tag"
   },
@@ -264,5 +264,33 @@
     "keyColumnName": "record - datafield - tag",
     "valueColumnName": "record - datafield - subfield",
     "noteColumnName": ""
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "001",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "001"
+        }
+      ]
+    }
   }
 ]

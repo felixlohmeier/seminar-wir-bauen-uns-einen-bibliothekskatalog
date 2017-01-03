@@ -18,6 +18,7 @@ Transformationsregeln extrahieren (altes Projekt):
 
 Transformationsregeln anwenden (neues Projekt):
 
+* Neues Projekt erstellen wie in [Kapitel 6.3 Aufgabe 2](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html) beschrieben
 * {%s%}Oben links Menü Undo / Redo den Button Apply... drücken{%ends%}
 * {%s%}Den Inhalt der Zwischenablage einfügen (z.B. mit STRG+V) und den Button Perform Operations drücken.{%ends%}
 
