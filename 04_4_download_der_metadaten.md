@@ -223,6 +223,8 @@ Das Script benötigt für einen Komplettdurchlauf etwa 6 Stunden. Sie werden als
 
 ## Lösung
 
+Wechseln Sie in das Verzeichnis download mit ```cd download```
+
 (1) Prüfung Dateigrößen:
 * a) alle: {%s%}du -a -h{%ends%}
 * b) die kleinste(n): {%s%}ls -1 -s -S{%ends%}

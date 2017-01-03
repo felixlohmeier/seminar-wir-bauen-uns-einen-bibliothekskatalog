@@ -18,7 +18,7 @@ Für die Installation von Docker auf der in Kapitel 3.1 eingerichteten VM kann d
 
 Hier eine Minimalvariante:
 
-1. Befehl ```sudo nano /etc/apt/sources.list.d/docker.list``` eingeben, folgenden Text einfügen ```deb https://apt.dockerproject.org/repo debian-jessie main``` und Datei mit ```STRG+X``` und ```Y``` speichern.
+1. Befehl ```sudo nano /etc/apt/sources.list.d/docker.list``` eingeben, folgenden Text einfügen ```deb http://apt.dockerproject.org/repo debian-jessie main``` und Datei mit ```STRG+X``` und ```Y``` speichern.
 
 2. Anschließend folgende Befehle in dieser Reihenfolge ausführen:
 
