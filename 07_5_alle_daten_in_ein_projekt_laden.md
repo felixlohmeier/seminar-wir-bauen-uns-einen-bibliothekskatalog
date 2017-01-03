@@ -113,7 +113,7 @@ In OpenRefine Projekte nacheinander laden und jeweils...
 
 2. Projekt als TSV exportieren
 
-* Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
+* {%s%}Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
 
 
 ## Aufgabe 5: Heruntergeladene TSV-Dateien auf den Webserver laden
