@@ -40,11 +40,11 @@ OpenRefine ist also nur Mittel zum Zweck, um die Daten in ein Format zu transfor
 * Stichwort "Virtualisierung": In Rechenzentren laufen solche virtuellen Maschinen, meist zusammen mit vielen anderen virtuellen Maschinen auf einem Großrechner. Die Virtualisierung ist so vollkommen, dass die virtuelle Maschine sich genau so verhält, als ob im Serverraum ein normaler PC stehen würde.
 * Auf Ihrem Server ist ein Linux-Betriebssystem installiert, genauer: Debian 8.5 (auch "Debian Jessie" genannt) zzgl. der Erweiterungen die [TurnKey Core](https://www.turnkeylinux.org/core) mitbringt.
 * Um weitere Programme (OpenRefine, später auch der Suchmaschinenindex Solr, TYPO3 und TYPO3-find) leichter installieren und starten zu können, haben wir zunächst Docker auf dem Linux-Betriebssystem installiert.
-* OpenRefine starten wir (bei Bedarf!) mit Hilfe von Docker als Container. Durch die Befehle, die wir Docker beim Aufruf mitgeben, machen wir OpenRefine im Netzwerk unter dem Port 8888 verfügbar und definieren als Arbeitsverzeichnis ihr persönliches Verzeichnis auf dem Server (/home/stud/).
+* OpenRefine starten wir (bei Bedarf!) mit Hilfe von Docker als Container. Durch die Befehle, die wir Docker beim Aufruf mitgeben, machen wir OpenRefine im Netzwerk unter dem Port 8888 verfügbar und definieren als Arbeitsverzeichnis ihr persönliches Verzeichnis auf dem Server (/home/stud/refine).
 
 ### Arbeitsplatzrechner:
 
 * Von ihrem Rechner oder einem anderen Rechner in Ihrem Netzwerk können Sie auf den Webserver zugreifen:
 * mit Putty über das SSH-Protokoll auf die Kommandozeile des Linux-Betriebssystems (Debian 8.5) ihres Webservers . Damit haben Sie die gleichen Möglichkeiten, als wenn Sie an den Server einen Bildschirm, eine Maus und eine Tastatur anschließen würden.
-* mit WinSCP über das SCP-Protokoll auf die Dateien ihres Webservers. Sie können damit Dateien herunterladen oder hochladen.
+* mit SCP (Windows: WinSCP) über das SCP-Protokoll auf die Dateien ihres Webservers. Sie können damit Dateien herunterladen oder hochladen.
 * mit einem Browser (Firefox, Chrome, usw.) auf OpenRefine unter der Adresse http://<IP-Adresse>:8888 (Beispiel: http://192.168.1.1:8888), später auf Solr (http://192.168.1.1:8983), TYPO3 (http://192.168.1.1/typo3) und den Bibliothekskatalog http://192.168.1.1 (also ganz ohne Port).
