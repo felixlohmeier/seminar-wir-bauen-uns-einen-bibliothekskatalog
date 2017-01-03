@@ -21,12 +21,6 @@ Die einfachste Möglichkeit, um Daten in OpenRefine zu laden, ist das Hochladen 
 scp stud@192.168.1.1:download/* .
 ```
 
-Mit scp können übrigens auch Dateien hochgeladen werden. Beispiel für den Upload aller Dateien aus dem aktuellen Verzeichnis in den Ordner ```download``` der virtuellen Maschine:
-
-```
-scp . stud@192.168.1.1:download/
-```
-
 ## Aufgabe 2: Daten konfigurieren und in ein neues Projekt laden
 
 Starten Sie OpenRefine, laden Sie eine MARCXML-Datei in OpenRefine und legen Sie damit ein neues Projekt an.
