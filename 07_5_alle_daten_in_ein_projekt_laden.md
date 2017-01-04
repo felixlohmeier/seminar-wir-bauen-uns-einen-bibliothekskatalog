@@ -61,7 +61,7 @@ Das Ergebnis sehen Sie in Terminal 2 in ```top``` (etwa 1,6 GB). Wenn Sie den Do
 
 ## Aufgabe 3: Erstellen Sie Projekte für alle 4.500 Dateien in geeigneten Paketgrößen
 
-Die Erledigung dieser Aufgabe dauert etwa 2-3 Stunden, weil viel manuelle Arbeit erforderlich ist. In Kapitel 7.8 lernen Sie später Möglichkeiten zur Automatisierung kennen.
+Die Erledigung dieser Aufgabe dauert etwa 2-3 Stunden.
 
 Hinweise:
 
@@ -74,7 +74,7 @@ Hinweise:
 
 Empfohlene Paketgröße: {%s%}45 Projekte mit je 100 Dateien bei 3GB Arbeitsspeicher für OpenRefine{%ends%}
 
-Terminal 1: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
+Terminal: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 
 In der grafischen Oberfläche von OpenRefine:
 
@@ -85,35 +85,42 @@ In der grafischen Oberfläche von OpenRefine:
 
 ## Aufgabe 4: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf alle in Aufgabe 3 erstellten Projekte an und exportieren Sie die Projekte einzeln als TSV
 
+Die Erledigung dieser Aufgabe dauert etwa 2-3 Stunden. In Kapitel 7.8 lernen Sie später Möglichkeiten zur Automatisierung kennen.
+
 Hinweise:
 
 * Für das Anwenden der Transformationen müssen Sie die Version 2.6rc1 verwenden, wie in Aufgabe 2.
-* Wählen Sie das Format Tab separated value (TSV) im Export-Menü oben rechts.
+* Nutzen Sie Ihre gespeicherten Transformationsregeln oder die aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json). Achtung: Der Firefox-Browser hat unter Windows Probleme bei der Anzeige von Sonderzeichen (hier das verwendete Unit-Separator-Zeichen). Verwenden Sie daher unter Windows den Chrome-Browser zur Anzeige der Datei mit den Transformationsregeln.
+* Wählen Sie für den Export das Format "Tab separated value" (TSV) im Export-Menü oben rechts.
 * Da Sie die viele Klickarbeit aus Aufgabe 3 bestimmt nicht wiederholen wollen, erstellen Sie zunächst eine Sicherheitskopie der Daten. Beenden Sie dazu den Dockercontainer und führen Sie den folgenden Kopierbefehl aus:
 
 ```
-cp -r refine refine-backup_07_5-3
+cp -r refine refine-backup
 ```
 
 * Falls bei den Transformationen etwas schiefgehen sollte, können Sie die Daten aus dem Backup wie folgt zurückspielen:
 
 ```
 rm -r -f refine
-cp -r refine-backup_07_5-3 refine
+cp -r refine-backup refine
 ```
 
 ## Lösung
 
-In OpenRefine Projekte nacheinander laden und jeweils...
+Terminal:
 
-1. Transformationsregeln anwenden
+* Backup erstellen: {%s%}cp -r refine refine-backup{%ends%}
+* OpenRefine in Version 2.6rc1 starten: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m 3G -d /data{%ends%}
 
-* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
-* Den Inhalt aus der Datei [07_3.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_3.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken. Achtung: Der Firefox-Browser hat unter Windows Probleme bei der Anzeige von Sonderzeichen (hier das verwendete Unit-Separator-Zeichen). Verwenden Sie daher unter Windows den Chrome-Browser zur Anzeige der Datei mit den Transformationsregeln.
+In der grafischen Oberfläche von OpenRefine alle Projekte nacheinander laden und jeweils die folgenden Schritte durchführen:
 
-2. Projekt als TSV exportieren
+* Transformation: {%s%}Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken. Den Inhalt aus der Datei 07_3.json in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken. Achtung: Der Firefox-Browser hat unter Windows Probleme bei der Anzeige von Sonderzeichen (hier das verwendete Unit-Separator-Zeichen). Verwenden Sie daher unter Windows den Chrome-Browser zur Anzeige der Datei mit den Transformationsregeln.{%ends%}
+* Export: {%s%}Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
 
-* {%s%}Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
+Der Arbeitsspeicher von OpenRefine ist nach Bearbeitung eines einzelnen Projekts bereits fast voll und da OpenRefine nicht gut von selbst aufräumt (es hält die vorher geladenen Projekte noch eine ganze Weile im Speicher vor) und bei vollem Arbeitsspeicher sehr viel langsamer wird, sollten Sie OpenRefine nach jedem bearbeiteten Projekt im Terminal beenden und neu starten:
+
+1. Beenden Sie OpenRefine mit ```STRG``` und ```C``` auf der Kommandozeile.
+2. Starten Sie OpenRefine erneut, indem Sie auf der Kommandozeile mit der ```Pfeiltaste nach oben``` den vorigen Befehl auswählen und mit ```Enter``` ausführen.
 
 
 ## Aufgabe 5: Heruntergeladene TSV-Dateien auf den Webserver laden
@@ -123,11 +130,15 @@ Hinweise:
 * Verwenden Sie ```SCP``` wie in [Kapitel 6.3 Aufgabe 1](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html)
 * Legen Sie die Dateien in einem neuen Order ```tsv``` ab.
 
-Lösung:
+Lösung Variante Windows:
+* Neuen Ordner tsv anlegen (Terminal): {%s%}cd ~ && mkdir tsv{%ends%}
+* Mit WinSCP verbinden: {%s%}WinSCP.exe starten, Protokoll SCP auswählen, in das Feld "Host name" die IP-Adresse eingeben, Benutzername und Passwort eingeben und Login anklicken.{%ends%}
+* Dateien übertragen: {%s%}Links das Verzeichnis mit den TSV-Dateien auswählen. Rechts in den Ordner "tsv" wechseln. TSV-Dateien auswählen und per Drag & Drop von links nach rechts schieben.{%ends%}
 
-* Terminal auf der VM: {%s%}Neuen Ordner tsv anlegen, beispielsweise mit dem Befehl cd ~ && mkdir tsv{%ends%}
-* Variante Windows: {%s%}WinSCP.exe starten, Protokoll SCP auswählen, in das Feld "Host name" die IP-Adresse eingeben, Benutzername und Passwort eingeben und Login anklicken. Links das Verzeichnis mit den TSV-Dateien auswählen. Rechts einen neuen Ordner "tsv" anlegen und in das Verzeichnis wechseln. TSV-Dateien auswählen und per Drag & Drop von links nach rechts schieben.{%ends%}
-* Variante Mac/Linux: {%s%}Terminal auf dem Betriebssystem (nicht auf der virtuellen Maschine) starten. In das Verzeichnis mit den TSV-Dateien wechseln. Folgenden Befehl eingeben: scp *.tsv stud@192.168.1.1:tsv/{%ends%}
+Lösung Variante Mac/Linux:
+* Neuen Ordner tsv anlegen (Terminal): {%s%}cd ~ && mkdir tsv{%ends%}
+* Terminal auf lokalem Rechner starten: {%s%}Terminal auf dem Betriebssystem (nicht auf der virtuellen Maschine) starten. In das Verzeichnis mit den TSV-Dateien wechseln.{%ends%}
+* Dateien übertragen: {%s%}scp *.tsv stud@192.168.1.1:tsv/{%ends%}
 
 
 ## Aufgabe 6: Spalten einheitlich sortieren (und nicht benötigte MARC-Felder löschen)
