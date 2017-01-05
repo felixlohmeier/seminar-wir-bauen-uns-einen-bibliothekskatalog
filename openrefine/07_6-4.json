@@ -3,8 +3,8 @@
     "op": "core/column-addition",
     "description": "Create column Titel at index 48 based on column 245 : a using expression grel:value + if(isNonBlank(cells[\"245 : b\"].value),\". \",\"\") + if(isNonBlank(cells[\"245 : b\"].value),cells[\"245 : b\"].value,\"\") + if(isNonBlank(cells[\"245 : n\"].value),\" - \",\"\") + if(isNonBlank(cells[\"245 : n\"].value),cells[\"245 : n\"].value,\"\") + if(isNonBlank(cells[\"245 : p\"].value),\" - \",\"\") + if(isNonBlank(cells[\"245 : p\"].value),cells[\"245 : p\"].value,\"\") + if(isNonBlank(cells[\"246 : a\"].value),\" - \",\"\") + if(isNonBlank(cells[\"246 : a\"].value),cells[\"246 : a\"].value,\"\")",
     "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
+      "mode": "row-based",
+      "facets": []
     },
     "newColumnName": "Titel",
     "columnInsertIndex": 48,

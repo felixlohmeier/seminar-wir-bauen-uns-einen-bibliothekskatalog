@@ -3,17 +3,12 @@
     "op": "core/row-removal",
     "description": "Remove rows",
     "engineConfig": {
+      "mode": "row-based",
       "facets": [
         {
-          "invert": false,
-          "expression": "isBlank(value)",
-          "selectError": false,
           "omitError": false,
+          "expression": "isBlank(value)",
           "selectBlank": false,
-          "name": "Titel",
-          "omitBlank": false,
-          "columnName": "Titel",
-          "type": "list",
           "selection": [
             {
               "v": {
@@ -21,10 +16,15 @@
                 "l": "true"
               }
             }
-          ]
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "Titel",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "Titel"
         }
-      ],
-      "mode": "row-based"
+      ]
     }
   }
 ]

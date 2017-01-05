@@ -3,8 +3,8 @@
     "op": "core/column-addition",
     "description": "Create column id at index 1 based on column 001 using expression grel:value",
     "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
+      "mode": "row-based",
+      "facets": []
     },
     "newColumnName": "id",
     "columnInsertIndex": 1,

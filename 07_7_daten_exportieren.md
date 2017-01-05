@@ -4,14 +4,16 @@ OpenRefine bietet viele Möglichkeiten die Daten in verschiedene Formate zu expo
 
 Hinweise:
 
-* Der Klick auf den Menüpunkt Export / TSV startet sofort einen Download der Daten. Das reicht in den meisten Fällen aus. Probieren Sie aber auch die anderen Möglichkeiten aus.
-* Wenn Sie die Daten exportiert haben, können Sie folgende Befehle zur Überprüfung der Daten verwenden: ```wc -l -c``` und ```head -n1```
+* Der Klick auf den Menüpunkt "Export / Tab-separated value" startet sofort einen Download der Daten. Dabei werden jedoch alle Spalten exportiert. Nutzen Sie stattdessen "Export / Custom tabular exporter..." und wählen Sie nur die in Kapitel 7.6 generierten Felder aus.
+* Benennen Sie die Datei in "haw-prozessiert.tsv" um und laden Sie sie auf den Webserver in den Ordner ~/tsv.
+* Wenn Sie die Daten exportiert haben, können Sie folgende Befehle zur Überprüfung der Daten verwenden: ```wc -l``` und ```head -n1```.
 
 ## Lösung
 
-* Export: {%s%}Projekte nacheinander in OpenRefine laden und im Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.{%ends%}
-* Zählung der Zeilen der TSV-Dateien (sollte der Anzahl der Records minus 1 entsprechen): {%s%}wc -l -c *.tsv{%ends%}
-* Erste Zeile der TSV-Dateien anzeigen (sollte die Spaltenüberschriften beinhalten): {%s%}head -n1 *.tsv{%ends%}
+* Export: {%s%}Projekt in OpenRefine laden und im Menü oben rechts Export / Custom tabular exporter... auswählen. Dann Button "De-select All" klicken und nur die Felder auswählen, die in Kapitel 7.6 angelegt wurden: id, ISBN, ISSN, Sprache, LCC, DDC, Urheber, Medientyp, Ort, Verlag, Jahr, Datum, Beschreibung, Schlagwoerter, Beitragende, Reihe, Vorgaenger, Nachfolger, Link, Titel. Anschließend im Reiter Download auf den Download-Button klicken.{%ends%}
+* Upload auf den Webserver: {%s%}vgl. Lösung in Kapitel 6.3, Aufgabe 1.{%ends%}
+* Zählung der Zeilen der TSV-Dateien (sollte der Anzahl der Records plus 1 entsprechen): {%s%}wc -l ~/tsv/haw-prozessiert.tsv{%ends%}
+* Erste Zeile der TSV-Dateien anzeigen (sollte die Spaltenüberschriften beinhalten): {%s%}head -n1 ~/tsv/haw-prozessiert.tsv{%ends%}
 
 ## Literatur
 

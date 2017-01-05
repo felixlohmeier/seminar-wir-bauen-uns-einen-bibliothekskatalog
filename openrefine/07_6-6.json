@@ -1,19 +1,22 @@
 [
   {
+    "op": "core/multivalued-cell-split",
+    "description": "Split multi-valued cells in column 020 : a",
+    "columnName": "020 : a",
+    "keyColumnName": "001",
+    "separator": "␟",
+    "mode": "plain"
+  },
+  {
     "op": "core/column-addition",
-    "description": "Create column ISBN at index 3 based on column 020 : a using expression grel:value",
+    "description": "Create column ISBN at index 2 based on column 020 : a using expression grel:value",
     "engineConfig": {
+      "mode": "row-based",
       "facets": [
         {
-          "invert": false,
-          "expression": "grel:value.length()",
-          "selectError": false,
           "omitError": false,
+          "expression": "grel:value.length()",
           "selectBlank": false,
-          "name": "020 : a",
-          "omitBlank": false,
-          "columnName": "020 : a",
-          "type": "list",
           "selection": [
             {
               "v": {
@@ -21,48 +24,67 @@
                 "l": "13"
               }
             }
-          ]
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "020 : a",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "020 : a"
         }
-      ],
-      "mode": "row-based"
+      ]
     },
     "newColumnName": "ISBN",
-    "columnInsertIndex": 3,
+    "columnInsertIndex": 2,
     "baseColumnName": "020 : a",
     "expression": "grel:value",
     "onError": "set-to-blank"
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column ISBN using expression grel:'978'+cells[\"020 : a\"].value[0,9]",
+    "description": "Text transform on cells in column ISBN using expression grel:with('978'+cells[\"020 : a\"].value[0,9],v,v+((10-(sum(forRange(0,12,1,i,toNumber(v[i])*(1+(i%2*2)) )) %10)) %10).toString()[0] )",
     "engineConfig": {
+      "mode": "row-based",
       "facets": [
         {
-          "invert": true,
-          "expression": "grel:value.length()",
-          "selectError": false,
           "omitError": false,
+          "expression": "grel:value.length()",
           "selectBlank": false,
-          "name": "020 : a",
-          "omitBlank": false,
-          "columnName": "020 : a",
-          "type": "list",
           "selection": [
             {
               "v": {
-                "v": 13,
-                "l": "13"
+                "v": 10,
+                "l": "10"
               }
             }
-          ]
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "020 : a",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "020 : a"
         }
-      ],
-      "mode": "row-based"
+      ]
     },
     "columnName": "ISBN",
-    "expression": "grel:'978'+cells[\"020 : a\"].value[0,9]",
+    "expression": "grel:with('978'+cells[\"020 : a\"].value[0,9],v,v+((10-(sum(forRange(0,12,1,i,toNumber(v[i])*(1+(i%2*2)) )) %10)) %10).toString()[0] )",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "description": "Join multi-valued cells in column ISBN",
+    "columnName": "ISBN",
+    "keyColumnName": "001",
+    "separator": "␟"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "description": "Join multi-valued cells in column 020 : a",
+    "columnName": "020 : a",
+    "keyColumnName": "001",
+    "separator": "␟"
   }
 ]
