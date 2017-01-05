@@ -1,0 +1,68 @@
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column ISBN at index 3 based on column 020 : a using expression grel:value",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "grel:value.length()",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "020 : a",
+          "omitBlank": false,
+          "columnName": "020 : a",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": 13,
+                "l": "13"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "newColumnName": "ISBN",
+    "columnInsertIndex": 3,
+    "baseColumnName": "020 : a",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ISBN using expression grel:'978'+cells[\"020 : a\"].value[0,9]",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": true,
+          "expression": "grel:value.length()",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "020 : a",
+          "omitBlank": false,
+          "columnName": "020 : a",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": 13,
+                "l": "13"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ISBN",
+    "expression": "grel:'978'+cells[\"020 : a\"].value[0,9]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]

@@ -1,0 +1,517 @@
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column ISSN at index 5 based on column 022 : a using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "ISSN",
+    "columnInsertIndex": 5,
+    "baseColumnName": "022 : a",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Sprache at index 7 based on column 041 : a using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Sprache",
+    "columnInsertIndex": 7,
+    "baseColumnName": "041 : a",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column LCC at index 9 based on column 050 : a using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "LCC",
+    "columnInsertIndex": 9,
+    "baseColumnName": "050 : a",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column DDC at index 11 based on column 082 : a using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "DDC",
+    "columnInsertIndex": 11,
+    "baseColumnName": "082 : a",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Urheber at index 13 based on column 100 : a using expression grel:if(isNonBlank(value),value,\"\") + if(isNonBlank(cells[\"100 : d\"].value),\" (\",\"\") + if(isNonBlank(cells[\"100 : d\"].value),cells[\"245 : d\"].value,\"\") + if(isNonBlank(cells[\"100 : d\"].value),\")\",\"\") + if(isBlank(value),cells[\"245 : c\"].value,\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Urheber",
+    "columnInsertIndex": 13,
+    "baseColumnName": "100 : a",
+    "expression": "grel:if(isNonBlank(value),value,\"\") + if(isNonBlank(cells[\"100 : d\"].value),\" (\",\"\") + if(isNonBlank(cells[\"100 : d\"].value),cells[\"245 : d\"].value,\"\") + if(isNonBlank(cells[\"100 : d\"].value),\")\",\"\") + if(isBlank(value),cells[\"245 : c\"].value,\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Urheber using expression grel:cells[\"110 : a\"].value + if(isNonBlank(cells[\"110 : b\"].value),\". \",\"\") + if(isNonBlank(cells[\"110 : b\"].value),cells[\"110 : b\"].value,\"\")",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Urheber",
+          "omitBlank": false,
+          "columnName": "Urheber",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        },
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "110 : a",
+          "omitBlank": false,
+          "columnName": "110 : a",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Urheber",
+    "expression": "grel:cells[\"110 : a\"].value + if(isNonBlank(cells[\"110 : b\"].value),\". \",\"\") + if(isNonBlank(cells[\"110 : b\"].value),cells[\"110 : b\"].value,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Urheber using expression grel:cells[\"100 : a\"].value",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Urheber",
+          "omitBlank": false,
+          "columnName": "Urheber",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        },
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "100 : a",
+          "omitBlank": false,
+          "columnName": "100 : a",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Urheber",
+    "expression": "grel:cells[\"100 : a\"].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Urheber using expression grel:cells[\"700 : a\"].value",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Urheber",
+          "omitBlank": false,
+          "columnName": "Urheber",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        },
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "700 : a",
+          "omitBlank": false,
+          "columnName": "700 : a",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Urheber",
+    "expression": "grel:cells[\"700 : a\"].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Urheber using expression grel:cells[\"710 : a\"].value + if(isNonBlank(cells[\"710 : b\"].value),\". \",\"\") + if(isNonBlank(cells[\"710 : b\"].value),cells[\"710 : b\"].value,\"\")",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Urheber",
+          "omitBlank": false,
+          "columnName": "Urheber",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        },
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "710 : a",
+          "omitBlank": false,
+          "columnName": "710 : a",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Urheber",
+    "expression": "grel:cells[\"710 : a\"].value + if(isNonBlank(cells[\"710 : b\"].value),\". \",\"\") + if(isNonBlank(cells[\"710 : b\"].value),cells[\"710 : b\"].value,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Medientyp at index 22 based on column 245 : h using expression grel:replace(value,\" =\",\"\")",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "245 : h",
+          "omitBlank": false,
+          "columnName": "245 : h",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "newColumnName": "Medientyp",
+    "columnInsertIndex": 22,
+    "baseColumnName": "245 : h",
+    "expression": "grel:replace(value,\" =\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Medientyp using expression grel:\"Elektronische Ressource\"",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Medientyp",
+          "omitBlank": false,
+          "columnName": "Medientyp",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Elektronische Ressource␟Elektronische Ressource",
+                "l": "Elektronische Ressource␟Elektronische Ressource"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Medientyp",
+    "expression": "grel:\"Elektronische Ressource\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Medientyp using expression grel:\"undefiniert\"",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Medientyp",
+          "omitBlank": false,
+          "columnName": "Medientyp",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Medientyp",
+    "expression": "grel:\"undefiniert\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Ort at index 27 based on column 260 : a using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Ort",
+    "columnInsertIndex": 27,
+    "baseColumnName": "260 : a",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Verlag at index 29 based on column 260 : b using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Verlag",
+    "columnInsertIndex": 29,
+    "baseColumnName": "260 : b",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Datum at index 31 based on column 260 : c using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Datum",
+    "columnInsertIndex": 31,
+    "baseColumnName": "260 : c",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Jahr at index 31 based on column 260 : c using expression grel:value.toDate().datePart(\"year\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Jahr",
+    "columnInsertIndex": 31,
+    "baseColumnName": "260 : c",
+    "expression": "grel:value.toDate().datePart(\"year\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Beschreibung at index 34 based on column 500 : a using expression grel:if(isNonBlank(value),value,\"\") + if(isNonBlank(cells[\"502 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"502 : a\"].value),cells[\"502 : a\"].value,\"\") + if(isNonBlank(cells[\"515 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"515 : a\"].value),cells[\"515 : a\"].value,\"\") + if(isNonBlank(cells[\"520 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"520 : a\"].value),cells[\"520 : a\"].value,\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Beschreibung",
+    "columnInsertIndex": 34,
+    "baseColumnName": "500 : a",
+    "expression": "grel:if(isNonBlank(value),value,\"\") + if(isNonBlank(cells[\"502 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"502 : a\"].value),cells[\"502 : a\"].value,\"\") + if(isNonBlank(cells[\"515 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"515 : a\"].value),cells[\"515 : a\"].value,\"\") + if(isNonBlank(cells[\"520 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"520 : a\"].value),cells[\"520 : a\"].value,\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Schlagwoerter at index 39 based on column 650 : a using expression grel:if(isNonBlank(value),value,\"\") + if(isNonBlank(cells[\"650 : x\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"650 : x\"].value),cells[\"650 : x\"].value,\"\") + if(isNonBlank(cells[\"653 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"653 : a\"].value),cells[\"653 : a\"].value,\"\") + if(isNonBlank(cells[\"655 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"655 : a\"].value),cells[\"655 : a\"].value,\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Schlagwoerter",
+    "columnInsertIndex": 39,
+    "baseColumnName": "650 : a",
+    "expression": "grel:if(isNonBlank(value),value,\"\") + if(isNonBlank(cells[\"650 : x\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"650 : x\"].value),cells[\"650 : x\"].value,\"\") + if(isNonBlank(cells[\"653 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"653 : a\"].value),cells[\"653 : a\"].value,\"\") + if(isNonBlank(cells[\"655 : a\"].value),\"␟\",\"\") + if(isNonBlank(cells[\"655 : a\"].value),cells[\"655 : a\"].value,\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Beitragende at index 45 based on column 700 : a using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Beitragende",
+    "columnInsertIndex": 45,
+    "baseColumnName": "700 : a",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Reihe at index 49 based on column 773 : t using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Reihe",
+    "columnInsertIndex": 49,
+    "baseColumnName": "773 : t",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Vorgaenger at index 51 based on column 780 : t using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Vorgaenger",
+    "columnInsertIndex": 51,
+    "baseColumnName": "780 : t",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Nachfolger at index 53 based on column 785 : t using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Nachfolger",
+    "columnInsertIndex": 53,
+    "baseColumnName": "785 : t",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Link at index 55 based on column 856 : u using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Link",
+    "columnInsertIndex": 55,
+    "baseColumnName": "856 : u",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  }
+]
