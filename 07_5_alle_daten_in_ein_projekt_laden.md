@@ -130,13 +130,15 @@ Hinweise:
 * Verwenden Sie ```scp``` wie in [Kapitel 6.3 Aufgabe 1](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html)
 * Legen Sie die Dateien in einem neuen Order ```tsv``` ab.
 
-Lösung Variante Windows:
+## Lösung
+
+### Variante Windows
 
 * Neuen Ordner tsv anlegen (Terminal): {%s%}cd ~ && mkdir tsv{%ends%}
 * Mit WinSCP verbinden: {%s%}WinSCP.exe starten, Protokoll SCP auswählen, in das Feld "Host name" die IP-Adresse eingeben, Benutzername und Passwort eingeben und Login anklicken.{%ends%}
 * Dateien übertragen: {%s%}Links das Verzeichnis mit den TSV-Dateien auswählen. Rechts in den Ordner "tsv" wechseln. TSV-Dateien auswählen und per Drag & Drop von links nach rechts schieben.{%ends%}
 
-Lösung Variante Mac/Linux:
+### Variante Mac/Linux
 
 * Neuen Ordner tsv anlegen (Terminal): {%s%}cd ~ && mkdir tsv{%ends%}
 * Terminal auf lokalem Rechner starten: {%s%}Terminal auf dem Betriebssystem (nicht auf der virtuellen Maschine) starten. In das Verzeichnis mit den TSV-Dateien wechseln.{%ends%}
