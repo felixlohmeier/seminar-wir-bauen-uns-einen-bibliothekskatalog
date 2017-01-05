@@ -85,7 +85,7 @@ In der grafischen Oberfläche von OpenRefine:
 
 ## Aufgabe 4: Wenden Sie die Transformationsregeln aus Kapitel 7.3 auf alle in Aufgabe 3 erstellten Projekte an und exportieren Sie die Projekte einzeln als TSV
 
-Die Erledigung dieser Aufgabe dauert etwa 2-3 Stunden. In Kapitel 7.8 lernen Sie später Möglichkeiten zur Automatisierung kennen.
+Die Erledigung dieser Aufgabe dauert etwa 3-4 Stunden. In Kapitel 7.8 lernen Sie später Möglichkeiten zur Automatisierung kennen.
 
 Hinweise:
 
@@ -127,15 +127,17 @@ Der Arbeitsspeicher von OpenRefine ist nach Bearbeitung eines einzelnen Projekts
 
 Hinweise:
 
-* Verwenden Sie ```SCP``` wie in [Kapitel 6.3 Aufgabe 1](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html)
+* Verwenden Sie ```scp``` wie in [Kapitel 6.3 Aufgabe 1](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_3_openrefine_starten_und_daten_laden.html)
 * Legen Sie die Dateien in einem neuen Order ```tsv``` ab.
 
 Lösung Variante Windows:
+
 * Neuen Ordner tsv anlegen (Terminal): {%s%}cd ~ && mkdir tsv{%ends%}
 * Mit WinSCP verbinden: {%s%}WinSCP.exe starten, Protokoll SCP auswählen, in das Feld "Host name" die IP-Adresse eingeben, Benutzername und Passwort eingeben und Login anklicken.{%ends%}
 * Dateien übertragen: {%s%}Links das Verzeichnis mit den TSV-Dateien auswählen. Rechts in den Ordner "tsv" wechseln. TSV-Dateien auswählen und per Drag & Drop von links nach rechts schieben.{%ends%}
 
 Lösung Variante Mac/Linux:
+
 * Neuen Ordner tsv anlegen (Terminal): {%s%}cd ~ && mkdir tsv{%ends%}
 * Terminal auf lokalem Rechner starten: {%s%}Terminal auf dem Betriebssystem (nicht auf der virtuellen Maschine) starten. In das Verzeichnis mit den TSV-Dateien wechseln.{%ends%}
 * Dateien übertragen: {%s%}scp *.tsv stud@192.168.1.1:tsv/{%ends%}
@@ -173,13 +175,18 @@ Wenn Sie die Funktion ```All / Edit Columns / Re-order / remove columns...``` ü
 ]
 ```
 
-Das ermöglicht uns mit dem Befehl aus Schritt 1 und ein paar Texttransformationen mit ```sed``` die Konfigurationsdatei automatisch zu generieren:
+Das ermöglicht uns mit dem Befehl aus Schritt 1 und ein paar Texttransformationen die Konfigurationsdatei automatisch zu generieren:
 
 * Die Spalten müssen in die eckigen Klammern nach ```"columnNames":``` eingefügt werden.
 * Die Spalten müssen von Anführungszeichen umschlossen sein.
 * Zwischen den Spalten steht ein Komma (nach der letzten Spalte also keins!).
 
-Lösungsansätze:
+Literatur:
+
+* Texttransformationen auf der Kommandozeile mit Unix Tools: [Introduction to text manipulation on UNIX-based systems](https://www.ibm.com/developerworks/aix/library/au-unixtext/)
+* Beispiele für Texttransformationen mit ```sed```: [USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)](http://sed.sourceforge.net/sed1line.txt)
+
+Lösungsansätze mit ```sed```:
 
 * Spalten in Anführungszeichen setzen und ein Komma anfügen:  ```sed 's/^/"/' | sed 's/$/",/'```
 * Anfang der Datei ergänzen: ```sed '1i [ { "op": "core/column-reorder", "description": "Reorder columns", "columnNames": ['```
@@ -188,161 +195,80 @@ Lösungsansätze:
 Zusammen mit Schritt 1 ergibt das folgende Lösung:
 
 ```
-head -q -n1 *.tsv | tr "\t" "\n" | sort | uniq | sed 's/^/"/' | sed 's/$/",/' | sed '1i [ { "op": "core/column-reorder", "description": "Reorder columns", "columnNames": [' | sed '$ s/,$/\n ] } ]/' > 07_5-6_all.json
+head -q -n1 *.tsv | tr "\t" "\n" | sort | uniq | sed 's/^/"/' | sed 's/$/",/' | sed '1i [ { "op": "core/column-reorder", "description": "Reorder columns", "columnNames": [' | sed '$ s/,$/\n ] } ]/' > ~/07_5_all.json
 ```
 
-In der Datei ```07_5-6_all.json``` haben Sie nun eine valide Transformationsdatei für OpenRefine, die alle in den Daten enthaltenen Felder alphabetisch sortiert.
+In der Datei ```07_5_all.json``` haben Sie nun eine valide Transformationsdatei für OpenRefine, die alle in den Daten enthaltenen Felder alphabetisch sortiert.
+
+Der letzte Teil des Befehls ```> ~/07_5_all.json``` sorgt übrigens dafür, dass die Datei im Verzeichnis ~ gespeichert wird, was ein Platzhalter für das Verzeichnis des aktuellen Nutzers (hier ```stud```) ist. Sie finden die Datei daher im "Hauptverzeichnis", in das Sie mit ```cd ~``` wechseln können.
 
 **3) Nicht benötigte Spalten löschen**
 
-Danach können wir die Datei mit ```nano 07_5-6_all.json``` bearbeiten und alle nicht benötigten Felder löschen, indem wir einfach die entsprechende Zeile der Datei entfernen. Je weniger Spalten enthalten sind, desto übersichtlicher wird die weitere Bearbeitung in den folgenden Kapiteln und desto geringer wird der Bedarf an Arbeitsspeicher.
+Danach können wir die Datei mit ```nano 07_5_all.json``` bearbeiten und alle nicht benötigten Felder löschen, indem wir einfach die entsprechende Zeile der Datei entfernen. Je weniger Spalten enthalten sind, desto übersichtlicher wird die weitere Bearbeitung in den folgenden Kapiteln und desto geringer wird der Bedarf an Arbeitsspeicher.
+
+Das Tastenkürzel in ```nano``` für das Speichern einer Datei unter einem anderem Namen lautet ```STRG``` und ```O``` (für "WriteOut").
 
 Hier sind zwei Beispielkonfigurationen:
 
-1. Alle Felder: [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json)
-2. Nur Felder für [Dublin Core (unqualified)](http://www.loc.gov/marc/marc2dc.html): [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json)
+1. Alle Felder: [07_5_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5_all.json)
+2. Feldauswahl auf Basis von Zielschema [Dublin Core (unqualified)](http://www.loc.gov/marc/marc2dc.html): [07_5_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5_minimal.json)
 
-**4) Transformationsdatei auf Projekte mit bereits transformierten Daten anwenden**
+**4) Transformationsdatei auf Projekte mit bereits transformierten Daten anwenden und alle Projekte erneut als TSV exportieren**
 
-In OpenRefine Projekte nacheinander laden und jeweils...
+Terminal:
 
-* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
-* Den Inhalt aus der Datei [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json) bzw. [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
+* OpenRefine in Version 2.6rc1 oder 2.6rc2 starten: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 
-**5) Alle Projekte erneut als TSV exportieren**
+In der grafischen Oberfläche von OpenRefine alle Projekte nacheinander laden und jeweils die folgenden Schritte durchführen:
 
-Projekte nacheinander in OpenRefine laden und im Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.
+* Transformation: Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken. Den Inhalt aus der Datei [07_5_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5_minimal.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken. Achtung: Der Firefox-Browser hat unter Windows Probleme bei der Anzeige von Sonderzeichen (hier das verwendete Unit-Separator-Zeichen). Verwenden Sie daher unter Windows den Chrome-Browser zur Anzeige der Datei mit den Transformationsregeln.
+* Export: Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.
 
-Wenn Sie die neu exportierten Dateien wie in Aufgabe 5 auf den Webserver laden und wieder mit ```head -n1 *.tsv``` prüfen, dann werden Sie feststellen, dass nur diejenigen Spalten im Export enthalten sind, in denen auch tatsächlich Felder belegt sind.
+Da die Projekte durch die vorherigen Transformationen wesentlich weniger Arbeitsspeicher benötigen, müssen Sie OpenRefine anders als bei Aufgabe 4 nicht mehr regelmäßig neu starten. Beachten Sie aber, dass Sie erst mit dem Beenden von OpenRefine sicher gehen können, dass alle Änderungen in den Projekten tatsächlich auf die Festplatte gespeichert wurden. Daher empfiehlt es sich trotzdem nach etwa 10 bearbeiteten Projekten den Docker-Container mit OpenRefine zu beenden und neu zu starten.
+
+**5) Frisch heruntergeladene TSV-Dateien erneut auf den Webserver laden**
+
+Wenn Sie die neu exportierten Dateien wie in Aufgabe 5 erneut auf den Webserver laden und wieder mit ```head -n1 *.tsv``` prüfen, dann werden Sie feststellen, dass nur diejenigen Spalten im Export enthalten sind, in denen auch tatsächlich Felder belegt sind.
+
+Variante Windows:
+
+* Dateien im Ordner tsv löschen (Terminal): ```cd ~/tsv && rm *.tsv```
+* Mit WinSCP verbinden: WinSCP.exe starten, Protokoll SCP auswählen, in das Feld "Host name" die IP-Adresse eingeben, Benutzername und Passwort eingeben und Login anklicken.
+* Dateien übertragen: Links das Verzeichnis mit den TSV-Dateien auswählen. Rechts in den Ordner "tsv" wechseln. TSV-Dateien auswählen und per Drag & Drop von links nach rechts schieben.
+
+Variante Mac/Linux:
+
+* Dateien im Ordner tsv löschen (Terminal): ```cd ~/tsv && rm *.tsv```
+* Terminal auf dem Betriebssystem (nicht auf der virtuellen Maschine) starten. In das Verzeichnis mit den TSV-Dateien wechseln.
+* Dateien übertragen: ```scp *.tsv stud@192.168.1.1:tsv/*```
+
+Prüfung der Dateien (Terminal):
+
+```
+cd ~/tsv
+head -n1 *.tsv
+head -q -n1 *.tsv | tr "\t" "\n" | sort | uniq -c
+```
 
 ## Aufgabe 7: Neues Projekt aus den TSV Dateien erstellen
 
 Hinweise:
 
-* OpenRefine führt unterschiedliche Datenstrukturen sinnvoll zusammen. Wenn die Dateien unterschiedlich viele Spalten oder eine andere Reihenfolge der Spalten haben, so ist das kein Problem. OpenRefine nimmt alle Spalten der ersten Datei auf und belegt diese mit neuen Zeilen. Sobald in einer weiteren Datei eine neue Spalte auftaucht, die OpenRefine noch nicht bekannt ist, so wird diese hinten angehängt. Das führt dazu, dass die Reihenfolge sich ändert. Wenn Sie wieder die alphabetische Sortierung der Spalten haben wollen, dann wenden Sie die Transformation aus Datei [07_5-6_all.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_all.json) bzw. [07_5-6_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-6_minimal.json) einfach noch einmal an.
+* OpenRefine führt unterschiedliche Datenstrukturen sinnvoll zusammen. Wenn die Dateien unterschiedlich viele Spalten oder eine andere Reihenfolge der Spalten haben, so ist das kein Problem. OpenRefine nimmt alle Spalten der ersten Datei auf und belegt diese mit neuen Zeilen. Sobald in einer weiteren Datei eine neue Spalte auftaucht, die OpenRefine noch nicht bekannt ist, so wird diese hinten angehängt. Das führt dazu, dass die Reihenfolge sich ändert. Wenn Sie wieder die alphabetische Sortierung der Spalten haben wollen, dann wenden Sie die Transformation aus Datei [07_5_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5_minimal.json) einfach noch einmal an.
 * Vermeiden Sie es, die Dateinamen von OpenRefine in den Daten speichern zu lassen. Das ist das Standardverhalten, kann aber mit einer Checkbox beim Import abgeschaltet werden.
 * Wenn Sie nicht über ausreichend Arbeitsspeicher für OpenRefine verfügen und die Feldliste nicht vorab reduzieren können, dann müssen Sie wohl oder übel mit mehreren Projekten arbeiten. Das erschwert allerdings die Arbeit enorm, weil Sie die Feldbelegungen immer in mehreren Projekten prüfen müssen und Bezüge zwischen den Datensätzen schwerer herzustellen sind.
 
 Bedarf an Arbeitsspeicher:
 
-* Reduzierte Felder (07_5-6_minimal.json): 2,78 GB
+* Reduzierte Felder (07_5_minimal.json): etwa 2,5 GB
 
 ## Lösung
 
+* {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 * {%s%}Create Project / Durchsuchen... / TSV Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as CSV / TSV / separator-based files{%ends%}
 * {%s%}Character encoding: UTF-8{%ends%}
-* {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen vergeben und Button "Create Project" drücken{%ends%}
+* {%s%}Checkbox "Store file source..." deaktivieren{%ends%}
+* {%s%}Projektnamen vergeben (z.B. "haw komplett" und Button "Create Project" drücken{%ends%}
 
-## Aufgabe 8: Prüfen, wie häufig Felder belegt sind
-
-Sie können sich mit den Facetten in OpenRefine einen Überblick über die Belegung der Spalten verschaffen. Wählen Sie dazu ```Facet -> Customized facets -> Facet by blank```.
-
-Alternativ können Sie TSV-Dateien auch auf der Kommandozeile durchzählen. Folgendes Script zählt alle Werte in den Spalten einer TSV-Datei.
-
-### Vorgehen
-
-```
-#!/bin/bash
-# Script zur Zählung von Feldbelegungen in TSV-Dateien
-# Stand: 20.11.2016
-# Nutzung: ./count-tsv.sh file.tsv
-
-# Abfrage der Dateinamen
-if [ -z "$1" ]
-  then
-    echo "Bitte Dateinamen angeben!"
-    echo "Beispiel: ./count.sh file.tsv"
-    exit
-  else
-    echo "Folgende Dateien werden untersucht:"
-    files=($*)
-    echo ${files[@]}
-    echo ""
-fi
-
-# Schleife für mehrere Dateien
-for file in "${files[@]}"; do
-
-	# Spaltennamen erfassen
-	readarray columns < <(head -q -n1 haw_000001_450200_minimal.tsv | tr '\t' '\n' | cat)
-
-	# Belegte Zellen in Spalten zählen und ausgeben
-	number=1
-	for column in "${columns[@]}"; do
-	echo -e ${column} "\t\t" $(cut -d$'\t' -f ${number} ${file} | grep -v '^$' | wc -l)
-	number=$(($number+1))
-	done
-done
-```
-
-Script als Datei: [count-tsv.sh](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/count-tsv.sh)
-
-**Ausführen:**
-
-* Script mit ```curl``` auf den Server laden: ```curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/count-tsv.sh```
-* Script ausführbar machen: ```chmod +x count-tsv.sh```
-* Script starten mit ```./count-tsv.sh```
-
-### Ergebnis
-
-Folgende Spalten sind weniger als 10x belegt und könnten wohl gelöscht werden:
-
-| Spalte  | Anzahl belegter Felder  |
-|---|---|
-|	082 : c 	|	2	|
-|	100 : 6 	|	2	|
-|	100 : h 	|	2	|
-|	535 : a 	|	2	|
-|	551 : 5 	|	2	|
-|	583 : c 	|	2	|
-|	600 : e 	|	2	|
-|	600 : l 	|	2	|
-|	600 : p 	|	2	|
-|	610 : d 	|	2	|
-|	610 : g 	|	2	|
-|	610 : l 	|	2	|
-|	630 : p 	|	2	|
-|	650 : b 	|	2	|
-|	650 : d 	|	2	|
-|	651 : s 	|	2	|
-|	653 : f 	|	2	|
-|	653 : x 	|	2	|
-|	700 : t 	|	2	|
-|	700 : v 	|	2	|
-|	700 : w 	|	2	|
-|	751 : 9 	|	2	|
-|	502 : g 	|	3	|
-|	511 : e 	|	3	|
-|	611 : x 	|	3	|
-|	630 : 2 	|	3	|
-|	630 : f 	|	3	|
-|	630 : s 	|	3	|
-|	100 : m 	|	4	|
-|	100 : r 	|	4	|
-|	550 : x 	|	4	|
-|	630 : l 	|	4	|
-|	653 : t 	|	4	|
-|	700 : 5 	|	4	|
-|	776 : o 	|	4	|
-|	611 : v 	|	5	|
-|	653 : h 	|	5	|
-|	710 : 9 	|	5	|
-|	711 : 0 	|	5	|
-|	711 : 2 	|	5	|
-|	100 : n 	|	6	|
-|	510 : x 	|	7	|
-|	600 : z 	|	7	|
-|	100 : p 	|	8	|
-|	551 : x 	|	8	|
-|	653 : g 	|	8	|
-|	655 : x 	|	8	|
-|	700 : 6 	|	8	|
-|	610 : y 	|	9	|
-
-### Transformation anwenden
-
-Wenn Sie die geringfügig belegten Felder löschen wollen, dann wenden Sie die folgende Transformationsdatei an.
-
-* Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken.
-* Den Inhalt aus der Datei [07_5-8_reduzieren.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5-8_reduzieren.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
+Damit haben Sie nun endlich alle Daten in einem einzelnen Projekt. Das ist die Grundlage, auf der das nächste Kapitel aufsetzt.
