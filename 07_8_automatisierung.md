@@ -133,7 +133,7 @@ exit
 * OpenRefine beenden, falls es im anderen Terminal noch laufen sollte.
 * Script starten mit ```./transform+export-minimal.sh```
 
-Das Script hat eine Laufzeit von etw 5-10 Minuten für 2 Projekte. Währenddessen gibt es keine Rückmeldungen zum Status, also haben Sie etwas Geduld. Wenn das Script fertig gelaufen ist, erscheint wieder die Eingabezeile. Prüfen Sie die beiden transformierten Projekte im Browser. Dazu müssen Sie zunächst wieder OpenRefine manuell starten.
+Das Script hat eine Laufzeit von etwa 5-10 Minuten für 2 Projekte. Währenddessen gibt es keine Rückmeldungen zum Status, also haben Sie etwas Geduld. Wenn das Script fertig gelaufen ist, erscheint wieder die Eingabezeile. Prüfen Sie die beiden transformierten Projekte im Browser. Dazu müssen Sie zunächst wieder OpenRefine manuell starten.
 
 ### Variante 2: Transformations+Export-Script "Komfort"
 
@@ -183,20 +183,22 @@ Hinweise:
 * Arbeitsverzeichnis löschen: {%s%}sudo rm -r -f refine{%ends%}
 * Backup aus Kapitel 7.5, Aufgabe 3 wiederherstellen: {%s%}cp -r refine-backup refine{%ends%}
 * OpenRefine starten: {%s%}sudo docker run --name=refine-server --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m 3G -d /data{%ends%}
-* OpenRefine im Browser aufrufen und Projekte lösen: {%s%}Menü "Open Project" öffnen und Projekte löschen, so dass nur die 45 Projekte mit 10000er Schnipseln verbleiben{%ends%}
+* OpenRefine im Browser aufrufen und Projekte löschen: {%s%}Menü "Open Project" öffnen und Projekte löschen, so dass nur die 45 Projekte mit 10000er Schnipseln verbleiben (gemäß Aufgaben im Script müssten also drei ältere Projekte gelöscht werden, die in der Liste noch unter "haw_2016 10 25_000001 010000 marcxml" stehen sollten){%ends%}
 * OpenRefine beenden
 * Script mit ```curl``` auf den Server laden: {%s%}curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/transform+export.sh{%ends%}
 * Script ausführbar machen: {%s%}chmod +x transform+export.sh{%ends%}
 * Script anpassen #1: {%s%}nano transform+export.sh und die Zeile projects=($(sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py | grep "TRANSFORM" | cut -c 2-14)) durch projects=($(sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py | grep "haw" | cut -c 2-14)) ersetzen.{%ends%}
 * Script anpassen #2: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_3.json 07_5_minimal.json) ersetzen.{%ends%}
 * Script ausführen (Achtung: Mehrere Stunden Laufzeit!): {%s%}./transform+export.sh{%ends%}
-* TSV-Dateien herunterladen: {%s%}vgl. Lösung in Kapitel 6.3, Aufgabe 1{%ends%}
-* Arbeitsverzeichnis leeren: {%s%}sudo rm -r -f refine/*{%ends%}
 
 **Teil 2: manuell**
 
+Ergebnis herunterladen und aufräumen:
+* TSV-Dateien herunterladen: {%s%}vgl. Lösung in Kapitel 6.3, Aufgabe 1{%ends%}
+* Arbeitsverzeichnis leeren: {%s%}sudo rm -r -f refine/*{%ends%}
+
 Server Starten:
-* {%s%}```sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data```{%ends%}
+* {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 
 Projekt anlegen:
 * {%s%}Create Project / Durchsuchen... / Alle TSV Dateien auswählen / Next / Configure Parsing Options{%ends%}
@@ -205,7 +207,8 @@ Projekt anlegen:
 * {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen "haw-prozessiert-script" vergeben und Button "Create Project" drücken{%ends%}
 
 **Teil 3: mit Script**
-* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_6-2.json 07_6-4.json 07_6-5.json 07_6-6.json 07_6-7.json 07_6-8.json) ersetzen.{%ends%}
+
+* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_5_minimal.json 07_6-2.json 07_6-4.json 07_6-5.json 07_6-6.json 07_6-7.json 07_6-8.json) ersetzen.{%ends%}
 * Script ausführen: {%s%}./transform+export.sh{%ends%}
 
 ## Ergebnis
