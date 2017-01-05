@@ -11,19 +11,19 @@ if [ -z "$1" ]
     exit
   else
     files=($*)
-    printf '%s\n' MARC-Feld Vorkommen Mehrfachbelegung | paste -sd '\t'
+    printf '%s\t%s\t%s\n' MARC-Feld Vorkommen Mehrfachbelegung
 fi
 
 # Schleife für mehrere Dateien
 for file in "${files[@]}"; do
 
 	# Spaltennamen erfassen
-	readarray columns -t < <(head -q -n1 ${file} | tr -d ' ' | tr '\t' '\n' | cat)
+	readarray -t columns < <(head -q -n1 ${file} | tr '\t' '\n' | cat)
 
 	# Belegte Zellen in Spalten zählen und ausgeben
 	number=1
 	for column in "${columns[@]}"; do
-	printf '%s\n' ${column} $(cut -d$'\t' -f ${number} ${file} | grep -v '^$' | wc -l) $(cut -d$'\t' -f ${number} ${file} | grep '␟' | wc -l) | paste -sd '\t'
+	printf '%s\t%s\t%s\n' "${column}" $(cut -d$'\t' -f ${number} ${file} | grep -v '^$' | wc -l) $(cut -d$'\t' -f ${number} ${file} | grep '␟' | wc -l)
 	number=$(($number+1))
 	done
 done

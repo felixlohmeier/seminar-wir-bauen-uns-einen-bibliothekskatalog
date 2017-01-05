@@ -223,7 +223,7 @@ Terminal:
 
 In der grafischen Oberfläche von OpenRefine alle Projekte nacheinander laden und jeweils die folgenden Schritte durchführen:
 
-* Transformation: Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken. Den Inhalt aus der Datei [07_5_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5_minimal.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken. Achtung: Der Firefox-Browser hat unter Windows Probleme bei der Anzeige von Sonderzeichen (hier das verwendete Unit-Separator-Zeichen). Verwenden Sie daher unter Windows den Chrome-Browser zur Anzeige der Datei mit den Transformationsregeln.
+* Transformation: Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken. Den Inhalt aus der Datei [07_5_minimal.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_5_minimal.json) in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.
 * Export: Menü oben rechts Export / "Tab separated value" wählen. Der Download sollte automatisch beginnen. Speichern Sie die Daten lokal in einem beliebigen Verzeichnis.
 
 Da die Projekte durch die vorherigen Transformationen wesentlich weniger Arbeitsspeicher benötigen, müssen Sie OpenRefine anders als bei Aufgabe 4 nicht mehr regelmäßig neu starten. Beachten Sie aber, dass Sie erst mit dem Beenden von OpenRefine sicher gehen können, dass alle Änderungen in den Projekten tatsächlich auf die Festplatte gespeichert wurden. Daher empfiehlt es sich trotzdem nach etwa 10 bearbeiteten Projekten den Docker-Container mit OpenRefine zu beenden und neu zu starten.
@@ -272,5 +272,6 @@ Bedarf an Arbeitsspeicher:
 * {%s%}Character encoding: UTF-8{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren{%ends%}
 * {%s%}Projektnamen vergeben (z.B. "haw komplett" und Button "Create Project" drücken{%ends%}
+* {%s%}Menü oben links "Undo / Redo" aufrufen und Button "Apply..." drücken. Den Inhalt aus der Datei 07_5_minimal.json in die Zwischenablage kopieren und in das Textfeld von "Apply" einfügen und Button "Perform Operations" drücken.{%ends%}
 
-Damit haben Sie nun endlich alle Daten in einem einzelnen Projekt. Das ist die Grundlage, auf der das nächste Kapitel aufsetzt.
+Damit haben Sie nun endlich alle Daten in einem einzelnen Projekt und die Spalten alphabetisch sortiert. Das ist die Grundlage, auf der das nächste Kapitel aufsetzt.
