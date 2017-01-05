@@ -10,26 +10,20 @@ if [ -z "$1" ]
     echo "Beispiel: ./count-tsv.sh file.tsv"
     exit
   else
-    echo "Folgende Dateien werden untersucht:"
     files=($*)
-    printf '%s\n' "${files[@]}"
+    printf '%s\n' MARC-Feld Vorkommen Mehrfachbelegung | paste -sd '\t'
 fi
 
 # Schleife für mehrere Dateien
 for file in "${files[@]}"; do
 
-	echo ""
-	echo $file
-	echo ""
-	printf '%-30s\t%-10s\t%-10s \n' "SPALTENNAME" "ZEILEN" "ZEILEN-MIT-␟"
-	
 	# Spaltennamen erfassen
-	readarray columns < <(head -q -n1 ${file} | tr '\t' '\n' | cat)
+	readarray columns -t < <(head -q -n1 ${file} | tr -d ' ' | tr '\t' '\n' | cat)
 
 	# Belegte Zellen in Spalten zählen und ausgeben
 	number=1
 	for column in "${columns[@]}"; do
-	printf '%-30s\t%-10d\t%-10d \n' "${column}" $(cut -d$'\t' -f ${number} ${file} | grep -v '^$' | wc -l) $(cut -d$'\t' -f ${number} ${file} | grep '␟' | wc -l)
+	printf '%s\n' ${column} $(cut -d$'\t' -f ${number} ${file} | grep -v '^$' | wc -l) $(cut -d$'\t' -f ${number} ${file} | grep '␟' | wc -l) | paste -sd '\t'
 	number=$(($number+1))
 	done
 done
