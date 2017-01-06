@@ -30,7 +30,7 @@ echo "Transformationsdateien:   " ${jsonfiles[@]}
 echo "Arbeitsverzeichnis:       " ${workdir}
 echo "OpenRefine auf Port:      " ${port}
 echo "OpenRefine max. RAM:      " ${ram}
-echo "Codewort:			" ${codewort}
+echo "Codewort:                 " ${codewort}
 echo ""
 
 # Startzeitpunkt ausgeben

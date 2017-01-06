@@ -10,7 +10,21 @@ Hinweise:
 
 ## Lösung
 
-* Export: {%s%}Projekt in OpenRefine laden und im Menü oben rechts Export / Custom tabular exporter... auswählen. Dann Button "De-select All" klicken und nur die Felder auswählen, die in Kapitel 7.6 angelegt wurden: id, ISBN, ISSN, Sprache, LCC, DDC, Urheber, Medientyp, Ort, Verlag, Jahr, Datum, Beschreibung, Schlagwoerter, Beitragende, Reihe, Vorgaenger, Nachfolger, Link, Titel. Anschließend im Reiter Download auf den Download-Button klicken.{%ends%}
+## Variante A: "Custom Tabular exporter"
+
+* {%s%}Projekt in OpenRefine laden und im Menü oben rechts Export / Custom tabular exporter... auswählen.{%ends%}
+* {%s%}Dann Button "De-select All" klicken und nur die Felder auswählen, die in Kapitel 7.6 angelegt wurden: id, ISBN, ISSN, Sprache, LCC, DDC, Urheber, Medientyp, Ort, Verlag, Jahr, Datum, Beschreibung, Schlagwoerter, Beitragende, Reihe, Vorgaenger, Nachfolger, Link, Titel.{%ends%}
+* {%s%}Anschließend im Reiter Download auf den Download-Button klicken.{%ends%}
+
+## Variante B: "Spalten löschen und normaler Export"
+
+* {%s%}Alle Spalten löschen außer diejenigen, die in Kapitel 7.6 angelegt wurden: id, ISBN, ISSN, Sprache, LCC, DDC, Urheber, Medientyp, Ort, Verlag, Jahr, Datum, Beschreibung, Schlagwoerter, Beitragende, Reihe, Vorgaenger, Nachfolger, Link, Titel{%ends%}
+* {%s%}Export / Tab-separated value{%ends%}
+
+** Als JSON-Datei: [07_7.json](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/07_7.json)**
+
+## Upload und Prüfung der TSV-Datei
+
 * Upload auf den Webserver: {%s%}vgl. Lösung in Kapitel 6.3, Aufgabe 1.{%ends%}
 * Zählung der Zeilen der TSV-Dateien (sollte der Anzahl der Records plus 1 entsprechen): {%s%}wc -l ~/tsv/haw-prozessiert.tsv{%ends%}
 * Erste Zeile der TSV-Dateien anzeigen (sollte die Spaltenüberschriften beinhalten): {%s%}head -n1 ~/tsv/haw-prozessiert.tsv{%ends%}

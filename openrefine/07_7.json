@@ -1,0 +1,26 @@
+[ { "op": "core/column-reorder", "description": "Reorder columns", "columnNames": [
+"id",
+"ISBN",
+"ISSN",
+"Sprache",
+"LCC",
+"DDC",
+"Urheber",
+"Medientyp",
+"Ort",
+"Verlag",
+"Jahr",
+"Datum",
+"Beschreibung",
+"Schlagwoerter",
+"Beitragende",
+"Reihe",
+"Vorgaenger",
+"Nachfolger",
+"Link",
+"Titel"
+ ] } ]
+
+
+					
+

@@ -205,15 +205,15 @@ Projekt anlegen:
 
 **Teil 3: mit Script**
 
-* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json 07_5_minimal.json) durch jsonfiles=(07_5_minimal.json 07_6-2.json 07_6-4.json 07_6-5.json 07_6-6.json 07_6-7.json 07_6-8.json) ersetzen.{%ends%}
+* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json 07_5_minimal.json) durch jsonfiles=(07_5_minimal.json 07_6-2.json 07_6-4.json 07_6-5.json 07_6-6.json 07_6-7.json 07_6-8.json 07_7.json) ersetzen.{%ends%}
 * Script ausführen: {%s%}./transform+export.sh{%ends%}
 
 ## Ergebnis
 
-Die Datei ```haw-prozessiert-script.tsv``` im Ordner ~/refine/ ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei ```haw-prozessiert.tsv im Ordner``` ~/tsv/ vergleichen. Im Idealfall sollte das folgende Kommando keine Differenz zwischen den beiden Dateien feststellen können:
+Die exportierte TSV-Datei im Ordner ~/refine/ ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei ```haw-prozessiert.tsv im Ordner``` ~/tsv/ vergleichen. Im Idealfall sollte das folgende Kommando keine Differenz zwischen den beiden Dateien feststellen können:
 
 ```
-diff ~/refine/haw-prozessiert-script.tsv ~/tsv/haw-prozessiert.tsv
+diff ~/refine/*.tsv ~/tsv/haw-prozessiert.tsv
 ```
 
 ## Literatur
