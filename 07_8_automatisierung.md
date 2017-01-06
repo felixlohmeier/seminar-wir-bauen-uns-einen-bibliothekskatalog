@@ -210,7 +210,7 @@ Projekt anlegen:
 
 ## Ergebnis
 
-Die exportierte TSV-Datei im Ordner ~/refine/ ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei ```haw-prozessiert.tsv im Ordner``` ~/tsv/ vergleichen. Im Idealfall sollte das folgende Kommando keine Differenz zwischen den beiden Dateien feststellen können:
+Die exportierte TSV-Datei im Ordner ```~/refine/``` ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei ```haw-prozessiert.tsv``` im Ordner ```~/tsv/``` vergleichen. Im Idealfall sollte das folgende Kommando keine Differenz zwischen den beiden Dateien feststellen können:
 
 ```
 diff ~/refine/*.tsv ~/tsv/haw-prozessiert.tsv
