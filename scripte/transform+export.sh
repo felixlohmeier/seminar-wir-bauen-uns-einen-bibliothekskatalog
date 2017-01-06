@@ -11,15 +11,16 @@
 # Beispiel: ./transform+export.sh 01234567890123 1234567890123
 #
 # Nutzung Variante B)
-# Codewort TRANSFORM manuell in OpenRefine in den Namen der zu verarbeitenden Projekten aufnehmen
+# Codewort manuell in OpenRefine in den Namen der zu verarbeitenden Projekten aufnehmen
 # und Script ohne weitere Parameter starten.
 # Beispiel: ./transform+export.sh
 #
 # Transformationen aus den folgenden Dateien werden (in dieser Reihenfolge) durchgeführt
 # (bei Bedarf direkt hier im Script ändern)
-jsonfiles=(07_3.json test.json)
+jsonfiles=(07_3.json 07_5_minimal.json)
 
 # Weitere Programmvariablen
+codewort="TRANSFORM"
 workdir="/home/stud/refine"
 port=8888
 ram=3G
@@ -29,6 +30,7 @@ echo "Transformationsdateien:   " ${jsonfiles[@]}
 echo "Arbeitsverzeichnis:       " ${workdir}
 echo "OpenRefine auf Port:      " ${port}
 echo "OpenRefine max. RAM:      " ${ram}
+echo "Codewort:			" ${codewort}
 echo ""
 
 # Startzeitpunkt ausgeben
@@ -58,7 +60,7 @@ if [ -z "$1" ]
     echo "Es wurden beim Aufruf des Scripts keine Projekt-IDs benannt."
     echo ""
     echo "Projekt-IDs auslesen..."
-    projects=($(sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py | grep "TRANSFORM" | cut -c 2-14))
+    projects=($(sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py | grep "${codewort}" | cut -c 2-14))
     if [ -z "$projects" ]
       then
         echo "*** Es konnten keine Projekte gefunden werden! ***"
@@ -67,14 +69,14 @@ if [ -z "$1" ]
         echo "1. an den Startbefehl des Scripts die IDs der zu verarbeitenden Projekte anhängen"
         echo "Beispiel: ./transform+export.sh 01234567890123 1234567890123"
         echo ""
-        echo "2. Das Codewort TRANSFORM manuell in OpenRefine in den Namen der zu verarbeitenden Projekten aufnehmen und das Script erneut starten."
+        echo "2. Das Codewort ${codewort} manuell in OpenRefine in den Namen der zu verarbeitenden Projekten aufnehmen und das Script erneut starten."
         echo ""
         echo "Server beenden und Container löschen..."
         sudo docker stop refine-server
         sudo docker rm refine-server
         exit
       else
-        echo "Folgende Projekte im Arbeitsverzeichnis tragen das Codewort TRANSFORM im Namen:"
+        echo "Folgende Projekte im Arbeitsverzeichnis tragen das Codewort ${codewort} im Namen:"
         echo ${projects[@]}
         echo ""
     fi
@@ -107,6 +109,10 @@ for projectid in "${projects[@]}" ; do
     for jsonfile in "${jsonfiles[@]}" ; do
         echo "Transformiere mit ${jsonfile}..."
         sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py -f ${jsonfile} ${projectid}
+	echo "Server neu starten..."
+	sudo docker stop refine-server && sudo docker rm refine-server
+	sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
+	until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
     done
 
     # Daten exportieren

@@ -139,8 +139,8 @@ Das Script hat eine Laufzeit von etwa 5-10 Minuten für 2 Projekte. Währenddess
 
 Wie Variante 1 mit folgenden Verbesserungen:
 
-* Die IDs der zu verarbeitenden Projekte können nun an den Befehl zum Aufruf des Scripts angehängt werden. Wenn keine Projekt-IDs angegeben werden, dann werden diejenigen Projekte verarbeitet, deren Name mit ```TRANSFORM``` beginnt. Dazu werden die vorhandenen Projekte ausgelesen und daraus die Projektnummern mit einem grep-Befehl ausgefiltert und in eine Variable geschrieben.
-* Die anzuwendenden Transformationsdateien werden zu Beginn in einer Variable ```jsonfiles``` definiert (und können direkt im Script geändert werden). Das Script wendet diese Transformationsdateien in der genannten Reihenfolge auf alle zu verarbeitenden Projekte an.
+* Die IDs der zu verarbeitenden Projekte können nun an den Befehl zum Aufruf des Scripts angehängt werden. Wenn keine Projekt-IDs angegeben werden, dann werden diejenigen Projekte verarbeitet, deren Name mit dem Codewort (voreingestellt: ```TRANSFORM```) beginnt. Dazu werden die vorhandenen Projekte ausgelesen und daraus die Projektnummern mit einem grep-Befehl ausgefiltert und in eine Variable geschrieben.
+* Die anzuwendenden Transformationsdateien werden zu Beginn in einer Variable ```jsonfiles``` definiert (voreingestellt: 07_3.json und 07_5_minimal.json) und können direkt im Script geändert werden). Das Script wendet diese Transformationsdateien in der genannten Reihenfolge auf alle zu verarbeitenden Projekte an. Um Arbeitsspeicher zu schonen, wird der Docker-Container mit OpenRefine nach jeder Transformation neu gestartet.
 * Das Script lädt selbsttätig die aktuellen Transformationsdateien aus dem Script in Gitbook, d.h. aus dem Verzeichnis https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/ in das Arbeitsverzeichnis von OpenRefine und überschreibt ggf. gleichlautende Dateien.
 * Der Server wird für jedes Projekt einzeln gestartet und beendet, damit der Arbeitsspeicher nicht voll läuft.
 * Statt der festen Wartezeit (sleep 15) erfolgt eine Abfrage, ob der Server erreichbar ist, bevor das Script fortschreitet. Das beschleunigt die Verarbeitung, wenn der Server schneller als in 15 Sekunden startet und beugt Fehlern vor, falls der Server ausgelastet ist und mal länger als 15 Sekunden braucht.
@@ -161,7 +161,6 @@ Wie Variante 1 mit folgenden Verbesserungen:
 Das Script gibt jetzt auch Rückmeldungen zum aktuellen Status, manche Meldungen sind aber vielleicht irritierend:
 
 * Die Meldung "(23) Failed writing body" können Sie ignorieren, falls diese erscheinen sollte, das macht nichts ;-).
-* Die Verarbeitung der Datei test.json wirft einen Fehler, weil dies nur ein Platzhalter ist und dort nichts sinnvolles drinsteht.
 * Am Ende werden schließlich alle TSV-Dateien gelistet, die im Arbeitsverzeichnis liegen. Daher tauchen auch die TSV-Dateien aus der vorigen Aufgabe mit auf.
 
 Prüfen Sie die transformierten Projekte im Browser. Dazu müssen Sie zunächst wieder OpenRefine manuell starten.
@@ -171,10 +170,10 @@ Prüfen Sie die transformierten Projekte im Browser. Dazu müssen Sie zunächst 
 
 Hinweise:
 
-* Stellen Sie das Backup aus Kapitel 7.5 wieder her, um einen sauberen Ausgangszustand zu erreichen. Löschen Sie im Browser Testprojekte aus früheren Aufgaben, so dass nur die 45 Projekte mit 10000er Schnipseln verbleiben.
+* Stellen Sie das Backup aus Kapitel 7.5 wieder her, um einen sauberen Ausgangszustand zu erreichen. Löschen Sie im Browser die Testprojekte aus früheren Aufgaben, so dass nur die 45 Projekte mit 10000er Schnipseln verbleiben.
 * Da das Script bzw. der Python-Client keine Projekte erstellen kann, müssen Sie Kapitel 7.5, Aufgabe 7 manuell durchführen. Sie können das Script für die Teil davor und danach einsetzen.
-* Passen Sie die Zeile ```jsonfiles=(07_3.json test.json)``` im Script jeweils so an, dass alle in Kapitel 7.3-7.7 verwendeten Transformationsdateien in der richtigen Reihenfolge abgearbeitet werden.
-* Passen Sie die Zeile ```projects=($(sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py | grep "TRANSFORM" | cut -c 2-14))``` im Script so an, dass alle gewünschten Projekte bearbeitet werden.
+* Passen Sie die Zeile ```jsonfiles=(07_3.json 07_5_minimal.json)``` im Script so an, dass alle in Kapitel 7.3-7.7 verwendeten Transformationsdateien in der richtigen Reihenfolge abgearbeitet werden.
+* Passen Sie die Zeile ```codewort="TRANSFORM"``` im Script so an, dass alle gewünschten Projekte bearbeitet werden.
 
 ## Lösung
 
@@ -187,8 +186,7 @@ Hinweise:
 * OpenRefine beenden
 * Script mit ```curl``` auf den Server laden: {%s%}curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/transform+export.sh{%ends%}
 * Script ausführbar machen: {%s%}chmod +x transform+export.sh{%ends%}
-* Script anpassen #1: {%s%}nano transform+export.sh und die Zeile projects=($(sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py | grep "TRANSFORM" | cut -c 2-14)) durch projects=($(sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py | grep "haw" | cut -c 2-14)) ersetzen.{%ends%}
-* Script anpassen #2: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_3.json 07_5_minimal.json) ersetzen.{%ends%}
+* Script anpassen: {%s%}nano transform+export.sh und die Zeile codewort="TRANSFORM" durch codewort="haw" ersetzen.{%ends%}
 * Script ausführen (Achtung: Mehrere Stunden Laufzeit!): {%s%}./transform+export.sh{%ends%}
 
 **Teil 2: manuell**
@@ -197,23 +195,22 @@ Ergebnis herunterladen und aufräumen:
 * TSV-Dateien herunterladen: {%s%}vgl. Lösung in Kapitel 6.3, Aufgabe 1{%ends%}
 * Arbeitsverzeichnis leeren: {%s%}sudo rm -r -f refine/*{%ends%}
 
-Server Starten:
-* {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
-
 Projekt anlegen:
+* OpenRefine starten: {%s%}sudo docker run --rm -p 8888:3333 -v /home/stud/refine:/data felixlohmeier/openrefine:2.6rc2 -i 0.0.0.0 -m 3G -d /data{%ends%}
 * {%s%}Create Project / Durchsuchen... / Alle TSV Dateien auswählen / Next / Configure Parsing Options{%ends%}
 * {%s%}Parse data as CSV / TSV / separator-based files{%ends%}
 * {%s%}Character encoding: UTF-8{%ends%}
 * {%s%}Checkbox "Store file source..." deaktivieren / Projektnamen "haw-prozessiert-script" vergeben und Button "Create Project" drücken{%ends%}
+* OpenRefine beenden
 
 **Teil 3: mit Script**
 
-* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json test.json) durch jsonfiles=(07_5_minimal.json 07_6-2.json 07_6-4.json 07_6-5.json 07_6-6.json 07_6-7.json 07_6-8.json) ersetzen.{%ends%}
+* Script anpassen: {%s%}nano transform+export.sh und die Zeile jsonfiles=(07_3.json 07_5_minimal.json) durch jsonfiles=(07_5_minimal.json 07_6-2.json 07_6-4.json 07_6-5.json 07_6-6.json 07_6-7.json 07_6-8.json) ersetzen.{%ends%}
 * Script ausführen: {%s%}./transform+export.sh{%ends%}
 
 ## Ergebnis
 
-Die Datei haw-prozessiert-script.tsv im Ordner ~/refine/ ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei haw-prozessiert.tsv im Ordner ~/tsv/ vergleichen. Im Idealfall sollte das folgende Kommando keine Differenz zwischen den beiden Dateien feststellen können:
+Die Datei ```haw-prozessiert-script.tsv``` im Ordner ~/refine/ ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei ```haw-prozessiert.tsv im Ordner``` ~/tsv/ vergleichen. Im Idealfall sollte das folgende Kommando keine Differenz zwischen den beiden Dateien feststellen können:
 
 ```
 diff ~/refine/haw-prozessiert-script.tsv ~/tsv/haw-prozessiert.tsv
