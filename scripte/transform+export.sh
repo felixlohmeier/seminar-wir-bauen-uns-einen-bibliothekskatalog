@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script zur Transformation und zum Export von Projekten mit OpenRefine
-# Variante "Komfort", Stand: 20.11.2016
+# Variante "Komfort", Stand: 06.01.2017
 #
 # Voraussetzungen:
 # 1. Docker
@@ -25,7 +25,7 @@ port=8888
 ram=3G
 
 # Variablen ausgeben
-echo "Transformationsdateien:   " ${jsonfiles}
+echo "Transformationsdateien:   " ${jsonfiles[@]}
 echo "Arbeitsverzeichnis:       " ${workdir}
 echo "OpenRefine auf Port:      " ${port}
 echo "OpenRefine max. RAM:      " ${ram}
