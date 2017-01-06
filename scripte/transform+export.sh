@@ -110,7 +110,8 @@ for projectid in "${projects[@]}" ; do
         echo "Transformiere mit ${jsonfile}..."
         sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py -f ${jsonfile} ${projectid}
 	echo "Server neu starten..."
-	sudo docker stop refine-server && sudo docker rm refine-server
+	sudo docker stop refine-server
+	sudo docker rm refine-server
 	sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
 	until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
     done
