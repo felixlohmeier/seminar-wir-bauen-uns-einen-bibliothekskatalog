@@ -81,7 +81,7 @@ if [ -z "$1" ]
         echo ""
     fi
   else
-    echo "Folgende Projekt-IDs wurden beim Aufruf des Script benannt:"
+    echo "Folgende Projekt-IDs wurden beim Aufruf des Scripts benannt:"
     projects=($*)
     echo ${projects[@]}
     echo ""
@@ -109,11 +109,12 @@ for projectid in "${projects[@]}" ; do
     for jsonfile in "${jsonfiles[@]}" ; do
         echo "Transformiere mit ${jsonfile}..."
         sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py -f ${jsonfile} ${projectid}
-	echo "Server neu starten..."
-	sudo docker stop refine-server
-	sudo docker rm refine-server
-	sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
-	until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
+        # Neustart des Docker-Containers nach jeder Transformation, um Arbeitsspeicher zu schonen
+        echo "Server neu starten ..." 
+        docker stop -t=500 ${dockername}
+        docker rm ${dockername}
+        sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
+        until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
     done
 
     # Daten exportieren
@@ -122,7 +123,7 @@ for projectid in "${projects[@]}" ; do
 
     # Server beenden und Container löschen
     echo "Server beenden und Container löschen..."
-    sudo docker stop refine-server
+    sudo docker stop -t=500 refine-server
     sudo docker rm refine-server
 
     echo "Ende Projekt $projectid @ $(date)"
@@ -137,5 +138,3 @@ echo ""
 echo "Folgende Dateien wurden erfolgreich exportiert:"
 echo "(Anzahl der Zeilen und Dateigröße in Bytes)"
 wc -l -c ${workdir}/*.tsv
-
-exit
