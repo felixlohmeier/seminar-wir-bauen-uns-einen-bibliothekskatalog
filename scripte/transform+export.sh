@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script zur Transformation und zum Export von Projekten mit OpenRefine
-# Variante "Komfort", Stand: 06.01.2017
+# Variante "Komfort", Stand: 08.01.2017
 #
 # Voraussetzungen:
 # 1. Docker
@@ -14,13 +14,12 @@
 # Codewort manuell in OpenRefine in den Namen der zu verarbeitenden Projekten aufnehmen
 # und Script ohne weitere Parameter starten.
 # Beispiel: ./transform+export.sh
-#
-# Transformationen aus den folgenden Dateien werden (in dieser Reihenfolge) durchgeführt
-# (bei Bedarf direkt hier im Script ändern)
+codewort="TRANSFORM"
+
+# Transformationsregeln aus den folgenden Dateien werden (in dieser Reihenfolge) durchgeführt
 jsonfiles=(07_3.json 07_5_minimal.json)
 
 # Weitere Programmvariablen
-codewort="TRANSFORM"
 workdir="/home/stud/refine"
 port=8888
 ram=3G
@@ -52,7 +51,7 @@ sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data feli
 echo ""
 
 # Warten bis Server vollständig gestartet ist
-until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
+until curl --silent -N http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 1; done
 
 # Abfrage der Projekt-IDs, wenn mit dem Startbefehl keine benannt wurden
 if [ -z "$1" ]
@@ -103,18 +102,26 @@ for projectid in "${projects[@]}" ; do
     sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
 
     # Warten bis Server vollständig gestartet ist
-    until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
-        
+    until curl --silent -N http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 1; done
+    echo ""
+
     # Transformationen durchführen
     for jsonfile in "${jsonfiles[@]}" ; do
         echo "Transformiere mit ${jsonfile}..."
+        # Meldungen aus Docker-Container refine-server ausgeben (Hintergrundprozess)
+        sudo docker attach refine-server &
+        # Transformation mit Python-Client anstoßen
         sudo docker run --rm --link refine-server -v ${workdir}:/data felixlohmeier/openrefine:client-py -f ${jsonfile} ${projectid}
-        # Neustart des Docker-Containers nach jeder Transformation, um Arbeitsspeicher zu schonen
-        echo "Server neu starten ..." 
-        docker stop -t=500 ${dockername}
-        docker rm ${dockername}
+        # Statistik des Java-Prozesses
+        echo "Statistik zum Ressourcenverbrauch..."
+        ps -o start,etime,%mem,%cpu,rss -C java
+        # Neustart des Docker-Containers refine-server nach jeder Transformation, um Arbeitsspeicher zu schonen
+        echo "Projekt speichern und Server neu starten ..." 
+        sudo docker stop -t=5000 refine-server
+        sudo docker rm refine-server
         sudo docker run -d --name=refine-server -p ${port}:3333 -v ${workdir}:/data felixlohmeier/openrefine:2.6rc1 -i 0.0.0.0 -m ${ram} -d /data
-        until curl --silent http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 3; done
+        until curl --silent -N http://localhost:${port} | cat | grep -q -o "OpenRefine" ; do sleep 1; done
+        echo ""
     done
 
     # Daten exportieren
@@ -123,7 +130,7 @@ for projectid in "${projects[@]}" ; do
 
     # Server beenden und Container löschen
     echo "Server beenden und Container löschen..."
-    sudo docker stop -t=500 refine-server
+    sudo docker stop -t=5000 refine-server
     sudo docker rm refine-server
 
     echo "Ende Projekt $projectid @ $(date)"

@@ -142,10 +142,9 @@ Wie Variante 1 mit folgenden Verbesserungen:
 * Die IDs der zu verarbeitenden Projekte können nun an den Befehl zum Aufruf des Scripts angehängt werden. Wenn keine Projekt-IDs angegeben werden, dann werden diejenigen Projekte verarbeitet, deren Name mit dem Codewort (voreingestellt: ```TRANSFORM```) beginnt. Dazu werden die vorhandenen Projekte ausgelesen und daraus die Projektnummern mit einem grep-Befehl ausgefiltert und in eine Variable geschrieben.
 * Die anzuwendenden Transformationsdateien werden zu Beginn in einer Variable ```jsonfiles``` definiert (voreingestellt: 07_3.json und 07_5_minimal.json) und können direkt im Script geändert werden). Das Script wendet diese Transformationsdateien in der genannten Reihenfolge auf alle zu verarbeitenden Projekte an. Um Arbeitsspeicher zu schonen, wird der Docker-Container mit OpenRefine nach jeder Transformation neu gestartet.
 * Das Script lädt selbsttätig die aktuellen Transformationsdateien aus dem Script in Gitbook, d.h. aus dem Verzeichnis https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/openrefine/ in das Arbeitsverzeichnis von OpenRefine und überschreibt ggf. gleichlautende Dateien.
-* Der Server wird für jedes Projekt einzeln gestartet und beendet, damit der Arbeitsspeicher nicht voll läuft.
 * Statt der festen Wartezeit (sleep 15) erfolgt eine Abfrage, ob der Server erreichbar ist, bevor das Script fortschreitet. Das beschleunigt die Verarbeitung, wenn der Server schneller als in 15 Sekunden startet und beugt Fehlern vor, falls der Server ausgelastet ist und mal länger als 15 Sekunden braucht.
 * Am Ende werden zur Erfolgskontrolle die exportierten TSV-Dateien ausgegeben.
-* Das Script gibt die Konfigurationswerte sowie regelmäßig Start- und Endzeitpunkte aus.
+* Das Script gibt die Konfigurationswerte, regelmäßig Start- und Endzeitpunkte und Statistiken zum Ressourcenverbrauch aus.
 * Arbeitsverzeichnis, Port und maximaler Arbeitsspeicher für den OpenRefine-Server werden zu Beginn als Variable definiert (Standard: ```/home/stud/refine/```, ```8888```, ```3G```), was eine Anpassung später leichter macht.
 
 **Script als Datei: [transform+export.sh](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/transform+export.sh)**
@@ -157,11 +156,6 @@ Wie Variante 1 mit folgenden Verbesserungen:
 * Script mit ```curl``` auf den Server laden: ```curl -O https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/scripte/transform+export.sh```
 * Script ausführbar machen: ```chmod +x transform+export.sh```
 * Script starten mit ```./transform+export.sh```
-
-Das Script gibt jetzt auch Rückmeldungen zum aktuellen Status, manche Meldungen sind aber vielleicht irritierend:
-
-* Die Meldung "(23) Failed writing body" können Sie ignorieren, falls diese erscheinen sollte, das macht nichts ;-).
-* Am Ende werden schließlich alle TSV-Dateien gelistet, die im Arbeitsverzeichnis liegen. Daher tauchen auch die TSV-Dateien aus der vorigen Aufgabe mit auf.
 
 Prüfen Sie die transformierten Projekte im Browser. Dazu müssen Sie zunächst wieder OpenRefine manuell starten.
 
@@ -210,10 +204,18 @@ Projekt anlegen:
 
 ## Ergebnis
 
-Die exportierte TSV-Datei im Ordner ```~/refine/``` ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei ```haw-prozessiert.tsv``` im Ordner ```~/tsv/``` vergleichen. Im Idealfall sollte das folgende Kommando keine Differenz zwischen den beiden Dateien feststellen können:
+Die exportierte TSV-Datei im Ordner ```~/refine/``` ist das Endergebnis der Verarbeitung. Sie können diese Datei mit der vorher manuell erstellten Datei ```haw-prozessiert.tsv``` im Ordner ```~/tsv/``` vergleichen.
+
+Anzahl der Zeilen vergleichen:
 
 ```
-diff ~/refine/*.tsv ~/tsv/haw-prozessiert.tsv
+wc -l ~/refine/*.tsv ~/tsv/haw-prozessiert.tsv
+```
+
+Spaltenüberschriften vergleichen:
+
+```
+head -n 1 ~/refine/*.tsv ~/tsv/haw-prozessiert.tsv
 ```
 
 ## Literatur
