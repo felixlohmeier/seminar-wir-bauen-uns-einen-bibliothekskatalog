@@ -15,6 +15,10 @@ Von technischer Seite ist das Format RDF sowie die Abfragesprache SPARQL von zen
 * Danowski, Patrick; Pohl, Adrian (Hrsg.) (2013): (Open) Linked Data in Bibliotheken. http://dx.doi.org/10.1515/9783110278736.
 * Stettler, Niklaus; Aschwanden, Michael; Mastrandrea, Elena; Süsstrunk, Norman; Wenk, Bruno (2015): Linked (Open) Data - Von der Theorie zur Praxis. http://linkeddata.fh-htwchur.ch.
 
+## Literatur mit Praxisbeispiel
+
+* Andreas Bohne-Lang (2017): Semantische Metadaten für den Webauftritt einer Bibliothek. In: GMS Med Bibl Inf 2016;16(3). Paper: http://dx.doi.org/10.3205/mbi000372 Folien: https://www.umm.uni-heidelberg.de/bibl/ueberuns/vortraege_folien/vortraege_bl_semandaten_agmb_2016.pdf
+
 ## Literatur zur Transformation von Bibliotheksmetadaten
 
 * Beispiel für Mapping von MARC21 zu RDF: https://wiki.dnb.de/display/DINIAGKIM/MARC+21-RDF-Mapping
