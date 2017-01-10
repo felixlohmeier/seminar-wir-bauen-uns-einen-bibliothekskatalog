@@ -31,10 +31,10 @@ Jede Lerneinheit umfasste zwei akademische Doppelstunden, also insgesamt 3 Zeits
 5. Vorlesung: [Exkurs zu Metadaten in Bibliotheken](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/05_0_exkurs_zu_metadaten_in_bibliotheken.html) (24.10.2016)
 6. Praxis: [Installation von OpenRefine mit Docker](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/06_0_installation_von_openrefine_mit_docker.html) (31.10.2016)
 7. Praxis [4x]: [Datentransformation mit OpenRefine](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_0_datentransformation_mit_openrefine.html) (07.11.2016, 14.11.2016, 18.11.2016, 21.11.2016)
-8. Praxis: [Installation und Konfiguration des Suchmaschinenindex Solr](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/08_0_installation-und-konfiguration-des-suchmaschinenindex-solr.md) (05.12.2016)
-9. Praxis: [Installation der Katalogoberfläche TYPO3-find](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/09_0_installation-der-katalogoberflaeche-typo3-find.md) (12.12.2016)
-10. Vorlesung: [Exkurs zu Relevanzranking](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/10_0_exkurs-zu-relevanzranking.md) (19.12.2016)
-11. Abschluss: [Projektpräsentationen und Abschlussdiskussion](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/11_0_projektpraesentationen-und-abschlussdiskussion.md) (09.01.2016)
+8. Praxis: [Installation und Konfiguration des Suchmaschinenindex Solr](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/08_0_installation-und-konfiguration-des-suchmaschinenindex-solr.html) (05.12.2016)
+9. Praxis: [Installation der Katalogoberfläche TYPO3-find](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/09_0_installation-der-katalogoberflaeche-typo3-find.html) (12.12.2016)
+10. Vorlesung: [Exkurs zu Relevanzranking](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/10_0_exkurs-zu-relevanzranking.html) (19.12.2016)
+11. Abschluss: [Projektpräsentationen und Abschlussdiskussion](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/11_0_projektpraesentationen-und-abschlussdiskussion.html) (09.01.2016)
 
 ## Lerntagebücher
 
