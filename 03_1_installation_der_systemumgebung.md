@@ -26,31 +26,33 @@ In den Übungen in diesem Skript verwenden wir [Debian](https://de.wikipedia.org
 
 Laden Sie die Version für virtuelle Maschinen ("VM build") von der Turnkey-Linux-Webseite herunter. Direktlink zu Version 14.1: https://www.turnkeylinux.org/download?file=turnkey-core-14.1-jessie-amd64.ova
 
-### 2. Starten Sie VirtualBox und folgen Sie der Installationsanleitung von TurnKey Linux
+### 2. Starten Sie VirtualBox und importieren Sie die Appliance
 
-(vgl. Schritt 3a unter https://www.turnkeylinux.org/docs/installation-appliances-virtualbox-new)
+1. Menü Datei / Appliance importieren... auswählen
+2. Heruntergeladene Datei auswählen
+3. Doppelklick auf "Gast-Betriebssystem" und Linux / Debian (64-bit) auswählen
+4. Button "Importieren" drücken
 
-    If you've downloaded the default VM build:
-    1. Under the File menu, select Import Appliance.
-    2. Direct the file browser to the OVA file.
-    3. Double click Guest OS Type and select Linux > Ubuntu
-    4. Press Import to create the VM.
+### 3. Netzwerk einrichten
 
-Die folgenden Einstellungen aus der Installationsanleitung nur vornehmen, wenn Sie nicht bereits vorausgewählt sind:
+Öffnen Sie zunächst die allgemeinen Einstellungen (Menü Datei / Einstellungen) und navigieren Sie zu Netzwerk / "Host-only-Netzwerke". Klicken Sie dort auf den Button rechts mit dem Plus-Symbol, um ein Netzwerk anzulegen.
 
-    After you've created the new VM, you'll need to tweak its configuration:
-    1. Settings > System > Processor > Enable PAE/NX
-    2. Settings > Network > Adapter 1 > Attach to: bridged
+Klicken Sie anschließend auf den Button "Ändern", um die Einstellungen der virtuellen Maschine aufzurufen. Konfigurieren Sie dort in der Rubrik Netzwerk zwei Netzwerkadapter:
 
-Die letzte Einstellung verbindet die virtuelle Maschine über eine "Bridge" mit der Netzwerkverbindung Ihres Computers. Wenn Sie mehrere Netzwerkadapter (z.B. WLAN und Ethernet) haben, dann wählen Sie einen aus. Die Einstellung lässt sich später ändern. Ihr Computer muss per WLAN oder Kabel mit einem lokalen Netzwerk (in der Regel Ihr WLAN-Router zuhause) verbunden sein, bevor Sie fortfahren.
+* Adapter 1: Angeschlossen an: Host-only Adapter
+* Adapter 2: Angeschlossen an: NAT
+
+Der erste Netzwerkadapter ermöglicht Ihnen, von Ihrem Betriebssystem auf die virtuelle Maschine zuzugreifen. Der zweite Netzwerkadapter erlaubt der virtuellen Maschine ihre Internetverbindung mitzubenutzen.
+
+### 4. Weitere Einstellungen
 
 Nehmen Sie weitere Einstellungen vor, die Sie zu Ihrem Computer passen. Empfehlungen:
 
-* General/Name: Vergeben Sie einen individuellen Namen
-* System/Motherboard/Base Memory: Erhöhen Sie den Arbeitsspeicher, wenn Ihr Computer ausreichend freien Arbeitsspeicher zur Verfügung hat. Achtung: In der Regel sollten Sie nicht mehr als die Hälfte des verfügbaren Arbeitsspeichers vergeben, da sonst ggf. nicht mehr genug Speicher für Ihr "normales" Betriebssystem verbleibt! Die Übungen im Kapitel 7 dieses Skripts sind für virtuelle Maschinen mit 4096 MB RAM ausgelegt. Wenn Sie weniger Arbeitsspeicher zuteilen können, dann müssen Sie im Kapitel 7 die Übungen später etwas abwandeln und weniger Daten verarbeiten. Mindestens 1024 MB sollten es aber sein.
-* System/Motherboard/Processor(s): Auch hier gilt: Je mehr CPUs desto besser, aber nicht mehr als die Hälfte der insgesamt verfügbaren CPUs.
+* Allgemein/Name: Vergeben Sie einen individuellen Namen
+* System/Hauptplatine/Hauptspeicher: Erhöhen Sie den Arbeitsspeicher, wenn Ihr Computer ausreichend freien Arbeitsspeicher zur Verfügung hat. Achtung: In der Regel sollten Sie nicht mehr als die Hälfte des verfügbaren Arbeitsspeichers vergeben, da sonst ggf. nicht mehr genug Speicher für Ihr "normales" Betriebssystem verbleibt! Die Übungen im Kapitel 7 dieses Skripts sind für virtuelle Maschinen mit 4096 MB RAM ausgelegt. Wenn Sie weniger Arbeitsspeicher zuteilen können, dann müssen Sie im Kapitel 7 die Übungen später etwas abwandeln und weniger Daten verarbeiten. Mindestens 1024 MB sollten es aber sein.
+* System/Prozessor/Prozessoren: Auch hier gilt: Je mehr CPUs desto besser, aber nicht mehr als die Hälfte der insgesamt verfügbaren CPUs.
 
-### 3. Booten Sie die virtuelle Maschine in VirtualBox
+### 5. Booten Sie die virtuelle Maschine in VirtualBox
 
 Klicken Sie auf "Start", es öffnet sich ein neues Fenster, in dem der Startvorgang durchläuft (etwa 1 Minute). Dann erscheint ein Bildschirm mit Dialogen:
 
