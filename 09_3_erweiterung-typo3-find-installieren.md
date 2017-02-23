@@ -1,6 +1,6 @@
 # 9.3 Erweiterung TYPO3-find installieren
 
-Normalerweise können Erweiterungen für TYPO3 ganz einfach über die Administrationsoberfläche installiert werden, so bei einem App Store. Die EntwicklerInnen legen ihre Erweiterungen dazu im offiziellen TYPO3 Extension Repository ab. Leider ist zum Zeitpunkt der Erstellung des Skripts (Januar 2017) von der Erweiterung TYPO3-find nur eine uralte Version im Extension Repository verfügbar. Dort liegt Version 1.0.1 (Nov 2013), während bei GitHub Version 3.1.0 (Jan 2017) zur Verfügung steht.
+Normalerweise können Erweiterungen für TYPO3 ganz einfach über die Administrationsoberfläche installiert werden, so wie bei einem App Store. Die EntwicklerInnen legen ihre Erweiterungen dazu im offiziellen TYPO3 Extension Repository ab. Leider ist zum Zeitpunkt der Erstellung des Skripts (Januar 2017) von der Erweiterung TYPO3-find nur eine uralte Version im Extension Repository verfügbar. Dort liegt Version 1.0.1 (Nov 2013), während bei GitHub Version 3.1.0 (Jan 2017) zur Verfügung steht.
 
 ## Vorgehen zur manuellen Installation von TYPO3-find aus GitHub
 
@@ -33,9 +33,9 @@ php composer.phar install
 ### Schritt 4: Daten in TYPO3-Container kopieren
 
 ```
-docker exec typo3-web mkdir /var/www/html/typo3/ext
-docker cp . typo3-web:/var/www/html/typo3/ext/find
-docker exec typo3-web chown www-data:www-data /var/www/html/typo3/ext/find
+sudo docker exec typo3-web mkdir /var/www/html/typo3/ext
+sudo docker cp . typo3-web:/var/www/html/typo3/ext/find
+sudo docker exec typo3-web chown www-data:www-data /var/www/html/typo3/ext/find
 ```
 
 ### Schritt 5: Aufräumen
@@ -52,7 +52,7 @@ Login in Administrationsoberfläche unter http://localhost/typo3 (localhost durc
 
 ### Schritt 1: Menü Extensions
 
-* Neben Extension "Find" auf den Würfel klicken, um die Extension zu aktivieren
+* Neben Extension ```Find``` auf den Würfel klicken, um die Extension zu aktivieren
 
 ### Schritt 2: Menü Page
 

@@ -1,6 +1,6 @@
 # 9.4 TYPO3-find anpassen
 
-Über die Setup-Datei (vgl. den letzten Schritt aus Kapitel 9.3) kann die Erweiterung konfiguriert werden.
+Über die Setup-Datei (vgl. den letzten Schritt aus Kapitel 9.3) kann die Erweiterung TYPO3-find konfiguriert werden.
 
 ## Aufgabe 1: Ergänzen Sie eine weitere Facette
 
