@@ -14,11 +14,11 @@ Die SUB Göttingen hat im Projekt Germania Sacra TYPO3-find für eine Klosterdat
 (...)
 ```
 
-Treffer im Feld ```title``` (Titel) werden mit Faktor 10 am höchsten gewichtet, während Treffer im Feld ```text``` (Beschreibungstext) mit Faktor 0,5 relativ unwichtig für die Sortierung der Trefferliste sind.
+Treffer im Feld ```title``` (Titel) werden mit Faktor 10 am höchsten gewichtet, während Treffer im Feld ```text``` (Beschreibungstext) mit Faktor 0,5 relativ unwichtig für die Sortierung der Trefferliste sind. Das Beispiel zeigt, dass eine Verbesserung der Relevanzsortierung von Trefferlisten in der Praxis bereits durch eine einfache Gewichtung der Felder erzielt werden kann.
 
 Links:
 
 * Klosterdatenbank Germania Sacra: http://klosterdatenbank.germania-sacra.de/
 * solrconfig.xml von Germania Sacra: https://github.com/subugoe/germania-sacra-daten/blob/master/solr/conf/solrconfig.xml#L401
 
-Aus Zeitgründen wurde das Thema Relevanzranking und die praktische Übung mit TYPO3-find im Seminar nicht weiter vertieft.
+Aus Zeitgründen musste die praktische Übung mit TYPO3-find leider entfallen.

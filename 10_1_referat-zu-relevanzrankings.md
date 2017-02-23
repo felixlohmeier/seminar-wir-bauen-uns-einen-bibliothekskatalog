@@ -6,7 +6,7 @@ Aus dem Referat von Dana Curic und Christian Dublasky am 19.12.2016 (vgl. [Präs
 
 * Relevanz ist abhängig vom Nutzungskontext, d.h. von der Person, die sucht und von ihrem Erkenntnisinteresse zum jeweiligen Zeitpunkt. Es ist daher nahezu unmöglich eine objektive Relevanz zu definieren.
 * Discovery-Systeme versuchen eine subjektiv als "gut" empfundene Relevanzsortierung durch eine unterschiedliche Gewichtung der verschiedenen Metadatenfelder (Titel, UrheberIn, Beschreibungstext) herzustellen.
-* Wenn die Daten uneinheitlich sind (z.B. zu einem Objekt viele und zu einem anderen Objekt sehr wenige beschreibende Daten enthalten sind), dann führt dies oft zu unerwarteten Rankings, weil der Suchindex in der Standardkonfiguration das Verhältnis der Suchtreffer in einem Dokument zur Gesamtlänge des Dokuments berechnet.
+* Wenn die Daten uneinheitlich sind (z.B. wenn zu einem Objekt viele und zu einem anderen Objekt sehr wenige beschreibende Daten vorliegen), dann führt dies oft zu unerwarteten Rankings, weil der Suchindex in der Standardkonfiguration das Verhältnis der Suchtreffer in einem Dokument zur Gesamtlänge des Dokuments in die Berechnung der Relevanzsortierung einfließen lässt.
 * Weil die Definition eines Algorithmus auf Basis von objektiven Kriterien so schwer fällt, wird in der Praxis die Gewichtung der Felder oft experimentell auf Basis von häufig durchgeführten Suchen austariert. Nutzerstudien sind beim Relevanzranking also besonders wichtig.
 
 ## Literatur
