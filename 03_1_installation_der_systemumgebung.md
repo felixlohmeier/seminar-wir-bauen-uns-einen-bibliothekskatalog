@@ -65,7 +65,7 @@ Nach erfolgtem Neustart bekommen Sie die Adressen angezeigt, unter denen die vir
 
 Wenn der Mauszeiger verschwunden sein sollte, müssen Sie ggf. eine Taste drücken, die unten rechts in der Fußzeile des Fensters angezeigt wird. Diese Taste (z.B. STRG rechts) hebt den Fokus auf das Fenster der virtuellen Maschine wieder auf, so dass Sie normal in Ihrem Betriebssystem navigieren können.
 
-Solange das Fenster offen ist, läuft die virtuelle Maschine. Zum Beenden der virtuellen Maschine schließen Sie einfach das Fenster und wählen Sie die zweite Option "Send the shutdown signal". Um die virtuelle Maschine erneut zu starten, wählen Sie den "Start" Button in Virtualbox. Sobald der bekannte Bildschirm mit den Adressen erscheint, ist die virtuelle Maschine erreichbar.
+Solange das Fenster offen ist, läuft die virtuelle Maschine. Zum Beenden der virtuellen Maschine schließen Sie einfach das Fenster und wählen Sie die zweite Option "die virtuelle Maschine mittels ACPI-Event herunterfahren". Um die virtuelle Maschine erneut zu starten, wählen Sie den "Start" Button in Virtualbox. Sobald der bekannte Bildschirm mit den Adressen erscheint, ist die virtuelle Maschine erreichbar.
 
 ## Schritt 3: Systemkonfiguration
 
