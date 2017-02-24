@@ -18,4 +18,3 @@ Beiträge der Studierenden in den Lerntagebüchern:
 * Julia baut: [Eine Rede, eine Rede](https://danielacodes.wordpress.com/2017/01/29/eine-rede-eine-rede/)
 * Bibliothekskatalog selbstgemacht: [Abschlussbetrachtung](https://discoverysystembauen.wordpress.com/2017/01/24/abschlussbetrachtung/)
 * Nurce codes: [Open Discovered – Und was jetzt?](https://nurcecodes.wordpress.com/2017/01/29/open-discovered-und-was-jetzt/)
-* Sabrinas Lerntagebuch zum Wahlpflichtkurs: 
