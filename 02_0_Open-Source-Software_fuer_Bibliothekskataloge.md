@@ -13,5 +13,5 @@ Inhalte:
 3. [Auswahl der Software für das Seminar](https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/02_3_auswahl_der_software_fuer_das_seminar.html)
 
 Beiträge in den Lerntagebüchern der Studierenden:
-* [Muss es denn immer etwas kosten?](https://dennislerntnichtaus.wordpress.com/2016/09/27/muss-es-denn-immer-etwas-kosten/)
-* [Die Sache mit der Katze im Sack… oder in der Decke – Teil 2](https://jgoouh.wordpress.com/2016/10/16/die-sache-mit-der-katze-im-sack-oder-in-der-decke-teil-2-achtung-dieser-beitrag-beinhaltet-echten-cat-content/)
+* Dennis lernt nicht aus: [Muss es denn immer etwas kosten?](https://dennislerntnichtaus.wordpress.com/2016/09/27/muss-es-denn-immer-etwas-kosten/)
+* eine Reise um das Programmieren in 133 Tagen: [Die Sache mit der Katze im Sack… oder in der Decke – Teil 2](https://jgoouh.wordpress.com/2016/10/16/die-sache-mit-der-katze-im-sack-oder-in-der-decke-teil-2-achtung-dieser-beitrag-beinhaltet-echten-cat-content/)
