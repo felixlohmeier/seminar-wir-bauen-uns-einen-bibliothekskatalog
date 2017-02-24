@@ -1,6 +1,6 @@
 # 11 Projektpräsentationen und Abschlussdiskussion
 
-Ziel: Projektpräsentationen zu alternativen Vorgehensweisen (andere Daten, andere Werkzeuge) in und Reflexion zur Frage "Was fehlt noch für einen Produktivbetrieb?"
+Ziel: Projektpräsentationen zu alternativen Vorgehensweisen (andere Daten, andere Werkzeuge) und Reflexion zur Frage "Was fehlt noch für einen Produktivbetrieb?"
 
 Inhalte:
 

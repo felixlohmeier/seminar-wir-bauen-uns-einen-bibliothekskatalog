@@ -1,10 +1,8 @@
 # 11.4 Optimierung der virtuellen Maschine
 
-Sie sind jetzt im Bonuslevel angekommen!
+Sie sind jetzt im Bonuslevel angekommen, herzlichen Glückwunsch!
 
 Wenn Sie die virtuelle Maschine noch weiter verwenden möchten, dann empfiehlt es sich noch ein paar Anpassungen an der Installation vorzunehmen.
-
-Ziel: Beim Start der virtuellen Maschine automatisch Docker-Container ausführen. Willkommensbildschirm und Loginmessage anpassen.
 
 ## Automatischer Start der Docker-Container
 
